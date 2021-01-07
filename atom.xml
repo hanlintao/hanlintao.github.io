@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-07T15:08:31.165Z</updated>
+    <updated>2021-01-07T15:17:03.236Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -42,9 +42,9 @@
 <p>创建自己的Github Pages</p>
 <h2 id="二-译者如何选择博客平台">二、译者如何选择博客平台</h2>
 <p>现在有许多搭建博客的方法，我基本上都尝试过，各有利弊：</p>
-<ol>
+<ul>
 <li>第三方博客平台</li>
-</ol>
+</ul>
 <p>早年间新浪博客广为人知，众多明星都会开通自己的新浪博客，大家熟知的QQ空间也是第三方博客平台的一种。</p>
 <p>但是渐渐的没什么人用了，这是因为第三方博客限制极多：广告、删帖、水军......</p>
 <p>现在程序员社区还是有许多第三方博客平台依然火热，比如博客园（cnblogs），但译员用得很少，所以我也不推荐大家去这样的博客平台注册账号。</p>
