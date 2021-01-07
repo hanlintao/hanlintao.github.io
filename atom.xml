@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator</title>
-    <updated>2021-01-07T11:16:37.693Z</updated>
+    <updated>2021-01-07T11:33:53.683Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -11,35 +11,31 @@
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <title type="html"><![CDATA[《译者编程入门指南》简介]]></title>
         <id>https://hanlintao.github.io/post/hello-gridea/</id>
         <link href="https://hanlintao.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <content type="html"><![CDATA[<h2 id="译者编程入门指南">《译者编程入门指南》</h2>
+<p>出版社：清华大学出版社<br>
+出版时间：2020年<br>
+ISBN编号：9787302518341</p>
+<h2 id="作者">作者</h2>
+<p>韩林涛 编著 俞敬松主审</p>
+<h2 id="简介">简介</h2>
+<p>高等外语教育是我国高等教育的重要组成部分。“新文科”建设过程中，高等外语教育如何积极迎接新科技革命挑战、新技术如何融入文科类课程、外语专业学生如何开展综合性跨学科学习？本书是回答这一系列问题的一次实验性探索。</p>
+<p>本教材定位为翻译专业本科、翻译专业硕士、职业译者、翻译爱好者的编程入门学习指南，旨在以浅显易懂、层次清晰的计算机辅助翻译小工具开发实例，循序渐进讲解基础编程知识，进而提升“新文科”背景下翻译学习者、翻译实践者的信息素养，助其更好地应对人工智能浪潮给翻译职业带来的冲击和挑战。</p>
+<h2 id="章节概况">章节概况</h2>
+<p>教材共九章，包括：</p>
+<p>第一章：导论<br>
+第二章：入门<br>
+第三章：编程环境搭建<br>
+第四章：如何开发简易在线双语术语库<br>
+第五章：如何开发简易在线术语管理工具<br>
+第六章：如何开发简易在线翻译记忆库<br>
+第七章：如何开发一个简易的字数统计工具<br>
+第八章：正则表达式在译前准备中的应用<br>
+第九章：从零入手接入机器翻译引擎</p>
 ]]></content>
     </entry>
 </feed>
