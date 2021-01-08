@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-08T14:43:25.599Z</updated>
+    <updated>2021-01-08T15:38:21.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -30,7 +30,7 @@
 <p>https://c.runoob.com/compile/1</p>
 <p>和</p>
 <p>https://c.runoob.com/compile/9</p>
-<p>通过上面两个网站我们可以学习一些简单的PHP和Python基础知识。</p>
+<p>通过上面两个网站我们可以练习一些简单的PHP和Python基础知识。</p>
 <h2 id="所需代码">所需代码</h2>
 <p><strong>代码一：基础网页代码</strong></p>
 <p>index.php</p>
@@ -252,7 +252,7 @@ else{
 <figure data-type="image" tabindex="5"><img src="https://hanlintao.github.io/post-images/1610116865348.png" alt="" loading="lazy"></figure>
 <p>选择好看的插画后就放到PPT模板中：</p>
 <figure data-type="image" tabindex="6"><img src="https://hanlintao.github.io/post-images/1610116933847.png" alt="" loading="lazy"></figure>
-<p>如此一来每篇文章发布的时候就换个插画，把文章标题放进去，CodeSlator的logo也保持在固定位置，这个时候给读者的感觉就是简单、统一、整洁。</p>
+<p>PPT的导出功能是支持直接将某一页PPT导出成图片的。如此一来每篇文章发布的时候就换个插画，把文章标题放进去，CodeSlator的logo也保持在固定位置，这个时候给读者的感觉就是简单、统一、整洁。</p>
 ]]></content>
     </entry>
     <entry>
