@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-08T13:21:58.961Z</updated>
+    <updated>2021-01-08T13:28:28.513Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -20,19 +20,19 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
 <!-- more -->
-<p><strong>本地编程环境搭建</strong></p>
+<h2 id="本地编程环境搭建">本地编程环境搭建</h2>
 <p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
 <p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
 <p>http://codeslator.edusoho.cn/course/2</p>
 <p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
-<p><strong>线上编程环境访问</strong></p>
+<h2 id="线上编程环境访问">线上编程环境访问</h2>
 <p>在译者编程入门指南讲座中我一般会带着大家学习一些比较简单的代码，大家最好能够提前打开以下网站：</p>
 <p>https://c.runoob.com/compile/1</p>
 <p>和</p>
 <p>https://c.runoob.com/compile/9</p>
 <p>通过上面两个网站我们可以学习一些简单的PHP和Python基础知识。</p>
-<p><strong>所需代码</strong></p>
-<p>代码一：基础网页代码</p>
+<h2 id="所需代码">所需代码</h2>
+<p><strong>代码一：基础网页代码</strong></p>
 <p>index.php</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 
@@ -48,7 +48,7 @@
 &lt;/html&gt;
 
 </code></pre>
-<p>代码二：为基础网页代码添加查询框</p>
+<p><strong>代码二：查询框</strong></p>
 <p>index.php</p>
 <pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
 
@@ -67,19 +67,19 @@
 &lt;/form&gt;
 
 </code></pre>
-<p>代码三：获取检索词</p>
+<p><strong>代码三：获取检索词</strong></p>
 <p>result.php</p>
 <pre><code>&lt;?php
     $term = $_POST[&quot;term&quot;];
 ?&gt;
 </code></pre>
-<p>代码四：创建数据库</p>
+<p><strong>代码四：创建数据库</strong></p>
 <pre><code>CREATE DATABASE fmprc 
 DEFAULT CHARACTER SET utf8 
 DEFAULT COLLATE utf8_general_ci;
 
 </code></pre>
-<p>代码五：创建数据表</p>
+<p><strong>代码五：创建数据表</strong></p>
 <pre><code>CREATE TABLE `tm` 
 ( 
     `ID` INT(5) NOT NULL AUTO_INCREMENT , 
@@ -92,7 +92,7 @@ CHARSET=utf8
 COLLATE utf8_general_ci;
 
 </code></pre>
-<p>代码六：连接服务器</p>
+<p><strong>代码六：连接服务器</strong></p>
 <pre><code>&lt;?php
 $dbhost = &quot;localhost&quot;; //数据库所在主机地址
 $dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
@@ -107,13 +107,13 @@ if(!$conn)
 
 ?&gt;
 </code></pre>
-<p>代码七：选择数据库</p>
+<p><strong>代码七：选择数据库</strong></p>
 <pre><code>&lt;?php
 mysqli_select_db($conn,&quot;fmprc&quot;);
 mysqli_query($conn,&quot;set names 'utf8'&quot;);
 ?&gt;
 </code></pre>
-<p>代码八：获取检索结果</p>
+<p><strong>代码八：获取检索结果</strong></p>
 <pre><code>&lt;?php
 
 $term = $_POST[&quot;term&quot;];
@@ -136,7 +136,7 @@ else{
 }
 ?&gt;
 </code></pre>
-<p>在《译者编程入门指南》一书的第四章，我介绍了如何开发简易的在线双语术语库：</p>
+<p>在《译者编程入门指南》一书的第四章，我详细介绍了如何开发简易的在线双语术语库：</p>
 <figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>

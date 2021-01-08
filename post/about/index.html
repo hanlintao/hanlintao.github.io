@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>关于 | CodeSlator Blog</title>
-<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610112115828">
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610112501722">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="关于 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
@@ -28,7 +28,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://hanlintao.github.io">
-  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1610112115828" alt="">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1610112501722" alt="">
   </a>
   <h1 class="site-title">
     CodeSlator Blog
@@ -137,6 +137,32 @@
 
         
 
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f057b1ca1ce366419d97',
+    clientSecret: '68656ac3f4d9ddfc5d6ad4a2adf548eb92b0c77f',
+    repo: 'http://hanlintao.github.io',
+    owner: 'hanlintao',
+    admin: ['hanlintao'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
         
 
         <div class="site-footer">
