@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-08T13:19:20.089Z</updated>
+    <updated>2021-01-08T13:20:48.081Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -20,18 +20,18 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
 <!-- more -->
-<p><strong>1. 本地编程环境搭建</strong></p>
+<p><strong>本地编程环境搭建</strong></p>
 <p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
 <p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
 <p>http://codeslator.edusoho.cn/course/2</p>
 <p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
-<p><strong>2. 线上编程环境访问</strong></p>
+<p><strong>线上编程环境访问</strong></p>
 <p>在译者编程入门指南讲座中我一般会带着大家学习一些比较简单的代码，大家最好能够提前打开以下网站：</p>
 <p>https://c.runoob.com/compile/1</p>
 <p>和</p>
 <p>https://c.runoob.com/compile/9</p>
 <p>通过上面两个网站我们可以学习一些简单的PHP和Python基础知识。</p>
-<p><strong>3. 所需代码</strong></p>
+<p><strong>所需代码</strong></p>
 <p>代码一：基础网页代码</p>
 <p>index.php</p>
 <pre><code>&lt;!DOCTYPE html&gt;
