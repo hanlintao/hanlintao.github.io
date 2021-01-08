@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-08T13:52:09.109Z</updated>
+    <updated>2021-01-08T14:43:25.599Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -237,6 +237,22 @@ else{
 <p>未来大家会在这个博客上看到更多我写的与这个项目相关的文章。</p>
 <p>看到这里，你是否心动，想着手做一个自己的博客了？</p>
 <p>去试试吧！连编程的坑都入了，还怕搭建不了一个静态博客吗？</p>
+<h2 id="faq">FAQ</h2>
+<p>这篇文章发布后收到了一些朋友的问题，我自己也在不断摸索Gridea的各种功能，所以在这篇帖子后面加上FAQ部分，记录我在维护博客时遇到的问题：</p>
+<p><strong>如何添加讨论区</strong></p>
+<p>讨论区模块的添加我是参考了这篇帖子：<a href="https://zhuanlan.zhihu.com/p/258592325">Gridea+GithubPages+godaddy+gitalk个人博客配置</a></p>
+<p>但是实际操作时我遇到了问题，比如：</p>
+<p>上面帖子中截图里说：Homepage URL和Authorization callback URL要填博客地址，截图里填的是http://***.github.io 这种形式的博客地址，但是我这样操作却错了。</p>
+<p>原因是：1）我已经绑定了域名codeslator.blog；2）我已经设置了Enforce HTTPS，所以我填的地址应该是：</p>
+<p>https://codeslator.blog</p>
+<p>而不是上面那个github.io后缀名的网址。我一度填写了http://codeslator.blog，没有加s，结果好长一段时间博客下面的讨论区都无法正常显示。</p>
+<p>我的坑已经踩过了，大家遇到时可前往不要害怕哦！</p>
+<p><strong>如何添加好看的封面图</strong></p>
+<p>我从开始维护CodeSlator这个品牌开始，就使用iSlide插件里面提供的各种插画和模板：</p>
+<figure data-type="image" tabindex="5"><img src="https://hanlintao.github.io/post-images/1610116865348.png" alt="" loading="lazy"></figure>
+<p>选择好看的插画后就放到PPT模板中：</p>
+<figure data-type="image" tabindex="6"><img src="https://hanlintao.github.io/post-images/1610116933847.png" alt="" loading="lazy"></figure>
+<p>如此一来每篇文章发布的时候就换个插画，把文章标题放进去，CodeSlator的logo也保持在固定位置，这个时候给读者的感觉就是简单、统一、整洁。</p>
 ]]></content>
     </entry>
     <entry>
