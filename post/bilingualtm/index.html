@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>开发简易在线翻译记忆库所需代码 | CodeSlator Blog</title>
-<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610168256033">
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610168932484">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="开发简易在线翻译记忆库所需代码 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
@@ -32,7 +32,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://hanlintao.github.io">
-  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1610168256033" alt="">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1610168932484" alt="">
   </a>
   <h1 class="site-title">
     CodeSlator Blog
@@ -108,7 +108,7 @@
                 <p>计算机辅助翻译技术的核心技术之一就是翻译记忆技术，涉及到翻译记忆库的对齐生成、翻译记忆库的管理、翻译记忆库的检索、翻译记忆库的相似度匹配等等，因此对于译者而言，善用翻译记忆库将能极大提升翻译的效率。</p>
 <!-- more -->
 <p>在这篇文章中我们一起来看一下如何开发简易的在线翻译记忆库。</p>
-<h2 id="一-xml">一、XML</h2>
+<h2 id="xml">XML</h2>
 <p>XML是eXtensible Markup Language的缩写，译为“可扩展标记语言”。只有理解了XML才能把翻译行业的众多基于XML的数据交换标准搞清楚，比如存储翻译记忆的TMX、存储术语库的TBX、存储断句规则的SRX等等。</p>
 <p>虽然现在主流的数据格式是json，一种更加简单轻便的数据存储格式，但在翻译行业常用的各类计算机辅助翻译工具中，XML的应用还是非常广的，所以对于翻译技术感兴趣的同学和老师还是有必要深入学习XML的。</p>
 <p>首先，请大家观看两个我录制的基础视频：什么是XML和什么是DTD。</p>
@@ -118,7 +118,7 @@
 <p><strong>什么是DTD？</strong></p>
 <iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=161812210&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <p>以上内容是我们了解翻译记忆库的基础，大家有时间的话最好能够全都看完。</p>
-<h2 id="二-tmx">二、TMX</h2>
+<h2 id="tmx">TMX</h2>
 <p>IBM的工程师曾在博客中写过这样一篇文章<a href="https://www.ibm.com/developerworks/cn/xml/x-localis3/index.html">本地化中的 XML：通过 TM 和 TMX 重用翻译<br>
 ——在 XML 标准的帮助下减少翻译的时间和劳动量</a></p>
 <p>其中提到：</p>
@@ -184,7 +184,7 @@
 <p>“.tmx”格式的文件适合在本地电脑打开，适合导入到计算机辅助翻译工具中供查询，但是不适合在线查询。我们不能把这个文件放到网盘、协作平台去查询。</p>
 <p>市面上有不少工具支持“.tmx”的导入导出和查询，比如一者科技的<a href="https://www.tmxmall.com/qsearch">语料快搜</a>，SDL公司的TM Server（此为收费的服务器版）等。</p>
 <p>对于译者或小的翻译团队而言，如果也想自己开发简易的在线翻译库呢？</p>
-<h2 id="三-开发简易在线翻译记忆库所需代码">三、开发简易在线翻译记忆库所需代码</h2>
+<h2 id="开发简易在线翻译记忆库所需代码">开发简易在线翻译记忆库所需代码</h2>
 <p>我们以PHP为例，介绍如何在本地服务器上开发一个简易的在线翻译记忆库。</p>
 <p><strong>本地编程环境搭建</strong></p>
 <p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
@@ -427,16 +427,18 @@ else{
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155651952&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <p>如何将本地代码和数据库更新到服务器上</p>
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155652119&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<!-- more -->
+<p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
+<p><img src="https://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
+<img src="https://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E4%B8%80-xml">一、XML</a></li>
-<li><a href="#%E4%BA%8C-tmx">二、TMX</a></li>
-<li><a href="#%E4%B8%89-%E5%BC%80%E5%8F%91%E7%AE%80%E6%98%93%E5%9C%A8%E7%BA%BF%E7%BF%BB%E8%AF%91%E8%AE%B0%E5%BF%86%E5%BA%93%E6%89%80%E9%9C%80%E4%BB%A3%E7%A0%81">三、开发简易在线翻译记忆库所需代码</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#tmx">TMX</a></li>
+<li><a href="#%E5%BC%80%E5%8F%91%E7%AE%80%E6%98%93%E5%9C%A8%E7%BA%BF%E7%BF%BB%E8%AF%91%E8%AE%B0%E5%BF%86%E5%BA%93%E6%89%80%E9%9C%80%E4%BB%A3%E7%A0%81">开发简易在线翻译记忆库所需代码</a></li>
 </ul>
 </li>
 </ul>
