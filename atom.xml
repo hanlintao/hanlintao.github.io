@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-09T04:55:32.113Z</updated>
+    <updated>2021-01-09T04:57:40.106Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -99,7 +99,7 @@
 <p>对于译者或小的翻译团队而言，如果也想自己开发简易的在线翻译库呢？</p>
 <h2 id="三-开发简易在线翻译记忆库所需代码">三、开发简易在线翻译记忆库所需代码</h2>
 <p>我们以PHP为例，介绍如何在本地服务器上开发一个简易的在线翻译记忆库。</p>
-<h2 id="本地编程环境搭建">本地编程环境搭建</h2>
+<p><strong>本地编程环境搭建</strong></p>
 <p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
 <p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
 <p>http://codeslator.edusoho.cn/course/2</p>
