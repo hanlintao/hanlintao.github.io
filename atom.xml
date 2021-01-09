@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-09T05:17:44.994Z</updated>
+    <updated>2021-01-09T13:46:13.964Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -246,7 +246,7 @@ foreach($xml-&gt;body-&gt;tu as $tu)
     &lt;table&gt;
         &lt;tr&gt;
             &lt;td&gt;
-                &lt; input type = &quot;text&quot; name = &quot;zh_CN&quot; placeholder = &quot;中文检索词&quot; /&gt;
+                &lt;input type = &quot;text&quot; name = &quot;zh_CN&quot; placeholder = &quot;中文检索词&quot; /&gt;
             &lt;/td&gt;
 
             &lt;td&gt;
