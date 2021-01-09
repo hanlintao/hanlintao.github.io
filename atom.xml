@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-09T13:46:13.964Z</updated>
+    <updated>2021-01-09T14:47:21.536Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -588,6 +588,12 @@ else{
 <p>选择好看的插画后就放到PPT模板中：</p>
 <figure data-type="image" tabindex="6"><img src="https://hanlintao.github.io/post-images/1610116933847.png" alt="" loading="lazy"></figure>
 <p>PPT的导出功能是支持直接将某一页PPT导出成图片的。如此一来每篇文章发布的时候就换个插画，把文章标题放进去，CodeSlator的logo也保持在固定位置，这个时候给读者的感觉就是简单、统一、整洁。</p>
+<p><strong>如何跟踪博客每条的浏览量</strong></p>
+<p>这么些年来我写博客做分享最大的一个感受就是：写完一篇文章后真的不必去关注浏览量，因为你永远不知道明天谁会打开你的博客，不知道TA阅读了你的文章后会有怎样的感受。</p>
+<p>不过如果你真的想关注，可以使用Google Analytics，用Gmail打开后简单操作一下就会生成一个ID，然后再把这个ID插入到Gridea后台即可。</p>
+<p>下面这个是博客浏览量的展示：</p>
+<figure data-type="image" tabindex="7"><img src="https://hanlintao.github.io/post-images/1610203536130.png" alt="" loading="lazy"></figure>
+<p>看了之后其实会比较心寒，因为你会发现其实没有几个人会关注这个博客。但是，大家前往不要因为这个浏览量低就不再写博客，高楼大厦非一日建成。你的博客可以是为自己写的，也可以是为他人写的，知道自己为什么要写作就可以了。</p>
 ]]></content>
     </entry>
     <entry>
