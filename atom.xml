@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-09T03:58:13.707Z</updated>
+    <updated>2021-01-09T03:58:28.161Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
     <entry>
-        <title type="html"><![CDATA[开发简易的在线翻译记忆库所需代码]]></title>
+        <title type="html"><![CDATA[开发简易在线翻译记忆库所需代码]]></title>
         <id>https://hanlintao.github.io/post/bilingualtm/</id>
         <link href="https://hanlintao.github.io/post/bilingualtm/">
         </link>
