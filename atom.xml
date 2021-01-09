@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-09T05:08:57.680Z</updated>
+    <updated>2021-01-09T05:17:44.994Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -26,9 +26,9 @@
 <p>虽然现在主流的数据格式是json，一种更加简单轻便的数据存储格式，但在翻译行业常用的各类计算机辅助翻译工具中，XML的应用还是非常广的，所以对于翻译技术感兴趣的同学和老师还是有必要深入学习XML的。</p>
 <p>首先，请大家观看两个我录制的基础视频：什么是XML和什么是DTD。</p>
 <p>简单来说，XML中包含的是要传输的数据，DTD定义了要传输的数据以怎样的结构存在于XML中。</p>
-<p><strong>什么是XML？</strong></p>
+<p><strong><a href="https://www.bilibili.com/video/BV1uE41177nh">什么是XML？</a></strong></p>
 <iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=159123577&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><strong>什么是DTD？</strong></p>
+<p><strong><a href="https://www.bilibili.com/video/BV1uE41177nh?p=2">什么是DTD？</a></strong></p>
 <iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=161812210&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <p>以上内容是我们了解翻译记忆库的基础，大家有时间的话最好能够全都看完。</p>
 <h2 id="tmx">TMX</h2>
@@ -332,13 +332,13 @@ else{
 &lt;/html&gt;
 </code></pre>
 <p>将以上代码输入到编辑器后，我们便能得到一个简易的在线翻译记忆库。但这个翻译记忆库只能在本地访问，如果想放到线上的话，还需要购买域名和服务器，相关视频在下方：</p>
-<p>如何购买一个自己的专属域名</p>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=2">如何购买一个自己的专属域名</a></p>
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155351236&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>如何购买主机并将域名绑定到主机上</p>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=3">如何购买主机并将域名绑定到主机上</a></p>
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155480677&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>如何通过FTP和文本编辑器更新网页代码</p>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=4">如何通过FTP和文本编辑器更新网页代码</a></p>
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155651952&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>如何将本地代码和数据库更新到服务器上</p>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=5">如何将本地代码和数据库更新到服务器上</a></p>
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155652119&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
 <p><img src="https://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
