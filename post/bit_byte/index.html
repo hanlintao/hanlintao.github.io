@@ -2,11 +2,11 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>《译者编程入门指南》简介 | CodeSlator Blog</title>
+<title>译者编程冷知识：位和字节 | CodeSlator Blog</title>
 <link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610466219787">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="《译者编程入门指南》简介 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="译者编程冷知识：位和字节 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
@@ -20,14 +20,13 @@
 </script>
 
 
-    <meta name="description" content="《译者编程入门指南》是一本面向翻译专业学生、职业译者、翻译爱好者的编程入门教材。
-📖 基本信息
-教材名称：《译者编程入门指南》
-出版社：清华大学出版社
-出版时间：2020年
-ISBN编号：9787302518341
-🙍‍♂🙎‍♂教材作..." />
-    <meta name="keywords" content="codeslator" />
+    <meta name="description" content="许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。
+位
+大家是否遇到过这样的场景：
+老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。
+我：...... 怎么查看？
+老师：..." />
+    <meta name="keywords" content="coldslator" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -95,58 +94,56 @@ ISBN编号：9787302518341
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              《译者编程入门指南》简介
+              译者编程冷知识：位和字节
             </h2>
             <div class="post-info">
               <span>
-                2021-01-01
+                2021-01-12
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://hanlintao.github.io/tag/AnSytWxjs/" class="post-tag">
-                  # codeslator
+                <a href="https://hanlintao.github.io/tag/oXOPh2b5x/" class="post-tag">
+                  # coldslator
                 </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/codeslator.jpg" alt="">
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/bit_byte.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>《译者编程入门指南》是一本面向翻译专业学生、职业译者、翻译爱好者的编程入门教材。</p>
-<h2 id="基本信息">📖 基本信息</h2>
-<p>教材名称：《译者编程入门指南》<br>
-出版社：清华大学出版社<br>
-出版时间：2020年<br>
-ISBN编号：9787302518341</p>
-<h2 id="教材作者">🙍‍♂🙎‍♂教材作者</h2>
-<p>韩林涛 编著 俞敬松主审</p>
-<h2 id="教材简介">🏷 教材简介</h2>
-<p>高等外语教育是我国高等教育的重要组成部分。“新文科”建设过程中，高等外语教育如何积极迎接新科技革命挑战、新技术如何融入文科类课程、外语专业学生如何开展综合性跨学科学习？本书是回答这一系列问题的一次实验性探索。</p>
-<p>本教材定位为翻译专业本科、翻译专业硕士、职业译者、翻译爱好者的编程入门学习指南，旨在以浅显易懂、层次清晰的计算机辅助翻译小工具开发实例，循序渐进讲解基础编程知识，进而提升“新文科”背景下翻译学习者、翻译实践者的信息素养，助其更好地应对人工智能浪潮给翻译职业带来的冲击和挑战。</p>
-<h2 id="章节概况">📑 章节概况</h2>
-<p>教材共九章，包括：</p>
-<p>第一章：导论<br>
-第二章：入门<br>
-第三章：编程环境搭建<br>
-第四章：如何开发简易在线双语术语库<br>
-第五章：如何开发简易在线术语管理工具<br>
-第六章：如何开发简易在线翻译记忆库<br>
-第七章：如何开发一个简易的字数统计工具<br>
-第八章：正则表达式在译前准备中的应用<br>
-第九章：从零入手接入机器翻译引擎</p>
+                <p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+<h2 id="位">位</h2>
+<p>大家是否遇到过这样的场景：</p>
+<p>老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。<br>
+我：...... 怎么查看？<br>
+老师：不知道自己去百度一下，连这都不知道！<br>
+我：老师，32位和64位有啥区别？<br>
+老师：...... 问那么多干嘛，自己去百度一下！</p>
+<p>接下来我们一起来看看什么是“位”。</p>
+<p>在计算机术语中，“位”可以对应两个英文单词：Digit和Bit。</p>
+<p>牛津词典里Digit的释义如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
+<p>在这个解释里，第一个解释很好理解，就是数字、数位、位。比如Digital（数字的、数字化的、数码的）的词根就是Digit。</p>
+<p>不过不少人可能不知道第二个意思，digit的本意是手指。所以一个手指头就是一个“digit”。当你举起一个手指头时，我们可以数“1”，而当你把这个手指头又收回去的时候，我们可以数“0”。所以这个手指的伸缩可以表示0和1两种状态，因此我们可以称这个手指头为“Binary Digit”，简称为“Bit”。</p>
+<p>在翻译的时候，“Binary Digit”翻译成：二进制位；“Bit”翻译成“比特位”，这个比特完全是从英文音译过来的，“比特”这两个汉字本身没有什么意义。</p>
+<p>现在你应该可以理解为什么“Digit”和“Bit”都可以对应“位”这个词了吧？</p>
+<h2 id="字节">字节</h2>
+<p>其实现在很多人都知道字节的英文是什么，因为“字节跳动”的英文是“ByteDance”。</p>
+<p>“位”和“字节”的关系可以这样来记住：一个字节（byte）等于8个比特位（bit）。当你伸出8个手指头时，一口全部咬掉（bite）。这个“bite”用得有点冷，但事实上，字节这个词的英文“byte”就是从“bite”来的，只不过觉得可能会跟“bit”混淆，所以人为修改成了“byte”。</p>
+<p>以下是牛津词典对“Byte”的解释：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
+<p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF">📖 基本信息</a></li>
-<li><a href="#%E6%95%99%E6%9D%90%E4%BD%9C%E8%80%85">🙍‍♂🙎‍♂教材作者</a></li>
-<li><a href="#%E6%95%99%E6%9D%90%E7%AE%80%E4%BB%8B">🏷 教材简介</a></li>
-<li><a href="#%E7%AB%A0%E8%8A%82%E6%A6%82%E5%86%B5">📑 章节概况</a></li>
+<li><a href="#%E4%BD%8D">位</a></li>
+<li><a href="#%E5%AD%97%E8%8A%82">字节</a></li>
 </ul>
 </li>
 </ul>
@@ -156,6 +153,15 @@ ISBN编号：9787302518341</p>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-wei-he-zi-jie/">
+              <h3 class="post-title">
+                译者编程冷知识：位和字节
+              </h3>
+            </a>
+          </div>
         
 
         

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-10T12:08:37.796Z</updated>
+    <updated>2021-01-12T15:43:42.826Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -10,6 +10,66 @@
     <logo>https://hanlintao.github.io/images/avatar.png</logo>
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[译者编程冷知识：位和字节]]></title>
+        <id>https://hanlintao.github.io/post/bit_byte/</id>
+        <link href="https://hanlintao.github.io/post/bit_byte/">
+        </link>
+        <updated>2021-01-12T08:59:33.000Z</updated>
+        <content type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+<h2 id="位">位</h2>
+<p>大家是否遇到过这样的场景：</p>
+<p>老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。<br>
+我：...... 怎么查看？<br>
+老师：不知道自己去百度一下，连这都不知道！<br>
+我：老师，32位和64位有啥区别？<br>
+老师：...... 问那么多干嘛，自己去百度一下！</p>
+<p>接下来我们一起来看看什么是“位”。</p>
+<p>在计算机术语中，“位”可以对应两个英文单词：Digit和Bit。</p>
+<p>牛津词典里Digit的释义如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
+<p>在这个解释里，第一个解释很好理解，就是数字、数位、位。比如Digital（数字的、数字化的、数码的）的词根就是Digit。</p>
+<p>不过不少人可能不知道第二个意思，digit的本意是手指。所以一个手指头就是一个“digit”。当你举起一个手指头时，我们可以数“1”，而当你把这个手指头又收回去的时候，我们可以数“0”。所以这个手指的伸缩可以表示0和1两种状态，因此我们可以称这个手指头为“Binary Digit”，简称为“Bit”。</p>
+<p>在翻译的时候，“Binary Digit”翻译成：二进制位；“Bit”翻译成“比特位”，这个比特完全是从英文音译过来的，“比特”这两个汉字本身没有什么意义。</p>
+<p>现在你应该可以理解为什么“Digit”和“Bit”都可以对应“位”这个词了吧？</p>
+<h2 id="字节">字节</h2>
+<p>其实现在很多人都知道字节的英文是什么，因为“字节跳动”的英文是“ByteDance”。</p>
+<p>“位”和“字节”的关系可以这样来记住：一个字节（byte）等于8个比特位（bit）。当你伸出8个手指头时，一口全部咬掉（bite）。这个“bite”用得有点冷，但事实上，字节这个词的英文“byte”就是从“bite”来的，只不过觉得可能会跟“bit”混淆，所以人为修改成了“byte”。</p>
+<p>以下是牛津词典对“Byte”的解释：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
+<p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[译者编程冷知识：位和字节]]></title>
+        <id>https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-wei-he-zi-jie/</id>
+        <link href="https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-wei-he-zi-jie/">
+        </link>
+        <updated>2021-01-12T08:59:33.000Z</updated>
+        <content type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+<h2 id="位">位</h2>
+<p>大家是否遇到过这样的场景：</p>
+<p>老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。<br>
+我：...... 怎么查看？<br>
+老师：不知道自己去百度一下，连这都不知道！<br>
+我：老师，32位和64位有啥区别？<br>
+老师：...... 问那么多干嘛，自己去百度一下！</p>
+<p>接下来我们一起来看看什么是“位”。</p>
+<p>在计算机术语中，“位”可以对应两个英文单词：Digit和Bit。</p>
+<p>牛津词典里Digit的释义如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
+<p>在这个解释里，第一个解释很好理解，就是数字、数位、位。比如Digital（数字的、数字化的、数码的）的词根就是Digit。</p>
+<p>不过不少人可能不知道第二个意思，digit的本意是手指。所以一个手指头就是一个“digit”。当你举起一个手指头时，我们可以数“1”，而当你把这个手指头又收回去的时候，我们可以数“0”。所以这个手指的伸缩可以表示0和1两种状态，因此我们可以称这个手指头为“Binary Digit”，简称为“Bit”。</p>
+<p>在翻译的时候，“Binary Digit”翻译成：二进制位；“Bit”翻译成“比特位”，这个比特完全是从英文音译过来的，“比特”这两个汉字本身没有什么意义。</p>
+<p>现在你应该可以理解为什么“Digit”和“Bit”都可以对应“位”这个词了吧？</p>
+<h2 id="字节">字节</h2>
+<p>其实现在很多人都知道字节的英文是什么，因为“字节跳动”的英文是“ByteDance”。</p>
+<p>“位”和“字节”的关系可以这样来记住：一个字节（byte）等于8个比特位（bit）。当你伸出8个手指头时，一口全部咬掉（bite）。这个“bite”用得有点冷，但事实上，字节这个词的英文“byte”就是从“bite”来的，只不过觉得可能会跟“bit”混淆，所以人为修改成了“byte”。</p>
+<p>以下是牛津词典对“Byte”的解释：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
+<p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[开发简易在线翻译记忆库所需代码]]></title>
         <id>https://hanlintao.github.io/post/bilingualtm/</id>
