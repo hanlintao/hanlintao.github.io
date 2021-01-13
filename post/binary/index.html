@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>译者编程冷知识：二进制与UTF-8 | CodeSlator Blog</title>
-<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610539152008">
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1610539514966">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="译者编程冷知识：二进制与UTF-8 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
@@ -34,7 +34,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://hanlintao.github.io">
-  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1610539152008" alt="">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1610539514966" alt="">
   </a>
   <h1 class="site-title">
     CodeSlator Blog
@@ -108,6 +108,8 @@
                 </a>
               
             </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/binary.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
@@ -205,6 +207,7 @@
 <p>如果是32个盒子，那么第一个盒子是正号，剩下的31个盒子的最大数就是：2<sup>31</sup> -1；如果第一个盒子是负号，那么剩下的31个盒子的最大数依然是：2<sup>31</sup> - 1</p>
 <p>因此这32个盒子能够显示的最小的负数就是： -(2<sup>31</sup> -1)，能够显示的最大的正数就是：2<sup>31</sup> -1</p>
 <p>好了，现在，我们再给大家换一种描述的方法，把“盒子”改成：“位”（bit）</p>
+<p>（看到这里，大家可以去看一下我之前发布的另一篇文章：<a href="https://codeslator.blog/post/bit_byte/">译者编程冷知识：位和字节</a>）</p>
 <p>如果计算机上的一个存储空间有32位（32 bits），那么请问，这个存储空间能够存储的最大的整数是什么？</p>
 <p>如果这个存储空间的第一位必须是正号或者负号，那么这个存储空间能够存储的最大的整数又是什么？</p>
 <p>希望大家已经可以自己计算出来了。</p>
@@ -240,7 +243,7 @@
 <p>这里面还有很多知识，我这里就不多介绍了。</p>
 <p>总之，UTF-8的8是8位的意思，UTF-16的16是16位的意思。</p>
 <p>现在你写的网页、代码，大部分的符号都涵盖到了UTF-8这种编码方式里，所以你把文件的文字编码方式选为UTF-8就大概率不会出现乱码了。</p>
-<p>之所以出现乱码，就是因为你想显示的文字并没有对应的二进制编码。<img src="https://hanlintao.github.io/post-images/1610538933709.png" alt="" loading="lazy"></p>
+<p>之所以出现乱码，就是因为你想显示的文字并没有对应的二进制编码。</p>
 
               </div>
               <div class="toc-container">
