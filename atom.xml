@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-01-12T15:45:27.785Z</updated>
+    <updated>2021-01-13T02:54:17.633Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -11,12 +11,158 @@
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
     <entry>
+        <title type="html"><![CDATA[开发TMX文件上传功能所需代码]]></title>
+        <id>https://hanlintao.github.io/post/tmxupload/</id>
+        <link href="https://hanlintao.github.io/post/tmxupload/">
+        </link>
+        <updated>2021-01-13T02:19:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。</p>
+<!-- more -->
+<h2 id="tmx文件上传">TMX文件上传</h2>
+<p>首先，我们将5.2.2节中的代码粘贴过来：</p>
+<p><strong>代码一：head.php</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    
+    &lt;title&gt;File Upload&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</code></pre>
+<p><strong>代码二：foot.php</strong></p>
+<pre><code>&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码三：upload.php</strong></p>
+<pre><code>&lt;?php include &quot;shared/head.php&quot;; ?&gt;   
+&lt;form action=&quot;upload_file.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;  
+    &lt;table&gt;    
+        &lt;tr&gt;    
+            &lt;td&gt;    
+                &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;    
+            &lt;/td&gt;    
+            &lt;td&gt;    
+                &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;上传&quot;&gt;  
+            &lt;/td&gt;    
+        &lt;/tr&gt;    
+    &lt;/table&gt;  
+&lt;/form&gt;  
+&lt;?php include &quot;shared/foot.php&quot;; ?&gt;
+</code></pre>
+<p><strong>代码四：upload_file.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {  
+  echo &quot;上传文件为：&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;;  
+  echo &quot;文件类型：&quot;.$_FILES[&quot;file&quot;][&quot;type&quot;].&quot;&lt;br&gt;&quot;;  
+  echo &quot;文件大小：&quot;.($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024).&quot; KB&lt;br&gt;&quot;;  
+  echo &quot;文件临时存储在：&quot;.$_FILES[&quot;file&quot;][&quot;tmp_name&quot;];  
+  }  
+?&gt;  
+</code></pre>
+<p><strong>代码五：upload_file.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {   
+  if (file_exists(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]))  
+      {  
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;已经存在。&quot;;  
+      }  
+    else  
+      {  
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      echo &quot;文件已上传至以下文件夹：&quot;.&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;];  
+      }  
+  }  
+?&gt;
+</code></pre>
+<p>以上代码均来自于本书第五章，其中代码五是代码四的升级版，修改的主要内容就是将用户上传的文件放到一个指定的文件夹中。</p>
+<p>对于初学者而言，如果就想使用上面的代码来实现TMX文件的上传是没有任何问题的，每当上传一个文件后，这个文件就会进入到upload文件夹中。</p>
+<p>我给大家看一下我电脑上的文件夹结构：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610505378914.png" alt="" loading="lazy"></figure>
+<p>如果你将上面的代码按照这个文件夹结构来撰写的话，就会得到一个可以正常上传TMX文件的功能。</p>
+<h2 id="tmx文件读取">TMX文件读取</h2>
+<p>既然能够上传TMX文件了，那么我们就也可以读取TMX文件了，读取的方法就是利用本书第六章所使用的代码：</p>
+<p><strong>代码七：从“.tmx”格式翻译记忆库中读取并展示数据</strong></p>
+<pre><code>&lt;?php   
+    $xml = simplexml_load_file(&quot;source.tmx&quot;);  
+    $json = json_encode($xml);  
+    $jsondata = json_decode($json,true);  
+    foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)  
+        {  
+            echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+            echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+            echo &quot;&lt;br&gt;&quot;;  
+        }     
+?&gt;  
+</code></pre>
+<p>对于初学者而言，会在这里卡住，因为不知道怎么将文件提交页面的文件名与代码七连通在一起。</p>
+<p>要解决这个问题就要把握两个关键点：</p>
+<p>1）代码七中的第一行：</p>
+<pre><code>$xml = simplexml_load_file(&quot;source.tmx&quot;); 
+</code></pre>
+<p>在这行代码中我们使用了一个函数simplexml_load_file()，这个函数要想执行成功需要一个参数，也就是括号里的&quot;source.tmx&quot;，这是我们要处理的文件的文件名。</p>
+<p>2）代码四中的第七行：</p>
+<pre><code>echo &quot;上传文件为：&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;; 
+</code></pre>
+<p>在这行代码中我们获得了上传文件的文件名。</p>
+<p>因此，只要将上传文件的文件名放到simplexml_load_file()函数里就可以了。</p>
+<p>upload_result.php文件修改如下：</p>
+<p><strong>代码八：upload_result.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {   
+  if (file_exists(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]))  
+      {  
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;已经存在。&quot;;  
+      }  
+    else  
+      {  
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      echo &quot;文件已上传至以下文件夹：&quot;.&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;;  
+      
+      $xml = simplexml_load_file(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      $json = json_encode($xml);  
+      $jsondata = json_decode($json,true);  
+      foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)  
+          {  
+              echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+              echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+              echo &quot;&lt;br&gt;&quot;;  
+          }     
+    
+        }  
+  }  
+?&gt;
+</code></pre>
+<p>这样就完成了TMX文件的上传并读取功能。接下来就可以再把如何上传TMX文件到数据库的代码拿过来就行了，这是本书第六章讲解过的内容，同时也在博客的这个帖子中有详细介绍：<a href="https://codeslator.blog/post/bilingualtm/">开发简易在线翻译记忆库所需代码</a>。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[译者编程冷知识：位和字节]]></title>
         <id>https://hanlintao.github.io/post/bit_byte/</id>
         <link href="https://hanlintao.github.io/post/bit_byte/">
         </link>
         <updated>2021-01-12T08:59:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+<!-- more -->
 <h2 id="位">位</h2>
 <p>大家是否遇到过这样的场景：</p>
 <p>老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。<br>
