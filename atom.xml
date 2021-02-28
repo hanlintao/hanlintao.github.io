@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-02-28T02:52:22.523Z</updated>
+    <updated>2021-02-28T02:53:02.564Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -10,6 +10,48 @@
     <logo>https://hanlintao.github.io/images/avatar.png</logo>
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[《翻译与本地化技术原理》课程教学大纲]]></title>
+        <id>https://hanlintao.github.io/post/fanyijishuyuanli/</id>
+        <link href="https://hanlintao.github.io/post/fanyijishuyuanli/">
+        </link>
+        <updated>2021-02-05T04:12:26.000Z</updated>
+        <content type="html"><![CDATA[<p>2021年2月修订</p>
+<h2 id="课程说明">课程说明</h2>
+<p>本课程为北京语言大学高级翻译学院翻译专业（本地化方向）二年级必修课，开设时间为二年级下学期。本课程的先修课程为《初级编程》、《网站设计与开发》和《翻译与本地化实践》，学生已经完成Python、HTML、CSS、JavaScript和PHP的入门学习，已经对数据库的设计有了基本认识，能够根据需求自主设计关系型数据库，并使用PHP和HTML构造简单的具备增删改查功能的信息系统。</p>
+<p>《翻译与本地化技术原理》旨在帮助学生了解翻译记忆、术语、质量检查、机器翻译等翻译与本地化核心技术原理，并基于此开发简易的在线计算机辅助翻译工具。</p>
+<p>在学期结束前，学生将分组完成计算机辅助翻译工具的设计与开发。</p>
+<p>##学时与学分<br>
+总课时为32课时，总学分为2学分。</p>
+<p>##考核方式<br>
+平时成绩（40%）+期末项目（60%）</p>
+<p>##课程大纲</p>
+<p><strong>模块一：翻译记忆技术</strong></p>
+<p>第一周：编辑距离和最短编辑距离</p>
+<p>第二周：使用PHP实现最短编辑距离计算</p>
+<p>第三周：实践：引入中文分词技术调整最短编辑距离计算算法</p>
+<p>第四周：小组汇报：不同计算机辅助翻译工具相似度匹配结果对比</p>
+<p><strong>模块二：术语技术</strong></p>
+<p>（注：术语技术的大部分内容已经在《术语学》课程中讲解过，为保证本课程体系的连贯性，依然会在课程教学大纲中展示）</p>
+<p>第一周：TF-IDF算法</p>
+<p>第二周：使用PHP实现TF-IDF算法</p>
+<p><strong>模块三：断句</strong></p>
+<p>第一周：基于SRX的断句方法</p>
+<p>第二周：引入TMXmall文档解析API进行断句</p>
+<p><strong>模块四：机器翻译</strong></p>
+<p>第一周：神经机器翻译原理</p>
+<p>第二周：引入百度翻译和有道翻译</p>
+<p>第三周：引入搜狗翻译和谷歌翻译</p>
+<p><strong>模块五：计算机辅助翻译工具雏形开发</strong></p>
+<p>第一周：基于jsGrid开发一个可编辑的表格</p>
+<p>第二周：将机器翻译、翻译记忆、术语和文档解析融合到一个页面中</p>
+<p>第三周：实践：开发简易界面实现基本的计算机辅助翻译功能</p>
+<p>第四周：产品设计入门</p>
+<p><strong>模块六：计算机辅助翻译工具开发</strong></p>
+<p>第一周：各小组汇报计算机辅助翻译工具开发计划</p>
+<p>第二周至学期结束：完成计算机辅助翻译工具开发，并不断优化功能，撰写开发报告</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[译者编程冷知识：二进制与UTF-8]]></title>
         <id>https://hanlintao.github.io/post/binary/</id>
