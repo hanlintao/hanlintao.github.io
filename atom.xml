@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-02-28T02:53:02.564Z</updated>
+    <updated>2021-02-28T02:54:08.611Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -21,11 +21,11 @@
 <p>本课程为北京语言大学高级翻译学院翻译专业（本地化方向）二年级必修课，开设时间为二年级下学期。本课程的先修课程为《初级编程》、《网站设计与开发》和《翻译与本地化实践》，学生已经完成Python、HTML、CSS、JavaScript和PHP的入门学习，已经对数据库的设计有了基本认识，能够根据需求自主设计关系型数据库，并使用PHP和HTML构造简单的具备增删改查功能的信息系统。</p>
 <p>《翻译与本地化技术原理》旨在帮助学生了解翻译记忆、术语、质量检查、机器翻译等翻译与本地化核心技术原理，并基于此开发简易的在线计算机辅助翻译工具。</p>
 <p>在学期结束前，学生将分组完成计算机辅助翻译工具的设计与开发。</p>
-<p>##学时与学分<br>
-总课时为32课时，总学分为2学分。</p>
-<p>##考核方式<br>
-平时成绩（40%）+期末项目（60%）</p>
-<p>##课程大纲</p>
+<h2 id="学时与学分">学时与学分</h2>
+<p>总课时为32课时，总学分为2学分。</p>
+<h2 id="考核方式">考核方式</h2>
+<p>平时成绩（40%）+期末项目（60%）</p>
+<h2 id="课程大纲">课程大纲</h2>
 <p><strong>模块一：翻译记忆技术</strong></p>
 <p>第一周：编辑距离和最短编辑距离</p>
 <p>第二周：使用PHP实现最短编辑距离计算</p>
