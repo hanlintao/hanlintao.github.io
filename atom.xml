@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-03-03T01:39:06.875Z</updated>
+    <updated>2021-03-03T02:09:41.867Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -33,10 +33,15 @@
 <p>第四周：小组汇报：不同计算机辅助翻译工具相似度匹配结果对比</p>
 <p>相关资料：</p>
 <p><a href="https://mp.weixin.qq.com/s/XtKklE50SgqmKTqAp5tvhA">关于计算机辅助翻译技术起源的奇妙发现</a></p>
+<p><a href="https://mp.weixin.qq.com/s/7n9WO_7fOBpFonsU2MWDEA">全球化、国际化、本地化与翻译</a></p>
 <p><a href="https://mp.weixin.qq.com/s/xonXFt8QcCgjyEUDyqn0dg">简言翻译记忆的原理（一）：写错单词最少要罚多少钱？</a></p>
 <p><a href="https://mp.weixin.qq.com/s/KUGdseKilUjSCwtNixm0dA">简言翻译记忆的原理（二）：用动态规划算法求解最短编辑距离</a></p>
 <p><a href="https://mp.weixin.qq.com/s/-BnkXDOYsqxYN9bnkcBH3w">简言翻译记忆的原理（三）：自动计算两个字符串间的相似度</a></p>
-<p>参考：https://www.dreamxu.com/books/dsa/dp/edit-distance.html</p>
+<p>参考：</p>
+<ol>
+<li>https://www.dreamxu.com/books/dsa/dp/edit-distance.html</li>
+<li></li>
+</ol>
 <p><strong>模块二：术语技术</strong></p>
 <p>（注：术语技术的大部分内容已经在《术语学》课程中讲解过，为保证本课程体系的连贯性，依然会在课程教学大纲中展示）</p>
 <p>第一周：TF-IDF算法</p>
