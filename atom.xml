@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-03-10T08:00:23.310Z</updated>
+    <updated>2021-03-10T14:16:49.216Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -45,6 +45,7 @@ https://www.sohu.com/a/109828891_464088</p>
 <p><strong>1.2 内容管理系统</strong></p>
 <p>内容管理系统（英语：content management system，缩写为 CMS）是指在一个合作模式下，用于管理工作流程的一套制度。该系统可应用于手工操作中，也可以应用到电脑或网络里。作为一种中央储存器（central repository），内容管理系统可将相关内容集中储存并具有群组管理、版本控制等功能。版本控制是内容管理系统的一个主要优势。</p>
 <p>内容管理系统在物品或文案或数据的存储、掌管、修订（盘存）、语用充实、文档发布等方面有着广泛的应用。现在流行的开源CMS系统有WordPress、Joomla!、Drupal、Xoops、CmsTop等。</p>
+<p>参考：<a href="http://blog.sina.com.cn/s/blog_5f4150730102xgav.html">内容管理系统分类</a></p>
 <p>来源：</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">维基百科</a></p>
 <p><strong>1.3 实践：WordPress安装</strong></p>
@@ -127,7 +128,55 @@ https://www.sohu.com/a/109828891_464088</p>
 时间：在班长或学习委员在下周二晚8:00收集好后通过邮件发送给教师<br>
 格式：《技术写作》2021年春季_第一周_姓名_学号.pdf</p>
 <p><strong>第二周：技术写作流程、技术文档类型和技术写作工具</strong></p>
-<p><strong>第三周：技术写作规范和标准</strong></p>
+<p><strong>2.1 技术写作流程</strong></p>
+<p>计划阶段（Planning）：</p>
+<p>· 分析用户（Analyze users）<br>
+· 开展调研（Conduct research）<br>
+· 组织内容（Organize content）<br>
+· 确定交付品（Determine deliverables）</p>
+<p>写作阶段（Developing）：</p>
+<p>· 建立结构化内容（Create structured content）<br>
+· 应用风格（Apply style）<br>
+· 使用技术图示（Use technical illustrations）</p>
+<p>质控阶段（Revising）</p>
+<p>· 审核（Review）<br>
+· 可用性测试（Usability test）<br>
+· Edit（编辑）</p>
+<p>交付阶段（Delivering）</p>
+<p>· 发布和分发（Publish and destribute）<br>
+· 收集用户反馈（Collect user feedback）</p>
+<p>参考：<br>
+《英语技术写作精要》P13-P18</p>
+<p><strong>2.2 技术文档类型</strong></p>
+<p><strong>2.3 技术写作工具</strong></p>
+<p>技术写作（非结构化）：<br>
+· Microsoft Word<br>
+· Adobe FrameMaker (XML Editor)<br>
+· Adobe RoboHelp (XML Editor)<br>
+· Madcap Flare (XML Editor)</p>
+<p>结构化写作：<br>
+· Oxygen XML Author (XML Editor)<br>
+· PTC Abortext Editor (XML Editor)<br>
+· Adobe FrameMaker (XML Editor)</p>
+<p>轻量级标记写作：<br>
+· Markdown 编辑器<br>
+· Notepad++</p>
+<p>组件内容管理系统（Component Content Management Systems, CCMS）：<br>
+· Astoria CCMS<br>
+· Author-it CCMS<br>
+· XDocs DITA CCMS<br>
+· IXIASOFT DITA CMS<br>
+· PTC Windchill Service Information Manager<br>
+· SDL Tridion Docs<br>
+· Schema ST4</p>
+<p>工具选择方案：</p>
+<blockquote>
+<p>If your delivery is just a page of document, Word can be the best choice. If you require topic reuse and multiple output formats such as PDF and HTML, an XML editor is effective. If you require version control, data-storing, or cross-team collaboration, a CCMS is an excellent and expensive option.</p>
+</blockquote>
+<p>参考：<br>
+《英语技术写作精要》P21-P26<br>
+《技术传播手册》P36<br>
+<strong>第三周：技术写作规范和标准</strong></p>
 <p><strong>第四周和第五周：用户分析和研究</strong></p>
 <p><strong>第六周、第七周和第八周：技术文档开发</strong></p>
 <p><strong>第九周和第十周：技术文档产品评价</strong></p>
