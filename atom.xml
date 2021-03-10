@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-03-10T14:18:55.909Z</updated>
+    <updated>2021-03-10T15:10:12.679Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -148,7 +148,46 @@ https://www.sohu.com/a/109828891_464088</p>
 <p>参考：<br>
 《英语技术写作精要》P13-P18</p>
 <p><strong>2.2 技术文档类型</strong></p>
-<p><strong>2.3 技术写作工具</strong></p>
+<p>根据目标用户划分技术文档类型：</p>
+<p>产品用户（Product users）：<br>
+· Online and embedded help<br>
+· User manuals<br>
+· Installation guides<br>
+· Technical training materials<br>
+· Data sheets<br>
+· How-to videos<br>
+· Troubleshooting guides<br>
+· Knowledge base articles<br>
+· FAQs<br>
+· Release notes<br>
+· Glossaries<br>
+· Blogs</p>
+<p>系统管理员（System administrators）：<br>
+· Installation guides<br>
+· Environment guides<br>
+· Data sheets<br>
+· How-to videos<br>
+· Troubleshooting guides<br>
+· Glossaries</p>
+<p>开发者（Developers）：<br>
+· API documentations<br>
+· SDK documentations</p>
+<p>消费者（Consumers）：<br>
+· Brochures and pamphlets<br>
+· White papers<br>
+· Blogs</p>
+<p>决策者（Decision makers）：<br>
+· Project proposals<br>
+· Technical reports<br>
+· White papers</p>
+<p>生产者（Producers）：<br>
+· Design or product specification</p>
+<p>同事或雇员（Colleagues or employees）：<br>
+· Business memos<br>
+· Internal processes and standards<br>
+· Business letters</p>
+<p>参考：<a href="https://zhuanlan.zhihu.com/p/37832180">技术文档种类详解</a><br>
+<strong>2.3 技术写作工具</strong></p>
 <p>技术写作（非结构化）：<br>
 · Microsoft Word<br>
 · Adobe FrameMaker (XML Editor)<br>
