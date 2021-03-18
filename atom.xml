@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://hanlintao.github.io</id>
+    <id>http://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-03-18T02:57:40.603Z</updated>
+    <updated>2021-03-18T03:01:12.275Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://hanlintao.github.io"/>
-    <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
+    <link rel="alternate" href="http://hanlintao.github.io"/>
+    <link rel="self" href="http://hanlintao.github.io/atom.xml"/>
     <subtitle>《译者编程入门指南》官方博客</subtitle>
-    <logo>https://hanlintao.github.io/images/avatar.png</logo>
-    <icon>https://hanlintao.github.io/favicon.ico</icon>
+    <logo>http://hanlintao.github.io/images/avatar.png</logo>
+    <icon>http://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
     <entry>
         <title type="html"><![CDATA[多语言内容管理系统设计与开发【更新中】]]></title>
-        <id>https://hanlintao.github.io/post/multilingualCMS/</id>
-        <link href="https://hanlintao.github.io/post/multilingualCMS/">
+        <id>http://hanlintao.github.io/post/multilingualCMS/</id>
+        <link href="http://hanlintao.github.io/post/multilingualCMS/">
         </link>
         <updated>2021-03-02T03:15:02.000Z</updated>
         <content type="html"><![CDATA[<p>声明：以下文字内容均为韩林涛原创内容，仅在本博客发布，任何人不得转载和抄袭。</p>
@@ -78,13 +78,13 @@ https://www.sohu.com/a/109828891_464088</p>
 <p>我们在本课程中要重点学习如何将WordPress调整成多语言版。我们使用的是名为Polylang的插件，参考：<a href="https://www.easywpbook.com/i18n/polylang.html">使用Polylang插件建设一个多语言站点</a>。</p>
 <p>按照上述教程来操作，你将获得自己的第一个多语言内容管理系统。接下来我们还可以尝试将这个网站放到公开网络中供他人去访问，这就需要自己去购买服务器和域名，具体流程参见以下教程：<a href="https://www.bilibili.com/video/BV1M7411c7BT">一步步吭哧吭哧制作个人双语网站</a>，重点观看P2、P3、P4。</p>
 <p>当我们拥有了一个可以公开访问的博客后，我们希望将多语言的数据库发布到网络上供他人检索和查询，比如我们希望将双语术语库发布到网站上，或者将双语句对发布到网站上供他人检索。那我们就可以使用WordPress的TablePress插件，通过该插件，我们可以直接将本地Excel表格中的双语术语表发布到WordPress博客中供他人检索，如下图：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1615257827346.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1615257827346.png" alt="" loading="lazy"></figure>
 <p>整个过程的逻辑是：</p>
 <p>· 安装TablePress插件<br>
 · 在WordPress的TablePress区域创建一个空白表格，并将本地电脑上的Excel表格上传到该空白表格中<br>
-<img src="https://hanlintao.github.io/post-images/1615257921016.png" alt="" loading="lazy"></p>
+<img src="http://hanlintao.github.io/post-images/1615257921016.png" alt="" loading="lazy"></p>
 <p>· 成功创建的表格会自动生成一个“简码”，并将这个简码插入到博客文章中：</p>
-<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1615260009478.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://hanlintao.github.io/post-images/1615260009478.png" alt="" loading="lazy"></figure>
 <p>· 文章发布后即可看到表格，并能通过表格自带的搜索框进行数据检索。</p>
 <h2 id="第二章-多语言内容管理系统与翻译实践">第二章 多语言内容管理系统与翻译实践</h2>
 <h2 id="第三章-简易平行语料库的设计与开发">第三章 简易平行语料库的设计与开发</h2>
@@ -93,8 +93,8 @@ https://www.sohu.com/a/109828891_464088</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[《技术写作》课程教学大纲]]></title>
-        <id>https://hanlintao.github.io/post/technicalwriting/</id>
-        <link href="https://hanlintao.github.io/post/technicalwriting/">
+        <id>http://hanlintao.github.io/post/technicalwriting/</id>
+        <link href="http://hanlintao.github.io/post/technicalwriting/">
         </link>
         <updated>2021-02-28T03:26:05.000Z</updated>
         <content type="html"><![CDATA[<p>2021年2月修订</p>
@@ -248,7 +248,7 @@ https://www.sohu.com/a/109828891_464088</p>
 <p>来源：<a href="https://www.iso.org/standard/71620.html">IEC/IEEE 82079-1:2019</a></p>
 <p>原文链接：<a href="https://www.doc88.com/p-5367840793617.html">https://www.doc88.com/p-5367840793617.html</a></p>
 <p>IEC 82079-1 标准包含七个主要章节，第 4 章到第 6 章是其“核心内容”：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1616031926963.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1616031926963.png" alt="" loading="lazy"></figure>
 <p>参考：<a href="http://www.china.tcworld.info/%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97/%E6%8A%80%E6%9C%AF%E5%86%99%E4%BD%9C/News/isoiec-82079-1-%E6%A0%87%E5%87%86%E7%AE%80%E4%BB%8B/">ISO/IEC 82079-1 标准简介</a></p>
 <p><strong>3.3 GB 5296.1</strong></p>
 <p>消费品使用说明 第1部分：总则</p>
@@ -281,8 +281,8 @@ https://www.sohu.com/a/109828891_464088</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[《翻译与本地化技术原理》课程教学大纲]]></title>
-        <id>https://hanlintao.github.io/post/fanyijishuyuanli/</id>
-        <link href="https://hanlintao.github.io/post/fanyijishuyuanli/">
+        <id>http://hanlintao.github.io/post/fanyijishuyuanli/</id>
+        <link href="http://hanlintao.github.io/post/fanyijishuyuanli/">
         </link>
         <updated>2021-02-05T04:12:26.000Z</updated>
         <content type="html"><![CDATA[<p>2021年2月修订</p>
@@ -334,8 +334,8 @@ https://www.sohu.com/a/109828891_464088</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[译者编程冷知识：二进制与UTF-8]]></title>
-        <id>https://hanlintao.github.io/post/binary/</id>
-        <link href="https://hanlintao.github.io/post/binary/">
+        <id>http://hanlintao.github.io/post/binary/</id>
+        <link href="http://hanlintao.github.io/post/binary/">
         </link>
         <updated>2021-01-13T11:24:21.000Z</updated>
         <summary type="html"><![CDATA[<p>对于文科背景的译者而言，理解十进制、二进制、UTF-8是一件从骨子里觉得自己不可能理解的计算机知识点。</p>
@@ -476,8 +476,8 @@ https://www.sohu.com/a/109828891_464088</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[开发支持多检索词的搜索引擎所需代码]]></title>
-        <id>https://hanlintao.github.io/post/multiqueries/</id>
-        <link href="https://hanlintao.github.io/post/multiqueries/">
+        <id>http://hanlintao.github.io/post/multiqueries/</id>
+        <link href="http://hanlintao.github.io/post/multiqueries/">
         </link>
         <updated>2021-01-13T03:01:26.000Z</updated>
         <summary type="html"><![CDATA[<p>有读者问到：“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”</p>
@@ -601,7 +601,7 @@ $sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'
 &lt;/html&gt;
 </code></pre>
 <p>效果如下图：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610508603777.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610508603777.png" alt="" loading="lazy"></figure>
 <p>一旦接受了两个检索词，那么result.php也得修改，如下：</p>
 <pre><code>&lt;?php
 
@@ -629,14 +629,14 @@ else{
 ?&gt;
 </code></pre>
 <p>这里面的关键就是SQL语句的写法，大家看下面这个截图：</p>
-<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610509423827.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://hanlintao.github.io/post-images/1610509423827.png" alt="" loading="lazy"></figure>
 <p>在这个截图中，我想搜索包含“卫生”和“中心”的句子，于是我构造的条件是：</p>
 <pre><code>zh_CN LIKE &quot;%卫生%&quot; AND zh_CN LIKE &quot;%中心%&quot;
 </code></pre>
 <p>也就是说我先让zh_CN对应的中文字段去查看是否有数据中包含“卫生”，然后再去看zh_CN对应的中文字段是否有包含“卫生”的数据，且两个条件必须要同时满足。</p>
 <p>给大家再看一个实际的检索结果展示：</p>
-<figure data-type="image" tabindex="3"><img src="https://hanlintao.github.io/post-images/1610509977939.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://hanlintao.github.io/post-images/1610509958790.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://hanlintao.github.io/post-images/1610509977939.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://hanlintao.github.io/post-images/1610509958790.png" alt="" loading="lazy"></figure>
 <p>这个应该就与这位读者想实现的功能保持一致了。</p>
 <p>为了帮助大家更好实践，我把代码也放到了这里：</p>
 <p>index.php</p>
@@ -756,8 +756,8 @@ else{
     </entry>
     <entry>
         <title type="html"><![CDATA[开发TMX文件上传功能所需代码]]></title>
-        <id>https://hanlintao.github.io/post/tmxupload/</id>
-        <link href="https://hanlintao.github.io/post/tmxupload/">
+        <id>http://hanlintao.github.io/post/tmxupload/</id>
+        <link href="http://hanlintao.github.io/post/tmxupload/">
         </link>
         <updated>2021-01-13T02:19:17.000Z</updated>
         <summary type="html"><![CDATA[<p>在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。</p>
@@ -834,7 +834,7 @@ else
 <p>以上代码均来自于本书第五章，其中代码五是代码四的升级版，修改的主要内容就是将用户上传的文件放到一个指定的文件夹中。</p>
 <p>对于初学者而言，如果就想使用上面的代码来实现TMX文件的上传是没有任何问题的，每当上传一个文件后，这个文件就会进入到upload文件夹中。</p>
 <p>我给大家看一下我电脑上的文件夹结构：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610505378914.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610505378914.png" alt="" loading="lazy"></figure>
 <p>如果你将上面的代码按照这个文件夹结构来撰写的话，就会得到一个可以正常上传TMX文件的功能。</p>
 <h2 id="tmx文件读取">TMX文件读取</h2>
 <p>既然能够上传TMX文件了，那么我们就也可以读取TMX文件了，读取的方法就是利用本书第六章所使用的代码：</p>
@@ -899,8 +899,8 @@ else
     </entry>
     <entry>
         <title type="html"><![CDATA[译者编程冷知识：位和字节]]></title>
-        <id>https://hanlintao.github.io/post/bit_byte/</id>
-        <link href="https://hanlintao.github.io/post/bit_byte/">
+        <id>http://hanlintao.github.io/post/bit_byte/</id>
+        <link href="http://hanlintao.github.io/post/bit_byte/">
         </link>
         <updated>2021-01-12T08:59:33.000Z</updated>
         <summary type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
@@ -917,7 +917,7 @@ else
 <p>接下来我们一起来看看什么是“位”。</p>
 <p>在计算机术语中，“位”可以对应两个英文单词：Digit和Bit。</p>
 <p>牛津词典里Digit的释义如下：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
 <p>在这个解释里，第一个解释很好理解，就是数字、数位、位。比如Digital（数字的、数字化的、数码的）的词根就是Digit。</p>
 <p>不过不少人可能不知道第二个意思，digit的本意是手指。所以一个手指头就是一个“digit”。当你举起一个手指头时，我们可以数“1”，而当你把这个手指头又收回去的时候，我们可以数“0”。所以这个手指的伸缩可以表示0和1两种状态，因此我们可以称这个手指头为“Binary Digit”，简称为“Bit”。</p>
 <p>在翻译的时候，“Binary Digit”翻译成：二进制位；“Bit”翻译成“比特位”，这个比特完全是从英文音译过来的，“比特”这两个汉字本身没有什么意义。</p>
@@ -926,14 +926,14 @@ else
 <p>其实现在很多人都知道字节的英文是什么，因为“字节跳动”的英文是“ByteDance”。</p>
 <p>“位”和“字节”的关系可以这样来记住：一个字节（byte）等于8个比特位（bit）。当你伸出8个手指头时，一口全部咬掉（bite）。这个“bite”用得有点冷，但事实上，字节这个词的英文“byte”就是从“bite”来的，只不过觉得可能会跟“bit”混淆，所以人为修改成了“byte”。</p>
 <p>以下是牛津词典对“Byte”的解释：</p>
-<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
 <p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[开发简易在线翻译记忆库所需代码]]></title>
-        <id>https://hanlintao.github.io/post/bilingualtm/</id>
-        <link href="https://hanlintao.github.io/post/bilingualtm/">
+        <id>http://hanlintao.github.io/post/bilingualtm/</id>
+        <link href="http://hanlintao.github.io/post/bilingualtm/">
         </link>
         <updated>2021-01-09T02:42:51.000Z</updated>
         <summary type="html"><![CDATA[<p>计算机辅助翻译技术的核心技术之一就是翻译记忆技术，涉及到翻译记忆库的对齐生成、翻译记忆库的管理、翻译记忆库的检索、翻译记忆库的相似度匹配等等，因此对于译者而言，善用翻译记忆库将能极大提升翻译的效率。</p>
@@ -1261,14 +1261,14 @@ else{
 <p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=5">如何将本地代码和数据库更新到服务器上</a></p>
 <iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155652119&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
-<p><img src="https://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
-<img src="https://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
+<p><img src="http://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
+<img src="http://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[开发简易在线双语术语库所需代码]]></title>
-        <id>https://hanlintao.github.io/post/bilingualtermbase/</id>
-        <link href="https://hanlintao.github.io/post/bilingualtermbase/">
+        <id>http://hanlintao.github.io/post/bilingualtermbase/</id>
+        <link href="http://hanlintao.github.io/post/bilingualtermbase/">
         </link>
         <updated>2021-01-08T12:47:14.000Z</updated>
         <summary type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
@@ -1392,13 +1392,13 @@ else{
 ?&gt;
 </code></pre>
 <p>在《译者编程入门指南》一书的第四章，我详细介绍了如何开发简易的在线双语术语库：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[译者的第一个博客]]></title>
-        <id>https://hanlintao.github.io/post/first_blog/</id>
-        <link href="https://hanlintao.github.io/post/first_blog/">
+        <id>http://hanlintao.github.io/post/first_blog/</id>
+        <link href="http://hanlintao.github.io/post/first_blog/">
         </link>
         <updated>2021-01-07T13:57:48.000Z</updated>
         <summary type="html"><![CDATA[<p>大家好！我是《译者编程入门指南》的作者韩林涛，我希望通过这篇帖子鼓励更多翻译专业的同学、职业译者、翻译爱好者建立自己的第一个博客。</p>
@@ -1471,19 +1471,19 @@ else{
 <p><strong>第三步</strong>：生成一个令牌（0.5 分钟）</p>
 <p>这个操作网上有很多，半分钟即可完成</p>
 <p><strong>第四步</strong>：在Gridea中配置基本信息（1 分钟）</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610030793929.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610030793929.png" alt="" loading="lazy"></figure>
 <p>在上面这个图可以看到，Gridea的界面非常小清新，而且十分简单。把前面几步得到的基本信息放进去再保存即可（注：上图的最后一行codeslator.blog是后面才加的，第一次配置不需要添加）</p>
 <p><strong>第五步</strong>：点击“同步”（0.5 分钟）</p>
 <p>点击了左下角的“同步”按钮后，你的博客的静态页面就发布到Github上了，然后就可以通过仓库名来访问了。</p>
 <p>如果你不想去注册域名，就停留在现在这个阶段，那么你会觉得一天的心情都特别好，有种在蔚蓝海岸黄金沙滩奔跑戏水的感觉。</p>
 <p>总之，以上操作12分钟内就可以完成。</p>
 <p>完成之后就可以开始写作了，写作页面如下：</p>
-<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610031094054.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://hanlintao.github.io/post-images/1610031094054.png" alt="" loading="lazy"></figure>
 <p>每次写作完就点击“同步”，这样就会把本地的文字推送到Github上去供别人访问。</p>
 <p>目前我就写了几篇文章，列表界面如下：</p>
-<figure data-type="image" tabindex="3"><img src="https://hanlintao.github.io/post-images/1610031173537.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://hanlintao.github.io/post-images/1610031173537.png" alt="" loading="lazy"></figure>
 <p>而且也可以换主题、换头像、修改网站的基本信息：</p>
-<figure data-type="image" tabindex="4"><img src="https://hanlintao.github.io/post-images/1610031235072.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://hanlintao.github.io/post-images/1610031235072.png" alt="" loading="lazy"></figure>
 <p>简直是太简单了！</p>
 <p>而且还可以设置博客所有文章的保存地址，将博客的所有文章保存在OneDrive、iCloud这种网盘里，即便电脑突然死机，文字也都存在云上，不担心丢失。（当然，边写也要边按保存快捷键）</p>
 <p>如果你还想绑定自己的域名，那就花个几十块钱去GoDaddy上买个域名，然后再通过Github的仓库设置来绑定，10分钟就搞定了（你当然还需要照着教程操作一下了）</p>
@@ -1504,15 +1504,15 @@ else{
 <p>我的坑已经踩过了，大家遇到时可前往不要害怕哦！</p>
 <p><strong>如何添加好看的封面图</strong></p>
 <p>我从开始维护CodeSlator这个品牌开始，就使用iSlide插件里面提供的各种插画和模板：</p>
-<figure data-type="image" tabindex="5"><img src="https://hanlintao.github.io/post-images/1610116865348.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="http://hanlintao.github.io/post-images/1610116865348.png" alt="" loading="lazy"></figure>
 <p>选择好看的插画后就放到PPT模板中：</p>
-<figure data-type="image" tabindex="6"><img src="https://hanlintao.github.io/post-images/1610116933847.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="http://hanlintao.github.io/post-images/1610116933847.png" alt="" loading="lazy"></figure>
 <p>PPT的导出功能是支持直接将某一页PPT导出成图片的。如此一来每篇文章发布的时候就换个插画，把文章标题放进去，CodeSlator的logo也保持在固定位置，这个时候给读者的感觉就是简单、统一、整洁。</p>
 <p><strong>如何跟踪博客每条的浏览量</strong></p>
 <p>这么些年来我写博客做分享最大的一个感受就是：写完一篇文章后真的不必去关注浏览量，因为你永远不知道明天谁会打开你的博客，不知道TA阅读了你的文章后会有怎样的感受。</p>
 <p>不过如果你真的想关注，可以使用Google Analytics，用Gmail打开后简单操作一下就会生成一个ID，然后再把这个ID插入到Gridea后台即可。</p>
 <p>下面这个是博客浏览量的展示：</p>
-<figure data-type="image" tabindex="7"><img src="https://hanlintao.github.io/post-images/1610203536130.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="http://hanlintao.github.io/post-images/1610203536130.png" alt="" loading="lazy"></figure>
 <p>看了之后其实会比较心寒，因为你会发现其实没有几个人会关注这个博客。但是，大家前往不要因为这个浏览量低就不再写博客，高楼大厦非一日建成。你的博客可以是为自己写的，也可以是为他人写的，知道自己为什么要写作就可以了。</p>
 ]]></content>
     </entry>

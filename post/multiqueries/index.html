@@ -3,10 +3,10 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>开发支持多检索词的搜索引擎所需代码 | CodeSlator Blog</title>
-<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1616035028493">
+<link rel="shortcut icon" href="http://hanlintao.github.io/favicon.ico?v=1616036470537">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="开发支持多检索词的搜索引擎所需代码 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="http://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="开发支持多检索词的搜索引擎所需代码 | CodeSlator Blog - Atom Feed" href="http://hanlintao.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
@@ -30,8 +30,8 @@
     <div class="main">
       <div class="main-content">
         <div class="site-header">
-  <a href="https://hanlintao.github.io">
-  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1616035028493" alt="">
+  <a href="http://hanlintao.github.io">
+  <img class="avatar" src="http://hanlintao.github.io/images/avatar.png?v=1616036470537" alt="">
   </a>
   <h1 class="site-title">
     CodeSlator Blog
@@ -106,13 +106,13 @@
                 10 min read
               </span>
               
-                <a href="https://hanlintao.github.io/tag/MWX9j5h6K/" class="post-tag">
+                <a href="http://hanlintao.github.io/tag/MWX9j5h6K/" class="post-tag">
                   # samplecode
                 </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/multiqueries.png" alt="">
+              <img class="post-feature-image" src="http://hanlintao.github.io/post-images/multiqueries.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
@@ -234,7 +234,7 @@ $sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'
 &lt;/html&gt;
 </code></pre>
 <p>效果如下图：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610508603777.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610508603777.png" alt="" loading="lazy"></figure>
 <p>一旦接受了两个检索词，那么result.php也得修改，如下：</p>
 <pre><code>&lt;?php
 
@@ -262,14 +262,14 @@ else{
 ?&gt;
 </code></pre>
 <p>这里面的关键就是SQL语句的写法，大家看下面这个截图：</p>
-<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610509423827.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://hanlintao.github.io/post-images/1610509423827.png" alt="" loading="lazy"></figure>
 <p>在这个截图中，我想搜索包含“卫生”和“中心”的句子，于是我构造的条件是：</p>
 <pre><code>zh_CN LIKE &quot;%卫生%&quot; AND zh_CN LIKE &quot;%中心%&quot;
 </code></pre>
 <p>也就是说我先让zh_CN对应的中文字段去查看是否有数据中包含“卫生”，然后再去看zh_CN对应的中文字段是否有包含“卫生”的数据，且两个条件必须要同时满足。</p>
 <p>给大家再看一个实际的检索结果展示：</p>
-<figure data-type="image" tabindex="3"><img src="https://hanlintao.github.io/post-images/1610509977939.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://hanlintao.github.io/post-images/1610509958790.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://hanlintao.github.io/post-images/1610509977939.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://hanlintao.github.io/post-images/1610509958790.png" alt="" loading="lazy"></figure>
 <p>这个应该就与这位读者想实现的功能保持一致了。</p>
 <p>为了帮助大家更好实践，我把代码也放到了这里：</p>
 <p>index.php</p>
@@ -406,7 +406,7 @@ else{
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://hanlintao.github.io/post/tmxupload/">
+            <a href="http://hanlintao.github.io/post/tmxupload/">
               <h3 class="post-title">
                 开发TMX文件上传功能所需代码
               </h3>
@@ -444,7 +444,7 @@ else{
 
         <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>  Edited by CodeSlator
-  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+  <a class="rss" href="http://hanlintao.github.io/atom.xml" target="_blank">
     <i class="ri-rss-line"></i> RSS
   </a>
 </div>
