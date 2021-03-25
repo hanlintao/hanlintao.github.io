@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-03-25T03:40:15.213Z</updated>
+    <updated>2021-03-25T04:01:41.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://hanlintao.github.io"/>
     <link rel="self" href="http://hanlintao.github.io/atom.xml"/>
@@ -10,6 +10,66 @@
     <logo>http://hanlintao.github.io/images/avatar.png</logo>
     <icon>http://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[译者的效率工具集合]]></title>
+        <id>http://hanlintao.github.io/post/666/</id>
+        <link href="http://hanlintao.github.io/post/666/">
+        </link>
+        <updated>2021-03-25T03:40:26.000Z</updated>
+        <content type="html"><![CDATA[<p>有的效率工具你知道了就会变得很厉害，不知道也就不知道了，所以我想把这些都整理一下发给大家。如果你们有什么很棒的效率工具，也可以在下方留言区分享给我，我汇总到这里来。</p>
+<h2 id="pdf相关">PDF相关</h2>
+<p><strong>编辑PDF</strong></p>
+<p>在Windows操作系统中我离不开Nitro Pro这款工具，目前国内只能找到破解版的，购买的话可以去官网可以花128美元买到，折合人民币是836元左右。<a href="https://www.gonitro.com/pricing">Nitro Pro</a></p>
+<p>在Mac上我没有发现特别好的PDF编辑工具。</p>
+<p><strong>标记PDF</strong></p>
+<p>在Mac上如果想标记PDF并且阅读的话，我强烈推荐MarginNote。<a href="https://www.marginnote.com/">MarginNote</a></p>
+<h2 id="视频相关">视频相关</h2>
+<p><strong>剪辑视频</strong></p>
+<p>用ffmpeg可以方便大家剪辑视频，这个技能超级棒，但有一点点的学习成本，我写过几篇帖子，分享给大家：</p>
+<p><a href="https://mp.weixin.qq.com/s/BsQ-3QgwxNB7sEuVDkX_CA">在视频本地化过程中使用ffmpeg提升效率</a><br>
+<a href="https://mp.weixin.qq.com/s/RnXysCq9SFIALGurdOYHzQ">在视频本地化过程中使用ffmpeg提升效率（二）视频转文字</a><br>
+<a href="https://mp.weixin.qq.com/s/LrHb6nKGkPZ-xmVOndcJYw">如何将视频的字幕单独识别成文字</a></p>
+<p>场景：有个1小时的视频，领导就想用其中的5分钟，你如何截取出来呢？<br>
+方案：可以用ffmpeg，非常方便。</p>
+<p>我的学生说剪映的桌面端和移动端都非常强大，也可以快速完成这项工作，你们也可以去试试：<a href="https://lv.ulikecam.com/">剪映</a></p>
+<p><strong>屏幕录屏</strong></p>
+<p>很多人都会推荐各种各种录屏软件，其实大家会发现像腾讯会议、钉钉会议这种用来开会的软件就可以录屏，无非就是开个会议然后自己讲自己录，会议开完就导出视频，非常方便，也非常清晰。有的会议系统还可以录制电脑自带的声音。</p>
+<p>当然，也可以使用OBS，免费的，特别棒，我的《译者编程入门指南》的全套视频教程都是在Mac上用OBS录制的。</p>
+<h2 id="文本处理相关">文本处理相关</h2>
+<p><strong>整理双语文本</strong></p>
+<p>广外陈杲老师和他的小伙伴研制的斑斓科技小助手 1.0非常棒：<a href="http://edu.bon-lion.com/bon-lion-helper/">斑斓科技小助手 1.0（22 项常用功能）</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[译者的效率工具集合]]></title>
+        <id>http://hanlintao.github.io/post/yi-zhe-de-xiao-lu-gong-ju-ji-he/</id>
+        <link href="http://hanlintao.github.io/post/yi-zhe-de-xiao-lu-gong-ju-ji-he/">
+        </link>
+        <updated>2021-03-25T03:40:26.000Z</updated>
+        <content type="html"><![CDATA[<p>有的效率工具你知道了就会变得很厉害，不知道也就不知道了，所以我想把这些都整理一下发给大家。如果你们有什么很棒的效率工具，也可以在下方留言区分享给我，我汇总到这里来。</p>
+<h2 id="pdf相关">PDF相关</h2>
+<p><strong>编辑PDF</strong></p>
+<p>在Windows操作系统中我离不开Nitro Pro这款工具，目前国内只能找到破解版的，购买的话可以去官网可以花128美元买到，折合人民币是836元左右。<a href="https://www.gonitro.com/pricing">Nitro Pro</a></p>
+<p>在Mac上我没有发现特别好的PDF编辑工具。</p>
+<p><strong>标记PDF</strong></p>
+<p>在Mac上如果想标记PDF并且阅读的话，我强烈推荐MarginNote。<a href="https://www.marginnote.com/">MarginNote</a></p>
+<h2 id="视频相关">视频相关</h2>
+<p><strong>剪辑视频</strong></p>
+<p>用ffmpeg可以方便大家剪辑视频，这个技能超级棒，但有一点点的学习成本，我写过几篇帖子，分享给大家：</p>
+<p><a href="https://mp.weixin.qq.com/s/BsQ-3QgwxNB7sEuVDkX_CA">在视频本地化过程中使用ffmpeg提升效率</a><br>
+<a href="https://mp.weixin.qq.com/s/RnXysCq9SFIALGurdOYHzQ">在视频本地化过程中使用ffmpeg提升效率（二）视频转文字</a><br>
+<a href="https://mp.weixin.qq.com/s/LrHb6nKGkPZ-xmVOndcJYw">如何将视频的字幕单独识别成文字</a></p>
+<p>场景：有个1小时的视频，领导就想用其中的5分钟，你如何截取出来呢？<br>
+方案：可以用ffmpeg，非常方便。</p>
+<p>我的学生说剪映的桌面端和移动端都非常强大，也可以快速完成这项工作，你们也可以去试试：<a href="https://lv.ulikecam.com/">剪映</a></p>
+<p><strong>屏幕录屏</strong></p>
+<p>很多人都会推荐各种各种录屏软件，其实大家会发现像腾讯会议、钉钉会议这种用来开会的软件就可以录屏，无非就是开个会议然后自己讲自己录，会议开完就导出视频，非常方便，也非常清晰。有的会议系统还可以录制电脑自带的声音。</p>
+<p>当然，也可以使用OBS，免费的，特别棒，我的《译者编程入门指南》的全套视频教程都是在Mac上用OBS录制的。</p>
+<h2 id="文本处理相关">文本处理相关</h2>
+<p><strong>整理双语文本</strong></p>
+<p>广外陈杲老师和他的小伙伴研制的斑斓科技小助手 1.0非常棒：<a href="http://edu.bon-lion.com/bon-lion-helper/">斑斓科技小助手 1.0（22 项常用功能）</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[多语言内容管理系统设计与开发【更新中】]]></title>
         <id>http://hanlintao.github.io/post/multilingualCMS/</id>
@@ -1283,257 +1343,6 @@ else{
 <p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
 <p><img src="http://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
 <img src="http://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[开发简易在线双语术语库所需代码]]></title>
-        <id>http://hanlintao.github.io/post/bilingualtermbase/</id>
-        <link href="http://hanlintao.github.io/post/bilingualtermbase/">
-        </link>
-        <updated>2021-01-08T12:47:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
-<!-- more -->
-<h2 id="本地编程环境搭建">本地编程环境搭建</h2>
-<p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
-<p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
-<p>http://codeslator.edusoho.cn/course/2</p>
-<p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
-<h2 id="线上编程环境访问">线上编程环境访问</h2>
-<p>在译者编程入门指南讲座中我一般会带着大家学习一些比较简单的代码，大家最好能够提前打开以下网站：</p>
-<p>https://c.runoob.com/compile/1</p>
-<p>和</p>
-<p>https://c.runoob.com/compile/9</p>
-<p>通过上面两个网站我们可以练习一些简单的PHP和Python基础知识。</p>
-<h2 id="所需代码">所需代码</h2>
-<p><strong>代码一：基础网页代码</strong></p>
-<p>index.php</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-
-&lt;title&gt;STITERM&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-
-</code></pre>
-<p><strong>代码二：查询框</strong></p>
-<p>index.php</p>
-<pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
-
-&lt;table&gt;
-&lt;tr&gt;
-    &lt;td&gt;
-        &lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
-    &lt;/td&gt;
-
-    &lt;td&gt;
-        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
-    &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;/form&gt;
-
-</code></pre>
-<p><strong>代码三：获取检索词</strong></p>
-<p>result.php</p>
-<pre><code>&lt;?php
-    $term = $_POST[&quot;term&quot;];
-?&gt;
-</code></pre>
-<p><strong>代码四：创建数据库</strong></p>
-<pre><code>CREATE DATABASE fmprc 
-DEFAULT CHARACTER SET utf8 
-DEFAULT COLLATE utf8_general_ci;
-
-</code></pre>
-<p><strong>代码五：创建数据表</strong></p>
-<pre><code>CREATE TABLE `tm` 
-( 
-    `ID` INT(5) NOT NULL AUTO_INCREMENT , 
-    `zh_CN` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
-    `en_US` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
-    PRIMARY KEY (`ID`) 
-) 
-ENGINE = InnoDB 
-CHARSET=utf8 
-COLLATE utf8_general_ci;
-
-</code></pre>
-<p><strong>代码六：连接服务器</strong></p>
-<pre><code>&lt;?php
-$dbhost = &quot;localhost&quot;; //数据库所在主机地址
-$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
-$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
-
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
-
-if(!$conn)
-{
-   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
-}
-
-?&gt;
-</code></pre>
-<p><strong>代码七：选择数据库</strong></p>
-<pre><code>&lt;?php
-mysqli_select_db($conn,&quot;fmprc&quot;);
-mysqli_query($conn,&quot;set names 'utf8'&quot;);
-?&gt;
-</code></pre>
-<p><strong>代码八：获取检索结果</strong></p>
-<pre><code>&lt;?php
-
-$term = $_POST[&quot;term&quot;];
-
-$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
-
-$getterm = mysqli_query($conn,$sql);
-
-if(!$getterm)
-{
-    echo &quot;无法获取术语，请检查问题！&quot;;
-}
-else{
-
-    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
-    {
-        echo $row[&quot;zh_CN&quot;];
-        echo $row[&quot;en_US&quot;];
-    }
-}
-?&gt;
-</code></pre>
-<p>在《译者编程入门指南》一书的第四章，我详细介绍了如何开发简易的在线双语术语库：</p>
-<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[译者的第一个博客]]></title>
-        <id>http://hanlintao.github.io/post/first_blog/</id>
-        <link href="http://hanlintao.github.io/post/first_blog/">
-        </link>
-        <updated>2021-01-07T13:57:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>大家好！我是《译者编程入门指南》的作者韩林涛，我希望通过这篇帖子鼓励更多翻译专业的同学、职业译者、翻译爱好者建立自己的第一个博客。</p>
-<p>当你看完这篇帖子时，希望你能够立即着手创建自己的第一个博客。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>大家好！我是《译者编程入门指南》的作者韩林涛，我希望通过这篇帖子鼓励更多翻译专业的同学、职业译者、翻译爱好者建立自己的第一个博客。</p>
-<p>当你看完这篇帖子时，希望你能够立即着手创建自己的第一个博客。</p>
-<!-- more -->
-<p>我们开始吧！</p>
-<h2 id="一-译者为何要创建博客">一、译者为何要创建博客</h2>
-<p>我给大家说说为什么我想创建博客：</p>
-<ol>
-<li>我希望拥有自己的专属域名</li>
-<li>我希望创建自己的职业品牌</li>
-<li>我希望发布自己的特色文章</li>
-</ol>
-<p>这些年来我一直鼓动我的学生开通微信公众号，从大学时代就养成写作的习惯，但是他们遇到了许多问题：</p>
-<ol>
-<li>微博不适合文章写作</li>
-<li>微信公众平台限制写作灵感</li>
-<li>个人博客搭建难度大</li>
-<li>个人博客维护成本高</li>
-<li>第三方博客随时会倒闭</li>
-</ol>
-<p>基于以上原因，借着推广译者编程项目的势头，我给大家提供一种可以解决以上问题方法：</p>
-<p>创建自己的Github Pages</p>
-<h2 id="二-译者如何选择博客平台">二、译者如何选择博客平台</h2>
-<p>现在有许多搭建博客的方法，我基本上都尝试过，各有利弊：</p>
-<ul>
-<li>第三方博客平台</li>
-</ul>
-<p>早年间新浪博客广为人知，众多明星都会开通自己的新浪博客，大家熟知的QQ空间也是第三方博客平台的一种。</p>
-<p>但是渐渐的没什么人用了，这是因为第三方博客限制极多：广告、删帖、水军......</p>
-<p>现在程序员社区还是有许多第三方博客平台依然火热，比如博客园（cnblogs），但译员用得很少，所以我也不推荐大家去这样的博客平台注册账号。</p>
-<ul>
-<li>微信公众平台</li>
-</ul>
-<p>我的微信公众平台“简言”自2014年创建到现在已经有12000关注者，我现在依然在精心的维护着，但是在写作时也会受到许多限制，其中最主要的三点就是：一天只能发一次；发布之后无法大幅度修改；在搜索引擎中难以搜到我的文章。</p>
-<p>许多人不认为这是限制，但是我觉得这种写作方式不利于产出大量的文字。而且我非常担心有一天微信公众平台突然被封，我的所有文章全都会灰飞烟灭。所以，我其实也不推荐大家去注册微信公众平台账号。</p>
-<ul>
-<li>WordPress等博客建站程序</li>
-</ul>
-<p>我从2011年便开始使用WordPress这种专业的开源博客程序来搭建自己的独立博客，但十年过去了，我明显觉得用WordPress搭建的博客相对臃肿，后台功能太繁琐，其实并不适合译者去维护，而且译者还要去购买域名和服务器，还要将二者绑定在一起，这拦住了不少初学者。虽然我不反对大家去使用WordPress来做个人博客，但这里并不主推。</p>
-<ul>
-<li>静态博客</li>
-</ul>
-<p>静态博客已经火了很多年了，我一直没有着手去做，主要原因是我觉得微信公众平台我已经维护了6年了，没有必要另起炉灶。但如今《译者编程入门指南》这本教材已经推出，我的一部分精力专门放在推动译者学编程这件事儿上，最近发的文章也都是与编程学习相关，许多朋友直呼已经看不懂我写的东西好久了。</p>
-<p>所以我前段时间计划专门做一个《译者编程入门指南》的官方博客，并且很快就决定要使用静态博客的方式。</p>
-<p>静态博客的逻辑大致是这样：</p>
-<p><strong>第一步</strong>：将博客程序安装自己的个人电脑上，先通过一顿猛如虎的极客操作安装一些这辈子第一次听说的软件，然后终于看到一个极为简洁的博客页面</p>
-<p><strong>第二步</strong>：将自己的博客网站所有的页面都导出成静态的HTML网页、CSS文件、图片文件等</p>
-<p><strong>第三步</strong>：注册一个全世界程序员都在使用的代码托管平台，比如Github，然后把第二步得到的静态网页全都上传到这个Github上的一个专属空间里（俗称：仓库）。</p>
-<p><strong>第四步</strong>：实际上到了第三步，博客就创建完成了，而且不需要花一分钱。但还可以进一步注册一个自己的专属域名，将这个域名与自己的Github专属空间做一个绑定。</p>
-<p><strong>第五步</strong>：重复第一步的操作，在自己的电脑上撰写博客，而且是用一种叫Markdown的极简语法来写博客。写完后将整个网站再次发布成静态网页，然后再发布到Github上的专属空间里，然后所有人都可以通过你的专属域名来访问。你也可以拿着这个域名去对外宣传自己。</p>
-<p>那么上面这种搭建静态博客的方法容易吗？</p>
-<p>在看我这篇帖子前，你如果看了网上别人介绍的方法，你肯定会觉得难！太难了！太太太难了！</p>
-<p>为什么？</p>
-<p>因为常见的集中静态博客搭建程序都非常极客，他们分别是：Github的嫡系<a href="https://jekyllrb.com/">Jekyll</a>、自称世界最快的网站搭建框架<a href="https://gohugo.io/">Hugo</a>、自称快速简洁且高效的博客框架<a href="https://hexo.io/zh-cn/">Hexo</a></p>
-<p>我看了他们的教程，并决定：不向我的任何一位读者推荐他们。</p>
-<p>那么我要推荐什么呢？</p>
-<p><a href="https://gridea.dev/">Gridea</a>：由一位年轻的国人@EryouHao独立开发的静态博客客户端产品</p>
-<p>这个工具哪里好呢？</p>
-<h2 id="三-译者如何使用gridea开通自己的第一个独立博客">三、译者如何使用Gridea开通自己的第一个独立博客</h2>
-<p>接下来我用我搭建CodeSlator.blog这个静态为例给大家展示它有多方便：</p>
-<p><strong>第一步</strong>：下载并安装Gridea（2 分钟）</p>
-<p>前往Gridea的官方网站下载安装包（Windows和Mac都有），就几十兆，轻松下载并安装。</p>
-<p><strong>第二步</strong>：创建Github Pages（8分钟）</p>
-<p>这个过程因人而异，我自己早就注册了Github账号，如果你没有就自己去创建一个：github.com</p>
-<p>创建完成后再创建一个仓库，比如我的Github的用户名是hanlintao，我创建的仓库名就是：hanlintao.github.io，这个也是你未来独立博客的访问地址</p>
-<p><strong>第三步</strong>：生成一个令牌（0.5 分钟）</p>
-<p>这个操作网上有很多，半分钟即可完成</p>
-<p><strong>第四步</strong>：在Gridea中配置基本信息（1 分钟）</p>
-<figure data-type="image" tabindex="1"><img src="http://hanlintao.github.io/post-images/1610030793929.png" alt="" loading="lazy"></figure>
-<p>在上面这个图可以看到，Gridea的界面非常小清新，而且十分简单。把前面几步得到的基本信息放进去再保存即可（注：上图的最后一行codeslator.blog是后面才加的，第一次配置不需要添加）</p>
-<p><strong>第五步</strong>：点击“同步”（0.5 分钟）</p>
-<p>点击了左下角的“同步”按钮后，你的博客的静态页面就发布到Github上了，然后就可以通过仓库名来访问了。</p>
-<p>如果你不想去注册域名，就停留在现在这个阶段，那么你会觉得一天的心情都特别好，有种在蔚蓝海岸黄金沙滩奔跑戏水的感觉。</p>
-<p>总之，以上操作12分钟内就可以完成。</p>
-<p>完成之后就可以开始写作了，写作页面如下：</p>
-<figure data-type="image" tabindex="2"><img src="http://hanlintao.github.io/post-images/1610031094054.png" alt="" loading="lazy"></figure>
-<p>每次写作完就点击“同步”，这样就会把本地的文字推送到Github上去供别人访问。</p>
-<p>目前我就写了几篇文章，列表界面如下：</p>
-<figure data-type="image" tabindex="3"><img src="http://hanlintao.github.io/post-images/1610031173537.png" alt="" loading="lazy"></figure>
-<p>而且也可以换主题、换头像、修改网站的基本信息：</p>
-<figure data-type="image" tabindex="4"><img src="http://hanlintao.github.io/post-images/1610031235072.png" alt="" loading="lazy"></figure>
-<p>简直是太简单了！</p>
-<p>而且还可以设置博客所有文章的保存地址，将博客的所有文章保存在OneDrive、iCloud这种网盘里，即便电脑突然死机，文字也都存在云上，不担心丢失。（当然，边写也要边按保存快捷键）</p>
-<p>如果你还想绑定自己的域名，那就花个几十块钱去GoDaddy上买个域名，然后再通过Github的仓库设置来绑定，10分钟就搞定了（你当然还需要照着教程操作一下了）</p>
-<p>这个博客建好之后，你就可以肆无忌惮的在上面发布文字，并在合适的时候推出去。</p>
-<p>对于我而言，CodeSlator就是我自己创建的一个品牌，专门用于推动译者编程项目，所以我创建了CodeSlator.com这个网站用于教学视频，创建了CodeSlator.blog这个域名用于绑定静态博客。</p>
-<p>未来大家会在这个博客上看到更多我写的与这个项目相关的文章。</p>
-<p>看到这里，你是否心动，想着手做一个自己的博客了？</p>
-<p>去试试吧！连编程的坑都入了，还怕搭建不了一个静态博客吗？</p>
-<h2 id="faq">FAQ</h2>
-<p>这篇文章发布后收到了一些朋友的问题，我自己也在不断摸索Gridea的各种功能，所以在这篇帖子后面加上FAQ部分，记录我在维护博客时遇到的问题：</p>
-<p><strong>如何添加讨论区</strong></p>
-<p>讨论区模块的添加我是参考了这篇帖子：<a href="https://zhuanlan.zhihu.com/p/258592325">Gridea+GithubPages+godaddy+gitalk个人博客配置</a></p>
-<p>但是实际操作时我遇到了问题，比如：</p>
-<p>上面帖子中截图里说：Homepage URL和Authorization callback URL要填博客地址，截图里填的是http://***.github.io 这种形式的博客地址，但是我这样操作却错了。</p>
-<p>原因是：1）我已经绑定了域名codeslator.blog；2）我已经设置了Enforce HTTPS，所以我填的地址应该是：</p>
-<p>https://codeslator.blog</p>
-<p>而不是上面那个github.io后缀名的网址。我一度填写了http://codeslator.blog，没有加s，结果好长一段时间博客下面的讨论区都无法正常显示。</p>
-<p>我的坑已经踩过了，大家遇到时可前往不要害怕哦！</p>
-<p><strong>如何添加好看的封面图</strong></p>
-<p>我从开始维护CodeSlator这个品牌开始，就使用iSlide插件里面提供的各种插画和模板：</p>
-<figure data-type="image" tabindex="5"><img src="http://hanlintao.github.io/post-images/1610116865348.png" alt="" loading="lazy"></figure>
-<p>选择好看的插画后就放到PPT模板中：</p>
-<figure data-type="image" tabindex="6"><img src="http://hanlintao.github.io/post-images/1610116933847.png" alt="" loading="lazy"></figure>
-<p>PPT的导出功能是支持直接将某一页PPT导出成图片的。如此一来每篇文章发布的时候就换个插画，把文章标题放进去，CodeSlator的logo也保持在固定位置，这个时候给读者的感觉就是简单、统一、整洁。</p>
-<p><strong>如何跟踪博客每条的浏览量</strong></p>
-<p>这么些年来我写博客做分享最大的一个感受就是：写完一篇文章后真的不必去关注浏览量，因为你永远不知道明天谁会打开你的博客，不知道TA阅读了你的文章后会有怎样的感受。</p>
-<p>不过如果你真的想关注，可以使用Google Analytics，用Gmail打开后简单操作一下就会生成一个ID，然后再把这个ID插入到Gridea后台即可。</p>
-<p>下面这个是博客浏览量的展示：</p>
-<figure data-type="image" tabindex="7"><img src="http://hanlintao.github.io/post-images/1610203536130.png" alt="" loading="lazy"></figure>
-<p>看了之后其实会比较心寒，因为你会发现其实没有几个人会关注这个博客。但是，大家前往不要因为这个浏览量低就不再写博客，高楼大厦非一日建成。你的博客可以是为自己写的，也可以是为他人写的，知道自己为什么要写作就可以了。</p>
 ]]></content>
     </entry>
 </feed>
