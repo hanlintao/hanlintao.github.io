@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>译者编程冷知识：位和字节 | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1627659593287">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="译者编程冷知识：位和字节 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。
+
+位
+大家是否遇到过这样的场景：
+老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。
+我：...... 怎么查看？
+老师..." />
+    <meta name="keywords" content="coldslator" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1627659593287" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              译者编程冷知识：位和字节
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-12
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/bANF-xQPl/" class="post-tag">
+                  # coldslator
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/bit_byte.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+<!-- more -->
+<h2 id="位">位</h2>
+<p>大家是否遇到过这样的场景：</p>
+<p>老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。<br>
+我：...... 怎么查看？<br>
+老师：不知道自己去百度一下，连这都不知道！<br>
+我：老师，32位和64位有啥区别？<br>
+老师：...... 问那么多干嘛，自己去百度一下！</p>
+<p>接下来我们一起来看看什么是“位”。</p>
+<p>在计算机术语中，“位”可以对应两个英文单词：Digit和Bit。</p>
+<p>牛津词典里Digit的释义如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
+<p>在这个解释里，第一个解释很好理解，就是数字、数位、位。比如Digital（数字的、数字化的、数码的）的词根就是Digit。</p>
+<p>不过不少人可能不知道第二个意思，digit的本意是手指。所以一个手指头就是一个“digit”。当你举起一个手指头时，我们可以数“1”，而当你把这个手指头又收回去的时候，我们可以数“0”。所以这个手指的伸缩可以表示0和1两种状态，因此我们可以称这个手指头为“Binary Digit”，简称为“Bit”。</p>
+<p>在翻译的时候，“Binary Digit”翻译成：二进制位；“Bit”翻译成“比特位”，这个比特完全是从英文音译过来的，“比特”这两个汉字本身没有什么意义。</p>
+<p>现在你应该可以理解为什么“Digit”和“Bit”都可以对应“位”这个词了吧？</p>
+<h2 id="字节">字节</h2>
+<p>其实现在很多人都知道字节的英文是什么，因为“字节跳动”的英文是“ByteDance”。</p>
+<p>“位”和“字节”的关系可以这样来记住：一个字节（byte）等于8个比特位（bit）。当你伸出8个手指头时，一口全部咬掉（bite）。这个“bite”用得有点冷，但事实上，字节这个词的英文“byte”就是从“bite”来的，只不过觉得可能会跟“bit”混淆，所以人为修改成了“byte”。</p>
+<p>以下是牛津词典对“Byte”的解释：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
+<p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BD%8D">位</a></li>
+<li><a href="#%E5%AD%97%E8%8A%82">字节</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/bilingualtm/">
+              <h3 class="post-title">
+                开发简易在线翻译记忆库所需代码
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

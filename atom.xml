@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hanlintao.github.io</id>
+    <title>CodeSlator Blog</title>
+    <updated>2021-07-30T15:39:57.971Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hanlintao.github.io"/>
+    <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://hanlintao.github.io/images/avatar.png</logo>
+    <icon>https://hanlintao.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, CodeSlator Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[译者的效率工具集合]]></title>
+        <id>https://hanlintao.github.io/post/666/</id>
+        <link href="https://hanlintao.github.io/post/666/">
+        </link>
+        <updated>2021-03-25T03:40:26.000Z</updated>
+        <content type="html"><![CDATA[<p>有的效率工具你知道了就会变得很厉害，不知道也就不知道了，所以我想把这些都整理一下发给大家。如果你们有什么很棒的效率工具，也可以在下方留言区分享给我，我汇总到这里来。</p>
+<h2 id="翻译相关">翻译相关</h2>
+<p>比较多，我慢慢来写，像你们的老朋友GT4T、Trados、memoQ、SmartCAT、YiCAT什么的我都会补上的哈~</p>
+<h2 id="pdf相关">PDF相关</h2>
+<p><strong>编辑PDF</strong></p>
+<p>在Windows操作系统中我离不开Nitro Pro这款工具，目前国内只能找到破解版的，购买的话可以去官网可以花128美元买到，折合人民币是836元左右。<a href="https://www.gonitro.com/pricing">Nitro Pro</a></p>
+<p>在Mac上我没有发现特别好的PDF编辑工具。</p>
+<p><strong>标记PDF</strong></p>
+<p>在Mac上如果想标记PDF并且阅读的话，我强烈推荐MarginNote。<a href="https://www.marginnote.com/">MarginNote</a></p>
+<h2 id="视频相关">视频相关</h2>
+<p><strong>剪辑视频</strong></p>
+<p>用ffmpeg可以方便大家剪辑视频，这个技能超级棒，但有一点点的学习成本，我写过几篇帖子，分享给大家：</p>
+<p><a href="https://mp.weixin.qq.com/s/BsQ-3QgwxNB7sEuVDkX_CA">在视频本地化过程中使用ffmpeg提升效率</a><br>
+<a href="https://mp.weixin.qq.com/s/RnXysCq9SFIALGurdOYHzQ">在视频本地化过程中使用ffmpeg提升效率（二）视频转文字</a><br>
+<a href="https://mp.weixin.qq.com/s/LrHb6nKGkPZ-xmVOndcJYw">如何将视频的字幕单独识别成文字</a></p>
+<p>场景：有个1小时的视频，领导就想用其中的5分钟，你如何截取出来呢？<br>
+方案：可以用ffmpeg，非常方便。</p>
+<p>我的学生说剪映的桌面端和移动端都非常强大，也可以快速完成这项工作，你们也可以去试试：<a href="https://lv.ulikecam.com/">剪映</a></p>
+<p><strong>屏幕录屏</strong></p>
+<p>很多人都会推荐各种各种录屏软件，其实大家会发现像腾讯会议、钉钉会议这种用来开会的软件就可以录屏，无非就是开个会议然后自己讲自己录，会议开完就导出视频，非常方便，也非常清晰。有的会议系统还可以录制电脑自带的声音。</p>
+<p>当然，也可以使用OBS，免费的，特别棒，我的《译者编程入门指南》的全套视频教程都是在Mac上用OBS录制的。</p>
+<h2 id="文本处理相关">文本处理相关</h2>
+<p><strong>整理双语文本</strong></p>
+<p>广外陈杲老师和他的小伙伴研制的斑斓科技小助手 1.0非常棒：<a href="http://edu.bon-lion.com/bon-lion-helper/">斑斓科技小助手 1.0（22 项常用功能）</a></p>
+<h2 id="文件处理相关">文件处理相关</h2>
+<p><strong>查找电脑中的文件</strong></p>
+<p>Windows中使用Everything、Filelocator Pro<br>
+Mac中使用Spotlight、Alfred</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[多语言内容管理系统设计与开发【更新中】]]></title>
+        <id>https://hanlintao.github.io/post/multilingualCMS/</id>
+        <link href="https://hanlintao.github.io/post/multilingualCMS/">
+        </link>
+        <updated>2021-03-02T03:15:02.000Z</updated>
+        <content type="html"><![CDATA[<p>声明：以下文字内容均为韩林涛原创内容，仅在本博客发布，任何人不得转载和抄袭。</p>
+<h2 id="第一章-你的第一个内容管理系统">第一章 你的第一个内容管理系统</h2>
+<p><strong>1.1 数据、信息和内容</strong></p>
+<p>数据、信息和内容是三个人们容易混淆的概念，所以最好从定义出发去理解其内涵。</p>
+<p><strong>数据：</strong></p>
+<p>客观事物的符号表示。在计算机科学中，指所有能输入到计算机中并被计算机程序处理的符号的总称。</p>
+<p>来源：《计算机科学技术名词 》 (第三版)</p>
+<p>描述事件或事物的属性、过程及其关系的符号序列。比如自然语言符号、科学符号、数字以及图形图像等。数据具有形式和内容两个方面。</p>
+<p>来源：《管理科学技术名词》</p>
+<p>数字、字母与符号的集合。系客观事物与主观思维的具体表达，不限于数值。现常指可由计算机处理的信息单元。</p>
+<p>来源：《图书馆·情报与文献学名词》</p>
+<p><strong>信息：</strong></p>
+<p>处理后的数据。可用于人们对管理和决策的支持。</p>
+<p>来源：《计算机科学技术名词 》 (第三版)</p>
+<p>广义指客观事物存在、运动和变化的方式、特征、规律及其表现形式。狭义指用来消除随机不确定性的东西。</p>
+<p>来源：《图书馆·情报与文献学名词》</p>
+<p>数据的内容和含义。同样的信息可以用不同形式的数据表达。</p>
+<p>来源：《管理科学技术名词》</p>
+<p><strong>内容：</strong></p>
+<p>1999年，欧盟的“Info2000计划”才真正对内容产业进行了界定：那些制造、开发、包装、销售信息产品和服务的企业。内容产业的范围包括在各种媒介上的印刷品（报纸、书籍、杂志等）、音像与电子出版物（联机数据库、音像制品服务，以传真及光盘为基础的服务以及电子游戏等）、音像传播（电视、录像、广播和影院），以及消费型软件业等。</p>
+<p>和传统的内容产业相比，现代意义上的内容产业一个突出的特征就是“ 数字化”。正是由于“ 数字化”的影响，信息内容对载体的依赖性不断降低，并使得传统内容产业的生产方式和运行体系发生了变化，催生了新兴的以互联网为特征的服务方式和内容。因此可以认为：现代意义上的信息内容产业是一种基于数字化、多媒体和网络等技术，利用信息资源和其他相关资源创（制）作、开发、分发、销售与消费信息产品和服务的产业。</p>
+<p>来源：<a href="https://wiki.mbalib.com/wiki/%E4%BF%A1%E6%81%AF%E5%86%85%E5%AE%B9%E4%BA%A7%E4%B8%9A">前往</a></p>
+<p>参考：<br>
+http://www.sic.gov.cn/News/455/3608.htm<br>
+http://excolo.com/information-v-content/<br>
+https://www.sohu.com/a/109828891_464088</p>
+<p><strong>1.2 内容管理系统</strong></p>
+<p>内容管理系统（英语：content management system，缩写为 CMS）是指在一个合作模式下，用于管理工作流程的一套制度。该系统可应用于手工操作中，也可以应用到电脑或网络里。作为一种中央储存器（central repository），内容管理系统可将相关内容集中储存并具有群组管理、版本控制等功能。版本控制是内容管理系统的一个主要优势。</p>
+<p>内容管理系统在物品或文案或数据的存储、掌管、修订（盘存）、语用充实、文档发布等方面有着广泛的应用。现在流行的开源CMS系统有WordPress、Joomla!、Drupal、Xoops、CmsTop等。</p>
+<p>参考：<a href="http://blog.sina.com.cn/s/blog_5f4150730102xgav.html">内容管理系统分类</a></p>
+<p>来源：</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">维基百科</a></p>
+<p><strong>1.3 实践：WordPress安装</strong></p>
+<p>网站：https://cn.wordpress.org/</p>
+<p>环境：XAMPP或者MAMP</p>
+<p>实践目标：请尝试在本地电脑上搭建一个基于WordPress的网站，并探索如何基于WordPress完成一个双语网站。</p>
+<p>第一步：环境搭建</p>
+<p>请参照CodeSlator视频课程中的环境搭建教程，Mac电脑优先选用MAMP Pro，Windows电脑优先选用国产的<a href="https://www.xp.cn/">PHPStudy</a>。</p>
+<p>易错点：<br>
+· 搞错htdocs文件夹的位置<br>
+· 电脑上安装了多个环境，使用时不知道用的是哪个环境</p>
+<p>第二步：下载WordPress</p>
+<p>下载地址参见官网，下载后该文件为一个压缩包，需要将其解压缩，并将全部内容解压缩到htdocs文件夹内自主创建的一个文件夹中。</p>
+<p>易错点：<br>
+· 下载WordPress压缩包后，解压缩时将内容解压到错误的目标文件夹</p>
+<p>第三步：安装WordPress</p>
+<p>安装前需要先确认以下两点：</p>
+<p>1）环境的默认访问地址前缀：先确认是否是localhost，如果不是localhost则根据环境工具内置的按钮点击后的结果确认，比如有些同学电脑上的环境地址是localhost:8080</p>
+<p>2）确认环境内默认的数据库地址：先确认默认的数据库地址是不是localhost/phpmyadmin，如果不是的话则根据环境工具内置的按钮点击后的结果确认</p>
+<p>以上两点确认后，则打开浏览器，前往：localhost/自定义文件夹地址</p>
+<p>易错点：<br>
+· 有同学不明白自己定义文件夹地址如何创建，实际上就是在htdocs文件夹下创建一个空白的文件夹，这个文件夹的名字就是localhost/后面跟着的名字。<br>
+· 有同学会使用中文来命名文件夹或者英文加数字，但建议在这里创建文件夹时仅使用纯小写英文，不要使用中文、数字、标点符号。<br>
+· 安装WordPress过程需要创建数据库、设置用户名和密码，许多同学搞不清楚数据库用户名密码和WordPress用户名和密码的区别，实际上在我们安装在本地电脑的环境中数据库的用户名和密码往往是：root/root或者root/空密码。比如XAMPP默认的数据库用户名和密码是root和空密码，而MAMP Pro和PHPStudy往往是root和root，这一点一定要搞清楚，不同的教程中给出的用户名和密码都不一定一样。</p>
+<p>这个用户名和密码是用户存储数据的地方，而WordPress安装过程中，需要提供这个用户名和密码，否则WordPress的后台数据不知道如何存到数据库中；还需要提供数据库的名字，这个是需要安装人员自己去phpMyadmin中去创建的，否则WordPress不知道应该将数据存到哪个数据库中。</p>
+<p>除了数据库用户名和密码外，用户还要自己设置WordPress的用户名和密码，这个是当用户成功安装完成WordPress后，在浏览器中访问个人博客时要自己输入的登录用户名和密码。</p>
+<p>第四步：登录WordPress</p>
+<p>成功安装完成WordPress后，用户可以登录其中，开始尝试发布文章、安装主题、调整页面布局、安装插件。</p>
+<p><strong>1.4 实践：WordPress多语言和WordPress数据库</strong></p>
+<p>我们在本课程中要重点学习如何将WordPress调整成多语言版。我们使用的是名为Polylang的插件，参考：<a href="https://www.easywpbook.com/i18n/polylang.html">使用Polylang插件建设一个多语言站点</a>。</p>
+<p>按照上述教程来操作，你将获得自己的第一个多语言内容管理系统。接下来我们还可以尝试将这个网站放到公开网络中供他人去访问，这就需要自己去购买服务器和域名，具体流程参见以下教程：<a href="https://www.bilibili.com/video/BV1M7411c7BT">一步步吭哧吭哧制作个人双语网站</a>，重点观看P2、P3、P4。</p>
+<p>当我们拥有了一个可以公开访问的博客后，我们希望将多语言的数据库发布到网络上供他人检索和查询，比如我们希望将双语术语库发布到网站上，或者将双语句对发布到网站上供他人检索。那我们就可以使用WordPress的TablePress插件，通过该插件，我们可以直接将本地Excel表格中的双语术语表发布到WordPress博客中供他人检索，如下图：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1615257827346.png" alt="" loading="lazy"></figure>
+<p>整个过程的逻辑是：</p>
+<p>· 安装TablePress插件<br>
+· 在WordPress的TablePress区域创建一个空白表格，并将本地电脑上的Excel表格上传到该空白表格中<br>
+<img src="https://hanlintao.github.io/post-images/1615257921016.png" alt="" loading="lazy"></p>
+<p>· 成功创建的表格会自动生成一个“简码”，并将这个简码插入到博客文章中：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1615260009478.png" alt="" loading="lazy"></figure>
+<p>· 文章发布后即可看到表格，并能通过表格自带的搜索框进行数据检索。</p>
+<h2 id="第二章-多语言内容管理系统与翻译实践">第二章 多语言内容管理系统与翻译实践</h2>
+<p>2.1 SQL语言入门</p>
+<p>本节内容将基于PHPMyadmin开展，学习如何使用SQL语言进行简易双语词典的查询。</p>
+<h2 id="第三章-简易平行语料库的设计与开发">第三章 简易平行语料库的设计与开发</h2>
+<h2 id="第四章-平行语料库管理系统设计与开发">第四章 平行语料库管理系统设计与开发</h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《技术写作》课程教学大纲]]></title>
+        <id>https://hanlintao.github.io/post/technicalwriting/</id>
+        <link href="https://hanlintao.github.io/post/technicalwriting/">
+        </link>
+        <updated>2021-02-28T03:26:05.000Z</updated>
+        <content type="html"><![CDATA[<p>2021年2月修订</p>
+<h2 id="课程说明">课程说明</h2>
+<p>本课程面向北京语言大学高级翻译学院翻译专业（本地化方向）三年级本科生，目的在于帮助学生了解如何为互联网产品撰写内容简洁结构清晰的技术文档。本课程没有先修课程，学生应具备基本的英语阅读和写作水平，并通过此课程进一步提升结构化写作能力、逻辑思维能力和团队协作能力。</p>
+<h2 id="学时学分">学时学分</h2>
+<p>总课时为32课时，总学分为2学分。</p>
+<h2 id="考核方式">考核方式</h2>
+<p>平时成绩（40%）+期末项目（60%）</p>
+<h2 id="参考资料">参考资料</h2>
+<ol>
+<li>陶友兰、谢敏、周全、李晓黎、程少武. 英语技术写作精要[M]. 上海：复旦大学出版社, 2020.</li>
+<li>Google. Technical Writing Courses.[EB/OL]. [2021-03-03]. https://developers.google.com/tech-writing .</li>
+<li>微信公众号：TC互联技术传播与技术写作社区（微信号：tchulian）</li>
+</ol>
+<h2 id="课程大纲">课程大纲</h2>
+<p><strong>第一周：初探技术写作</strong></p>
+<p>参考资料：<a href="http://www.tc-china.org/wp-content/uploads/2018/08/%E6%8A%80%E6%9C%AF%E4%BC%A0%E6%92%AD%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C.pdf">《技术传播手册》</a></p>
+<p>请仔细阅读本手册的前三章，了解技术传播的概念。</p>
+<p>技术传播与技术写作：</p>
+<blockquote>
+<p>早期因为主要的媒介是纸张和文字，表现手段和传播形式都比较有限。进入数字时代后，各种新媒体层出不穷，于是更多的技术手段用来帮助用户。例如视频、动画、网站、维基、虚拟现实和增强现实、聊天机器人等各种手段非常丰富。原有技术写作的称呼已经不能描述行业的实践，于是便有了新的称呼技术传播 (Technical Communication)。<br>
+高志军：<a href="https://techcomm-book.readthedocs.io/zh_CN/latest/1-introduction/techcomm.html">《技术传播教程》</a></p>
+</blockquote>
+<p>请观看这个视频：<a href="https://www.youtube.com/watch?v=qnnkAWP55Ww&amp;ab_channel=LifeatGoogle">Meet Technical Writers at Google</a> （视频来自YouTube）</p>
+<p>课堂练习一：你所在的学校即将召开一次线上家长会，所用软件为腾讯会议。但你身在学校，无法帮助父母加入此会议，因此你准备撰写一份文档。</p>
+<p>请尝试使用中文撰写这份文档。</p>
+<p>课堂练习二：你的美国朋友Nick想了解如何通过去哪儿网订三张从北京飞往三亚的机票（包含一张儿童票），请撰写一份文档帮助他了解整个流程。</p>
+<p>请尝试使用英文撰写这份文档。</p>
+<p><strong>第二周：技术写作流程、技术文档类型和技术写作工具</strong></p>
+<p><strong>2.1 技术写作流程</strong></p>
+<p>计划阶段（Planning）：</p>
+<p>· 分析用户（Analyze users）<br>
+· 开展调研（Conduct research）<br>
+· 组织内容（Organize content）<br>
+· 确定交付品（Determine deliverables）</p>
+<p>写作阶段（Developing）：</p>
+<p>· 建立结构化内容（Create structured content）<br>
+· 应用风格（Apply style）<br>
+· 使用技术图示（Use technical illustrations）</p>
+<p>质控阶段（Revising）</p>
+<p>· 审核（Review）<br>
+· 可用性测试（Usability test）<br>
+· Edit（编辑）</p>
+<p>交付阶段（Delivering）</p>
+<p>· 发布和分发（Publish and destribute）<br>
+· 收集用户反馈（Collect user feedback）</p>
+<p>参考：<br>
+《英语技术写作精要》P13-P18</p>
+<p><strong>2.2 技术文档类型</strong></p>
+<p>根据目标用户划分技术文档类型：</p>
+<p>产品用户（Product users）：<br>
+· Online and embedded help<br>
+· User manuals<br>
+· Installation guides<br>
+· Technical training materials<br>
+· Data sheets<br>
+· How-to videos<br>
+· Troubleshooting guides<br>
+· Knowledge base articles<br>
+· FAQs<br>
+· Release notes<br>
+· Glossaries<br>
+· Blogs</p>
+<p>系统管理员（System administrators）：<br>
+· Installation guides<br>
+· Environment guides<br>
+· Data sheets<br>
+· How-to videos<br>
+· Troubleshooting guides<br>
+· Glossaries</p>
+<p>开发者（Developers）：<br>
+· API documentations<br>
+· SDK documentations</p>
+<p>消费者（Consumers）：<br>
+· Brochures and pamphlets<br>
+· White papers<br>
+· Blogs</p>
+<p>决策者（Decision makers）：<br>
+· Project proposals<br>
+· Technical reports<br>
+· White papers</p>
+<p>生产者（Producers）：<br>
+· Design or product specification</p>
+<p>同事或雇员（Colleagues or employees）：<br>
+· Business memos<br>
+· Internal processes and standards<br>
+· Business letters</p>
+<p>参考：<a href="https://zhuanlan.zhihu.com/p/37832180">技术文档种类详解</a><br>
+<strong>2.3 技术写作工具</strong></p>
+<p>技术写作（非结构化）：<br>
+· Microsoft Word<br>
+· Adobe FrameMaker (XML Editor)<br>
+· Adobe RoboHelp (XML Editor)<br>
+· Madcap Flare (XML Editor)</p>
+<p>结构化写作：<br>
+· Oxygen XML Author (XML Editor)<br>
+· PTC Abortext Editor (XML Editor)<br>
+· Adobe FrameMaker (XML Editor)</p>
+<p>轻量级标记写作：<br>
+· Markdown 编辑器<br>
+· Notepad++</p>
+<p>组件内容管理系统（Component Content Management Systems, CCMS）：<br>
+· Astoria CCMS<br>
+· Author-it CCMS<br>
+· XDocs DITA CCMS<br>
+· IXIASOFT DITA CMS<br>
+· PTC Windchill Service Information Manager<br>
+· SDL Tridion Docs<br>
+· Schema ST4</p>
+<p>工具选择方案：</p>
+<blockquote>
+<p>If your delivery is just a page of document, Word can be the best choice. If you require topic reuse and multiple output formats such as PDF and HTML, an XML editor is effective. If you require version control, data-storing, or cross-team collaboration, a CCMS is an excellent and expensive option.</p>
+</blockquote>
+<p>参考：<br>
+《英语技术写作精要》P21-P26<br>
+《技术传播手册》P36</p>
+<p>作业：请在身边寻找一份或多份技术文档，分析其受众、质量和提升手段。<br>
+时间：班长或学习委员在下周二晚8:00收集好后通过邮件发送给教师<br>
+格式：《技术写作》2021年春季_第二周_姓名_学号.pdf</p>
+<p><strong>第三周：技术写作规范和标准</strong></p>
+<p><strong>3.1 谁来指定标准？</strong></p>
+<p><strong>谁是ISO？</strong></p>
+<p>ISO是国际标准化组织（International Organization for Standardization），成立于1947年，总部位于瑞士日内瓦，ISO国际标准以数字表示，例如：“ISO 11180:1993”的“11180”是标准号码，而“1993”是出版年份。</p>
+<p>中国于1978年加入ISO，在2008年10月的第31届国际化标准组织大会上，中国正式成为ISO的常任理事国。</p>
+<p><strong>谁是IEC？</strong></p>
+<p>IEC是国际电工委员会（International Electrotechnical Commission），于1906年正式成立。</p>
+<p>成立背景：国际标准化活动是从电工领域开始的。1870年以后，电灯、电热器等家用电器以及各种插头、插座、电阻丝等己得到广泛使用。由于产品质量差、标准不统一，常常发生人身事故。于是，用电安全和电工产品标准化问题被提到日程上来。1887~1900年召开的6次国际电工会议上，与会专家们一致认为，有必要建立一个永久性的国际电工标准化机构。</p>
+<p>来源：<a href="http://www.mnr.gov.cn/zt/kj/kjfz/bzh/201310/t20131014_2369525.html">国际电工委员会简介及组织机构</a></p>
+<p>1957年，我国加入国际电工委员会，拥有了一席之地。<br>
+2011年，凭借电力事业举世瞩目的成就，我国终于成为IEC常任理事国。</p>
+<p>参考：<a href="http://www.xinhuanet.com/fortune/2018-10/26/c_129979917.htm">履新！这个国际组织112年来首次由中国人担任最高领导</a></p>
+<p><strong>谁是ITU？</strong></p>
+<p>国际电信联盟是联合国负责信息通信技术（ICT）事务的专门机构。  国际电联成立于1865年，旨在促进国际上通信网络的互联互通，1947年成为联合国专门机构。</p>
+<p>当我们谈及制定国际标准的组织时，一般指的就是ISO、IEC和ITU。</p>
+<p><strong>谁是ANSI？</strong></p>
+<p>ANSI是美国国家标准协会（American National Standards Institute），领导美国的标准、合格评定以及其它相关活动，成立于1921年，是私营非盈利机构。ANSI既不是政府机构，也不是标准制定机构。</p>
+<p>ANSI是ISO和IEC的常任理事成员之一。</p>
+<p>参考：<a href="https://share.ansi.org/Shared%20Documents/Standards%20Activities/International%20Standardization/Regional/Asia%20Pacific/China/ANSI_Overview_2013_ABBR_CN.pdf">美国国家标准协会/美国标准体系</a></p>
+<p><strong>谁是IEEE？</strong></p>
+<p>电气电子工程师学会（IEEE）的英文全称是the Institute of Electrical and Electronics Engineers，其前身是成立于1884年的美国电气工程师协会(AIEE)和成立于1912年的无线电工程师协会(IRE)。前者主要致力于有线通讯、光学以及动力系统的研究，而后者则是国际无线电领域不断扩大的产物。20世纪30年代，“电子学”这个词开始进入工程学词典。虽然许多工程师都同时是AIEE和IRE两个协会的会员，但是新入行的电子工程师们还是更倾向于加入无线电工程师协会。两个协会之间激烈的竞争的结果，造就了双方的合作与合并。1963年，AIEE和IRE宣布合并，电气电子工程师学会（IEEE）正式成立了。</p>
+<p>来源：：<a href="https://cn.ieee.org/about/">IEEE介绍</a></p>
+<p><strong>谁是GB？</strong></p>
+<p>中华人民共和国国家标准，简称国标（汉语拼音：Guóbiāo，GB），由在国际标准化组织和国际电工委员会代表中华人民共和国的会员机构中国国家标准化管理委员会发布，有时也简称中国国家标准。</p>
+<p>强制性国家标准冠以“GB”，推荐性国家标准冠以“GB/T”。与很多ISO国际标准相比，很多国家标准等同采用（IDT，identical to 其他标准）、修改采用（MOD，modified in relation to 其他标准）；2000年以前称作等效采用（EQV, equivalent to 其他标准）或非等效采用（NEQ，not equivalent to 其他标准）。</p>
+<p>来源：<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%A0%87%E5%87%86">中华人民共和国国家标准</a></p>
+<p><strong>各个国家的标准制定机构都有哪些？</strong></p>
+<p>参考：<a href="https://www.chip1stop.com/sp/knowledge/091_international-standards-organization_zh">国际及世界各国的规格/标准组织</a></p>
+<p><strong>3.2 IEC/IEEE 82079-1:2019</strong></p>
+<p>IEC/IEEE 82079-1:2019 is jointly developed and published by IEC, IEEE, and ISO and provides general principles and detailed requirements for the design and formulation of all types of instructions for use that will be necessary or helpful for users of products of all kinds, ranging from a tin of paint to large or highly complex products, such as large industrial machinery, turnkey based plants or buildings.</p>
+<p>来源：<a href="https://www.iso.org/standard/71620.html">IEC/IEEE 82079-1:2019</a></p>
+<p>原文链接：<a href="https://www.doc88.com/p-5367840793617.html">https://www.doc88.com/p-5367840793617.html</a></p>
+<p>IEC 82079-1 标准包含七个主要章节，第 4 章到第 6 章是其“核心内容”：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1616031926963.png" alt="" loading="lazy"></figure>
+<p>参考：<a href="http://www.china.tcworld.info/%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97/%E6%8A%80%E6%9C%AF%E5%86%99%E4%BD%9C/News/isoiec-82079-1-%E6%A0%87%E5%87%86%E7%AE%80%E4%BB%8B/">ISO/IEC 82079-1 标准简介</a></p>
+<p><strong>3.3 GB 5296.1</strong></p>
+<p>消费品使用说明 第1部分：总则</p>
+<p>“使用说明”是向消费者如实传递正确、安全地使用产品等信息的方法,对保护消费者人身、财产<br>
+安全和人体健康，避免环境污染，以及防止欺骗和误导，保护消费者利益等方面都具有重要作用。</p>
+<p>GB 5296的本部分对制定《消费品使用说明》国家标准的其他部分，对促进我国产品使用说明编<br>
+制规范化，有着重要的指导和推动作用。</p>
+<p>作为 GB 5296 的总则，本部分不可能提供覆盖每类消费品使用说明的详细要求。因此，本部分规<br>
+定的原则，是为所有利益相关方提供如何设计和编制各类使用说明的通用要求。</p>
+<p>标准链接：<a href="https://members.wto.org/crnattachments/2012/tbt/CHN/12_0383_00_x.pdf">https://members.wto.org/crnattachments/2012/tbt/CHN/12_0383_00_x.pdf</a></p>
+<p>官方链接：<a href="http://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D7E643D3A7E05397BE0A0AB82A">全国标准信息公共服务平台</a></p>
+<p>参考：<a href="http://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D75D3BD3A7E05397BE0A0AB82A">国家标准《安全色》</a></p>
+<p><strong>3.4 风格指南</strong></p>
+<p>以下风格指南供大家参考：</p>
+<p><a href="https://www.ox.ac.uk/sites/files/oxford/media_wysiwyg/University%20of%20Oxford%20Style%20Guide.pdf">University of Oxford Style Guide</a></p>
+<p><a href="https://developers.google.cn/style">Google developer documentation style guide</a></p>
+<p><a href="https://docs.microsoft.com/en-us/style-guide/welcome/">Microsoft Writing Style Guide</a></p>
+<p><a href="https://www.microsoft.com/zh-cn/language/styleguides">Microsoft 简体中文本地化规范</a></p>
+<p><a href="https://wenku.baidu.com/view/dd4d0b5f804d2b160b4ec063.html">华为产品手册中文写作规范</a></p>
+<p>课堂任务：</p>
+<p>从以上风格指南中选择与标点符号相关的章节，制定一份属于你自己的中英标点符号使用指南。</p>
+<p>时间：班长或学习委员在下周二晚8:00收集好后通过邮件发送给教师<br>
+格式：《技术写作》2021年春季_第三周_姓名_学号.pdf</p>
+<p><strong>第四周和第五周：用户分析和研究</strong></p>
+<p>4.1 用户研究的常见方法</p>
+<p>无论是开展学术研究还是就业创业，我们都需要根据目标来开展用户研究。</p>
+<p>下图展示了常见的用户研究方法：<br>
+<img src="https://hanlintao.github.io/post-images/1616593523196.jpeg" alt="" loading="lazy"></p>
+<p>来源：<a href="https://wj.qq.com/article/single-185.html">超强干货！7个腾讯最常用的用户研究方法</a></p>
+<p>请参考《腾讯网UED体验设计之旅》以了解用户研究的常见方法。</p>
+<p>课堂讨论案例：图书馆用户行为分析</p>
+<p>北京语言大学图书馆正式开放后，许多同学都会选择抽时间到图书馆“参观游览”，但从图书馆运营人员的角度，对图书馆使用者的使用行为数据进行分析和观察可以帮助图书馆更好发展。</p>
+<p>现在图书馆希望深度还原来访用户的使用场景、使用规律、进馆后行为路径和行为特点，请设计一套图书馆用户行为分析的方法以实现此目的。</p>
+<p>问题一：你希望分析用户的哪些数据？可否尝试在数据库或工作表中将此这些数据进行合理分类？</p>
+<p>问题二：如果图书馆馆长希望在图书馆大门呈现一张“大数据图”展示图书馆的使用情况，如何设计这张大数据图所包含的各种指标？（如每日新用户人数、用户进馆时间等；用户借阅数据等）</p>
+<p>问题三：用户进入图书馆的目的是什么？可否对用户进馆后所完成的各项任务进行系统性的归类？用户在使用图书馆的全过程中最常见的操作是什么？最不常见的操作是什么？用户所进行的各类操作的先后顺序是什么？</p>
+<p>以上案例参考该<a href="http://www.woshipm.com/user-research/3236774.html">网页</a>设计</p>
+<p>案例：我校图书馆建成后成为了北语学子的打卡目的地，如何充分利用图书馆的软硬件资源成为大家关注的事项之一，为了向更多北语er介绍图书馆的使用方法，我们尝试对图书馆的用户进行深入调研，从而撰写一份北语图书馆的使用指南，并在撰写过程中为图书馆的发展提出自己的建议。</p>
+<p>课堂任务：</p>
+<p>以小组为单位，从本周所学习的用户研究方法选择一种开展图书馆用户分析。</p>
+<p>时间：班长或学习委员在下周二晚8:00收集好后通过邮件发送给教师<br>
+格式：《技术写作》2021年春季_第四周_组长姓名.pdf</p>
+<p><strong>第六周、第七周和第八周：技术文档开发</strong></p>
+<p><strong>第九周和第十周：技术文档产品评价</strong></p>
+<p><strong>第十一周至第十五周：技术文档实战</strong></p>
+<p><strong>第十六周：期末展示</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《翻译与本地化技术原理》课程教学大纲]]></title>
+        <id>https://hanlintao.github.io/post/fanyijishuyuanli/</id>
+        <link href="https://hanlintao.github.io/post/fanyijishuyuanli/">
+        </link>
+        <updated>2021-02-05T04:12:26.000Z</updated>
+        <content type="html"><![CDATA[<p>2021年2月修订</p>
+<h2 id="课程说明">课程说明</h2>
+<p>本课程为北京语言大学高级翻译学院翻译专业（本地化方向）二年级必修课，开设时间为二年级下学期。本课程的先修课程为《初级编程》、《网站设计与开发》和《翻译与本地化实践》，学生已经完成Python、HTML、CSS、JavaScript和PHP的入门学习，已经对数据库的设计有了基本认识，能够根据需求自主设计关系型数据库，并使用PHP和HTML构造简单的具备增删改查功能的信息系统。</p>
+<p>《翻译与本地化技术原理》旨在帮助学生了解翻译记忆、术语、质量检查、机器翻译等翻译与本地化核心技术原理，并基于此开发简易的在线计算机辅助翻译工具。</p>
+<p>在学期结束前，学生将分组完成计算机辅助翻译工具的设计与开发。</p>
+<h2 id="学时学分">学时学分</h2>
+<p>总课时为32课时，总学分为2学分。</p>
+<h2 id="考核方式">考核方式</h2>
+<p>平时成绩（40%）+期末项目（60%）</p>
+<h2 id="课程大纲">课程大纲</h2>
+<p><strong>模块一：翻译记忆技术</strong></p>
+<p>第一周：编辑距离和最短编辑距离</p>
+<p>第二周：使用PHP实现最短编辑距离计算</p>
+<p>第三周：实践：引入中文分词技术调整最短编辑距离计算算法</p>
+<p>第四周：小组汇报：不同计算机辅助翻译工具相似度匹配结果对比</p>
+<p>相关资料：</p>
+<p><a href="https://mp.weixin.qq.com/s/XtKklE50SgqmKTqAp5tvhA">关于计算机辅助翻译技术起源的奇妙发现</a></p>
+<p><a href="https://mp.weixin.qq.com/s/7n9WO_7fOBpFonsU2MWDEA">全球化、国际化、本地化与翻译</a></p>
+<p><a href="https://mp.weixin.qq.com/s/xonXFt8QcCgjyEUDyqn0dg">简言翻译记忆的原理（一）：写错单词最少要罚多少钱？</a></p>
+<p><a href="https://mp.weixin.qq.com/s/KUGdseKilUjSCwtNixm0dA">简言翻译记忆的原理（二）：用动态规划算法求解最短编辑距离</a></p>
+<p><a href="https://mp.weixin.qq.com/s/-BnkXDOYsqxYN9bnkcBH3w">简言翻译记忆的原理（三）：自动计算两个字符串间的相似度</a></p>
+<p>参考：</p>
+<ol>
+<li>https://www.dreamxu.com/books/dsa/dp/edit-distance.html</li>
+<li></li>
+</ol>
+<p><strong>模块二：术语技术</strong></p>
+<p>（注：术语技术的大部分内容已经在《术语学》课程中讲解过，为保证本课程体系的连贯性，依然会在课程教学大纲中展示）</p>
+<p>第一周：TF-IDF算法</p>
+<p>第二周：使用PHP实现TF-IDF算法</p>
+<p><strong>模块三：断句</strong></p>
+<p>第一周：基于SRX的断句方法</p>
+<p>第二周：引入TMXmall文档解析API进行断句</p>
+<p><strong>模块四：机器翻译</strong></p>
+<p>第一周：神经机器翻译原理</p>
+<p>第二周：引入百度翻译和有道翻译</p>
+<p>第三周：引入搜狗翻译和谷歌翻译</p>
+<p><strong>模块五：计算机辅助翻译工具雏形开发</strong></p>
+<p>第一周：基于jsGrid开发一个可编辑的表格</p>
+<p>第二周：将机器翻译、翻译记忆、术语和文档解析融合到一个页面中</p>
+<p>第三周：实践：开发简易界面实现基本的计算机辅助翻译功能</p>
+<p>第四周：产品设计入门</p>
+<p><strong>模块六：计算机辅助翻译工具开发</strong></p>
+<p>第一周：各小组汇报计算机辅助翻译工具开发计划</p>
+<p>第二周至学期结束：完成计算机辅助翻译工具开发，并不断优化功能，撰写开发报告</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[译者编程冷知识：二进制与UTF-8]]></title>
+        <id>https://hanlintao.github.io/post/binary-MacBook Pro/</id>
+        <link href="https://hanlintao.github.io/post/binary-MacBook Pro/">
+        </link>
+        <updated>2021-01-13T11:24:21.000Z</updated>
+        <summary type="html"><![CDATA[<p>对于文科背景的译者而言，理解十进制、二进制、UTF-8是一件从骨子里觉得自己不可能理解的计算机知识点。</p>
+<p>但其实这个知识点很有趣，我希望能够用尽可能简单的方式来解释清楚。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>对于文科背景的译者而言，理解十进制、二进制、UTF-8是一件从骨子里觉得自己不可能理解的计算机知识点。</p>
+<p>但其实这个知识点很有趣，我希望能够用尽可能简单的方式来解释清楚。</p>
+<!-- more -->
+<h2 id="什么叫做进">什么叫做“进”</h2>
+<p>我们经常讲的二进制、十进制、十六进制、六十进制......都有个“进”字儿。最好理解“进”的是我们平时使用的十进制：</p>
+<p>0、1、2、3、4、5、6、7、8、9、停！</p>
+<p>怎么着？怎么不继续数了？不应该是接着数10吗？</p>
+<p>不。得分析一下。</p>
+<p>我们按照十进制去数数的时候，一共就只有10个数儿，分别是0到9。（注意哈，0-9是十个数儿哈）</p>
+<p>既然十进制是十个数儿，那9之后肯定要从这10个数儿里选，而且还不能选一个数儿，得选俩数儿，因为一个数儿都用完了。</p>
+<p>如果选俩数儿，就得从最小的俩数开始选，这两个数就是：0和1。</p>
+<p>但又不能是01，只能是10。</p>
+<p>所以9后面就是10。</p>
+<p>这就是“进”。</p>
+<h2 id="二进制">二进制</h2>
+<p>前面讲了十进制，十进制一共涉及到10个数字，那么二进制就是涉及到两个数字：0和1。</p>
+<p>在二进制里面数数的时候还是从0开始数，第二个数儿是1：</p>
+<p>0、1、停</p>
+<p>那么1之后应该是什么呢？</p>
+<p>按照前面讲的“进”的方式，1后面的数字肯定是两位（因为0和1都是一位），而且必须由0和1组成。</p>
+<p>01肯定不行，因为01就是1，00也不行，00就是0。</p>
+<p>所以只能是：10</p>
+<p>0、1、10</p>
+<p>10之后呢？肯定要把后面的0替换成1，所以是11。</p>
+<p>0、1、10、11</p>
+<p>那11之后呢？现在由0和1组成的两位都已经用完了，只能是跟一个三位数字，而这个三位数字又必须是由0和1组成。</p>
+<p>000是3位，但000就是0。</p>
+<p>001也是3位，但001就是1。</p>
+<p>010也是3位，但010就是10.</p>
+<p>可见，这个三位数字肯定得是1开头，不能是0开头，得是：</p>
+<p>1**</p>
+<p>那后面两位数是什么呢？</p>
+<p>肯定是0和1组成的两位数，那我们就从00开始：</p>
+<p>100</p>
+<p>因此：</p>
+<p>0、1、10、11、100、.......</p>
+<p>按照这样的计算方法，我们就能自己把二进制的数儿一个个排出来了。</p>
+<h2 id="幂指数">幂（指数）</h2>
+<p>虽然这个帖子的标题是讲二进制是什么，而我们已经解释清楚二进制是什么把数字表示出来的了，但为什么还要讲“幂”呢？</p>
+<p>因为，要想进一步理解二进制的使用，还得讲一下幂是什么。</p>
+<p>高中数学里幂和指数经常混为一谈。</p>
+<p>我们可以这样理解二者的区别：</p>
+<p>2的3次方（写作：2<sup>3</sup>）</p>
+<p>我们求2的3次方的过程就叫做：幂（Power）运算。</p>
+<p>英文是这样解释的：</p>
+<p>An expression that represents repeated multiplication of the same factor is called a power.</p>
+<p>其中2是底（base），3是指数（exponent）</p>
+<p>英语读作：2 to the power of three</p>
+<p>汉语读作：2的3次方或者2的3次幂</p>
+<p>好的，把上面这两个容易混淆的概念解释清楚后，我们来看十进制与这个概念有啥关系：</p>
+<p><strong>999</strong></p>
+<p>这是一个十进制的数字999，一共有三位：百位、十位和个位，对应的数字分别是：100、10和1</p>
+<p>所以：999 = 9 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 100 + 9 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 10 + 9</p>
+<p>我们用的是十进制，所以我们可以通过10为底的幂运算来分别获得100、10和1，即：</p>
+<p>10<sup>2</sup> = 100 (10的2次方)</p>
+<p>10<sup>1</sup> = 10 （10的1次方）</p>
+<p>10<sup>0</sup> = 1（10的0次方）</p>
+<p>那么我们接下来再看二进制：</p>
+<p><strong>10101</strong></p>
+<p>我们可以用同样的方法来表示，但区别是这回的底是2，而不是10：</p>
+<p>1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>4</sup> + 0 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>3</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>2</sup> + 0 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>1</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>0</sup> =</p>
+<p>16                    +  0                      + 4                      + 0               +1        =</p>
+<p>21</p>
+<p>所以二进制10101对应的十进制就是21。</p>
+<p>通过这个例子我们可以轻松完成二进制到十进制的转换，不过这个还只是让大家更容易理解如何把幂运算与进制结合到一起。</p>
+<h2 id="位">位</h2>
+<p>我们接下来再看一个问题：</p>
+<p>如果给你4个盒子，每个盒子里只能装1或者0，那么这4个盒子一共能有多少种排列的可能？</p>
+<p>你可以手动计算：</p>
+<p>0000</p>
+<p>0001</p>
+<p>0010</p>
+<p>0011</p>
+<p>.......</p>
+<p>但是我们也可以这样运算：</p>
+<p>四个盒子如果都是1就是：1111</p>
+<p>用以2为底的幂运算计算：</p>
+<p>1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>3</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>2</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>1</sup> +  1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>0</sup> =</p>
+<p>8       + 4       + 2       + 1       =</p>
+<p>15</p>
+<p>也就是说这四个盒子能存储的最大的十进制数字是15。</p>
+<p>我们知道最小的十进制数字是0（对应的二进制是0000），而0到15一共是16个数字，所以四个盒子一共能有16种排布方式，而16又恰好是2<sup>4</sup>（2的4次方），15就是：2<sup>4</sup> -1 (即16-1）</p>
+<p>这些排布方式对应的十进制范围就是：0 到 2<sup>4</sup> -1</p>
+<p>那么换一个问题：</p>
+<p>如果有32个盒子，那么这32个盒子能有多少种排列呢？</p>
+<p>根据上面的计算，对应的十进制范围就是：0 到 2<sup>32</sup> -1</p>
+<p>即：0 到 4294967295</p>
+<p>那我们现在再出一个新的问题：给你4个盒子，第一个盒子可以填正号（+）或者负号（-），后面的三个盒子则每个盒子可以填写0或者1，那么请问：这4个盒子一共有多少种排序，其中对应的正数有多少个，负数有多少个？</p>
+<p>这个问题应该很简单吧？</p>
+<p>假如第一个盒子是正号，那么剩下三个盒子的最大数就是：2<sup>3</sup> -1，如果第一个盒子是负号，那么剩下的三个盒子的最大数也是：2<sup>3</sup> -1</p>
+<p>同理，如果是32个盒子呢？</p>
+<p>如果是32个盒子，那么第一个盒子是正号，剩下的31个盒子的最大数就是：2<sup>31</sup> -1；如果第一个盒子是负号，那么剩下的31个盒子的最大数依然是：2<sup>31</sup> - 1</p>
+<p>因此这32个盒子能够显示的最小的负数就是： -(2<sup>31</sup> -1)，能够显示的最大的正数就是：2<sup>31</sup> -1</p>
+<p>好了，现在，我们再给大家换一种描述的方法，把“盒子”改成：“位”（bit）</p>
+<p>（看到这里，大家可以去看一下我之前发布的另一篇文章：<a href="https://codeslator.blog/post/bit_byte/">译者编程冷知识：位和字节</a>）</p>
+<p>如果计算机上的一个存储空间有32位（32 bits），那么请问，这个存储空间能够存储的最大的整数是什么？</p>
+<p>如果这个存储空间的第一位必须是正号或者负号，那么这个存储空间能够存储的最大的整数又是什么？</p>
+<p>希望大家已经可以自己计算出来了。</p>
+<h2 id="utf-8和utf-16">UTF-8和UTF-16</h2>
+<p>有了上面的知识，我们知道其实“位”（bit）就是个盒子，因为盒子就是用来存储东西的空间嘛。计算机里也是有存储空间的，计算机里的存储空间也是盒子，这些盒子只能存储0和1，而不能存储英文字母和汉字。</p>
+<p>为了能够存储英文字母和汉字，就只能让所有的英文字母和汉字都有对应的0和1，即二进制。</p>
+<p>那我们就这样来安排，用三位吧（3 bits)</p>
+<p>000  -&gt; a</p>
+<p>001  -&gt; b</p>
+<p>010  -&gt; c</p>
+<p>......</p>
+<p>111 -&gt; g</p>
+<p>完了，3位只能表示到g，可我还有那么多个英文字母呢，而且我还有那么多个标点符号呢？</p>
+<p>由于早期的计算机是美国人做的，所以他们只想用来表示英文字母和标点符号，然后他们发现7位就可以了：</p>
+<p>（二进制）1111111 =（十进制）127</p>
+<p>7个盒子能够表示的最大数是127，最小的数是0，所以7位可以用来表示128个符号。</p>
+<p>但是计算机里一个字节（byte）等于8位（bit），得凑个整呀？</p>
+<p>于是就规定了第一位是0，其他的位可以是0，也可以是1。</p>
+<p>这就有了最早的文字编码方式：ASCII（美国信息交换标准代码）</p>
+<p>可这种编码方式只能表示英文字母和标点符号，汉字和其他语言都表示不了，所以ASCII只能美国人自己玩儿，其他国家的人还得搞出新的编码方式，像汉字这种7位肯定不够，得多加一点儿。</p>
+<p>于是汉字的编码就搞了2个字节（2 bytes），因为1个字节是8位，所以2个字节就是16位。</p>
+<p>好家伙，你自己算算16个盒子能有多少个排列？ 给你个参考：2的16次方(2<sup>16</sup>) = 265536</p>
+<p>完全够了！</p>
+<p>于是，汉字就采取了双字节的方式来编码。</p>
+<p>这人啊一旦有了钱，就会为所欲为。16个盒子怎么能够？我要32个盒子、64个盒子！</p>
+<p>于是就有人想，能不能用尽可能多的位数来表示编码文字呢？这样人类有多少儿符号都能给它编码。</p>
+<p>然而，并不是位数越多越好，因为土豪有的时候过于浪费，如果你用32位，也就是4个8位，加入表示第一个英文字母a，就得是这样：</p>
+<p>00000000 00000000 00000000 00000000</p>
+<p>这么多个0，你受得了吗？</p>
+<p>你要是受得了，计算机还受不了呢。</p>
+<p>于是，人们就想怎么才能节约一些空间，少用一些0。</p>
+<p>所以有些符号（比如英文），就用8位来表示吧，有些符号就用16位来表示吧。</p>
+<p>这里面还有很多知识，我这里就不多介绍了。</p>
+<p>总之，UTF-8的8是8位的意思，UTF-16的16是16位的意思。</p>
+<p>现在你写的网页、代码，大部分的符号都涵盖到了UTF-8这种编码方式里，所以你把文件的文字编码方式选为UTF-8就大概率不会出现乱码了。</p>
+<p>之所以出现乱码，就是因为你想显示的文字并没有对应的二进制编码。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开发支持多检索词的搜索引擎所需代码]]></title>
+        <id>https://hanlintao.github.io/post/multiqueries/</id>
+        <link href="https://hanlintao.github.io/post/multiqueries/">
+        </link>
+        <updated>2021-01-13T03:01:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>有读者问到：“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”</p>
+<p>要想解决这个问题，需要对搜索功能如何实现的有进一步的了解，我们通过本帖来详细分析一下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>有读者问到：“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”</p>
+<p>要想解决这个问题，需要对搜索功能如何实现的有进一步的了解，我们通过本帖来详细分析一下。</p>
+<!-- more -->
+<p>在本书的第四章我们介绍了如何开发简易在线双语术语库，同时在博客的这个帖子中也有介绍：<a href="https://codeslator.blog/post/bilingualtermbase/">开发简易在线双语术语库所需代码</a>。</p>
+<p>这位读者的上述问题就源自于这部分的学习。</p>
+<h2 id="搜索功能的实现">搜索功能的实现</h2>
+<p>我们简单回顾一下搜索功能的实现过程：</p>
+<p><strong>代码一：查询框</strong></p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITERM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码二：获取检索结果</strong></p>
+<p>result.php</p>
+<pre><code>&lt;?php
+
+$term = $_POST[&quot;term&quot;];
+
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+
+$getterm = mysqli_query($conn,$sql);
+
+if(!$getterm)
+{
+    echo &quot;无法获取术语，请检查问题！&quot;;
+}
+else{
+
+    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
+    {
+        echo $row[&quot;zh_CN&quot;];
+        echo $row[&quot;en_US&quot;];
+    }
+}
+?&gt;
+</code></pre>
+<p>上面这两段代码组合到一起就能实现简易术语检索功能或简易翻译记忆功能的实现，而实现的关键在于：</p>
+<p>1）代码一的这两行：</p>
+<pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+</code></pre>
+<pre><code>&lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
+</code></pre>
+<p>2）代码二的这两行：</p>
+<pre><code>$term = $_POST[&quot;term&quot;];
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+</code></pre>
+<p>也就是说，通过代码一的表单我们可以把检索词放到“term”这个变量中（<code>name = &quot;term&quot;</code> 就表示要给输入的检索词起一个名字“term”）</p>
+<p>通过代码二的<code>$_POST[&quot;term&quot;]</code>我们就可以通过POST的方法来在两个文件之间传输检索词（代码一的<code>method = &quot;POST&quot;</code>就表示以POST方法发送数据，本书P90页有对POST方法的简要介绍）。</p>
+<p>更为关键的是我们在代码二中构建的SQL语句：<code>$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;</code></p>
+<p>如果没有SQL语句去检索数据库，我们也无法将用户输入的关键词与数据库相连。</p>
+<h2 id="检索词的处理">检索词的处理</h2>
+<p>在SQL语句中，我们将用户输入的关键词放到了<code>$term</code>变量中，然后使用<code>zh_CN LIKE '%$term%'</code>和<code>en_US LIKE '%$term%'</code>作为判断条件，看看用户输入的检索词是否出现在了中文数据中或英文数据中（<code>OR</code>表明的就是“或”）。</p>
+<p>现在再看这位读者的问题：</p>
+<p>“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”</p>
+<p>她说的search.php指的就是上面这两段代码对应的功能，我们上面的代码确实只能输入一个检索词，并判断这一个检索词是否出现在中文或英文数据中。</p>
+<p>她想同时搜索两个关键词，甚至是多个关键词，上面的代码显然是做不到的。除非在index.php中我们多添加一个<code>&lt;input&gt;</code>元素，让用户输入两个检索词，如下：</p>
+<p><strong>代码三：支持两个检索词的搜索框</strong></p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITERM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term_one&quot; placeholder = &quot;检索词一&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term_two&quot; placeholder = &quot;检索词二&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>效果如下图：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610508603777.png" alt="" loading="lazy"></figure>
+<p>一旦接受了两个检索词，那么result.php也得修改，如下：</p>
+<pre><code>&lt;?php
+
+$term_one = $_POST[&quot;term_one&quot;];
+$term_two = $_POST[&quot;term_two&quot;];
+
+//$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+
+$sql = &quot;SELECT * FROM tm WHERE (zh_CN LIKE '%$term_one%' AND zh_CN LIKE '%$term_two%') OR (en_US LIKE '%$term_one%' AND en_US LIKE '%$term_two%')&quot;;
+
+$getterm = mysqli_query($conn,$sql);
+
+if(!$getterm)
+{
+    echo &quot;无法获取术语，请检查问题！&quot;;
+}
+else{
+
+    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
+    {
+        echo $row[&quot;zh_CN&quot;];
+        echo $row[&quot;en_US&quot;];
+    }
+}
+?&gt;
+</code></pre>
+<p>这里面的关键就是SQL语句的写法，大家看下面这个截图：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610509423827.png" alt="" loading="lazy"></figure>
+<p>在这个截图中，我想搜索包含“卫生”和“中心”的句子，于是我构造的条件是：</p>
+<pre><code>zh_CN LIKE &quot;%卫生%&quot; AND zh_CN LIKE &quot;%中心%&quot;
+</code></pre>
+<p>也就是说我先让zh_CN对应的中文字段去查看是否有数据中包含“卫生”，然后再去看zh_CN对应的中文字段是否有包含“卫生”的数据，且两个条件必须要同时满足。</p>
+<p>给大家再看一个实际的检索结果展示：</p>
+<figure data-type="image" tabindex="3"><img src="https://hanlintao.github.io/post-images/1610509977939.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://hanlintao.github.io/post-images/1610509958790.png" alt="" loading="lazy"></figure>
+<p>这个应该就与这位读者想实现的功能保持一致了。</p>
+<p>为了帮助大家更好实践，我把代码也放到了这里：</p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;input type = &quot;text&quot; name = &quot;term_one&quot; placeholder = &quot;检索词一&quot; /&gt;
+            &lt;/td&gt;
+
+            &lt;td&gt;
+                &lt;input type = &quot;text&quot; name = &quot;term_two&quot; placeholder = &quot;检索词二&quot; /&gt;
+
+            &lt;/td&gt;
+
+            &lt;td&gt;
+                &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>result.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;table width = &quot;100%&quot; border = &quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;序号&lt;/td&gt;
+        &lt;td&gt;中文&lt;/td&gt;
+        &lt;td&gt;英文&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;?php
+
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+mysqli_select_db($conn,&quot;mytms&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+
+$term_one = $_POST[&quot;term_one&quot;];
+$term_two = $_POST[&quot;term_two&quot;];
+
+echo &quot;检索词一：&quot;.$term_one.&quot;&lt;br&gt;&quot;;
+
+echo &quot;检索词二：&quot;.$term_two.&quot;&lt;br&gt;&quot;;
+$sql = &quot;SELECT * FROM tm WHERE (zh_CN LIKE '%$term_one%' AND zh_CN LIKE '%$term_two%') OR (en_US LIKE '%$term_one%' AND en_US LIKE '%$term_two%')&quot;;
+
+//$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$zh_CN%' AND en_US LIKE '%$en_US%'&quot;;
+
+$gettm = mysqli_query($conn,$sql);
+
+if(!$gettm)
+{
+    echo &quot;无法获取翻译记忆，请检查问题！&quot;;
+}
+else{
+    while($row = mysqli_fetch_array($gettm,MYSQLI_ASSOC))
+    {
+        $row[&quot;zh_CN&quot;] = preg_replace(&quot;/$term_one/u&quot;,&quot;&lt;font color=blue&gt;&lt;b&gt;$term_one&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;zh_CN&quot;]);
+
+        $row[&quot;zh_CN&quot;] = preg_replace(&quot;/$term_two/u&quot;,&quot;&lt;font color=blue&gt;&lt;b&gt;$term_two&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;zh_CN&quot;]);
+
+        $row[&quot;en_US&quot;] = preg_replace(&quot;/$term_one/u&quot;,&quot;&lt;font color=red&gt;&lt;b&gt;$term_one&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;en_US&quot;]);
+
+        $row[&quot;en_US&quot;] = preg_replace(&quot;/$term_two/u&quot;,&quot;&lt;font color=red&gt;&lt;b&gt;$term_two&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;en_US&quot;]);
+
+        echo &quot;
+            &lt;tr&gt;
+                &lt;td&gt;{$row['ID']}&lt;/td&gt;
+                &lt;td&gt;{$row['zh_CN']}&lt;/td&gt;
+                &lt;td&gt;{$row['en_US']}&lt;/td&gt;
+            &lt;/tr&gt;&quot;;
+    }
+}
+?&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>（注：数据库需要自己准备，相关数据库创建的方法参见：<a href="https://codeslator.blog/post/bilingualtm/">开发简易在线翻译记忆库所需代码</a>）</p>
+<h2 id="检索词的进一步处理">检索词的进一步处理</h2>
+<p>上面的方法其实只是部分解决了这位读者的问题，因为当这位读者想搜索三个检索词时，或者搜索一个中文词、一个英文词时就会遇到问题，因为要想实现多个检索词的检索，就需要添加多个检索框，SQL语句也要跟着修改。</p>
+<p>但我们也可以考虑使用一个检索框，用户输入的检索词用空格隔开，然后再根据空格把用户的一次输入切分成多个检索词，再将检索词放到SQL里去逐个检索。</p>
+<p>我们在之后的教程中再介绍这个知识点。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开发TMX文件上传功能所需代码]]></title>
+        <id>https://hanlintao.github.io/post/tmxupload/</id>
+        <link href="https://hanlintao.github.io/post/tmxupload/">
+        </link>
+        <updated>2021-01-13T02:19:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。</p>
+<!-- more -->
+<h2 id="tmx文件上传">TMX文件上传</h2>
+<p>首先，我们将5.2.2节中的代码粘贴过来：</p>
+<p><strong>代码一：head.php</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    
+    &lt;title&gt;File Upload&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</code></pre>
+<p><strong>代码二：foot.php</strong></p>
+<pre><code>&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码三：upload.php</strong></p>
+<pre><code>&lt;?php include &quot;shared/head.php&quot;; ?&gt;   
+&lt;form action=&quot;upload_file.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;  
+    &lt;table&gt;    
+        &lt;tr&gt;    
+            &lt;td&gt;    
+                &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;    
+            &lt;/td&gt;    
+            &lt;td&gt;    
+                &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;上传&quot;&gt;  
+            &lt;/td&gt;    
+        &lt;/tr&gt;    
+    &lt;/table&gt;  
+&lt;/form&gt;  
+&lt;?php include &quot;shared/foot.php&quot;; ?&gt;
+</code></pre>
+<p><strong>代码四：upload_file.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {  
+  echo &quot;上传文件为：&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;;  
+  echo &quot;文件类型：&quot;.$_FILES[&quot;file&quot;][&quot;type&quot;].&quot;&lt;br&gt;&quot;;  
+  echo &quot;文件大小：&quot;.($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024).&quot; KB&lt;br&gt;&quot;;  
+  echo &quot;文件临时存储在：&quot;.$_FILES[&quot;file&quot;][&quot;tmp_name&quot;];  
+  }  
+?&gt;  
+</code></pre>
+<p><strong>代码五：upload_file.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {   
+  if (file_exists(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]))  
+      {  
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;已经存在。&quot;;  
+      }  
+    else  
+      {  
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      echo &quot;文件已上传至以下文件夹：&quot;.&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;];  
+      }  
+  }  
+?&gt;
+</code></pre>
+<p>以上代码均来自于本书第五章，其中代码五是代码四的升级版，修改的主要内容就是将用户上传的文件放到一个指定的文件夹中。</p>
+<p>对于初学者而言，如果就想使用上面的代码来实现TMX文件的上传是没有任何问题的，每当上传一个文件后，这个文件就会进入到upload文件夹中。</p>
+<p>我给大家看一下我电脑上的文件夹结构：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610505378914.png" alt="" loading="lazy"></figure>
+<p>如果你将上面的代码按照这个文件夹结构来撰写的话，就会得到一个可以正常上传TMX文件的功能。</p>
+<h2 id="tmx文件读取">TMX文件读取</h2>
+<p>既然能够上传TMX文件了，那么我们就也可以读取TMX文件了，读取的方法就是利用本书第六章所使用的代码：</p>
+<p><strong>代码七：从“.tmx”格式翻译记忆库中读取并展示数据</strong></p>
+<pre><code>&lt;?php   
+    $xml = simplexml_load_file(&quot;source.tmx&quot;);  
+    $json = json_encode($xml);  
+    $jsondata = json_decode($json,true);  
+    foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)  
+        {  
+            echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+            echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+            echo &quot;&lt;br&gt;&quot;;  
+        }     
+?&gt;  
+</code></pre>
+<p>对于初学者而言，会在这里卡住，因为不知道怎么将文件提交页面的文件名与代码七连通在一起。</p>
+<p>要解决这个问题就要把握两个关键点：</p>
+<p>1）代码七中的第一行：</p>
+<pre><code>$xml = simplexml_load_file(&quot;source.tmx&quot;); 
+</code></pre>
+<p>在这行代码中我们使用了一个函数simplexml_load_file()，这个函数要想执行成功需要一个参数，也就是括号里的&quot;source.tmx&quot;，这是我们要处理的文件的文件名。</p>
+<p>2）代码四中的第七行：</p>
+<pre><code>echo &quot;上传文件为：&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;; 
+</code></pre>
+<p>在这行代码中我们获得了上传文件的文件名。</p>
+<p>因此，只要将上传文件的文件名放到simplexml_load_file()函数里就可以了。</p>
+<p>upload_result.php文件修改如下：</p>
+<p><strong>代码八：upload_result.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {   
+  if (file_exists(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]))  
+      {  
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;已经存在。&quot;;  
+      }  
+    else  
+      {  
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      echo &quot;文件已上传至以下文件夹：&quot;.&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;;  
+      
+      $xml = simplexml_load_file(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      $json = json_encode($xml);  
+      $jsondata = json_decode($json,true);  
+      foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)  
+          {  
+              echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+              echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+              echo &quot;&lt;br&gt;&quot;;  
+          }     
+    
+        }  
+  }  
+?&gt;
+</code></pre>
+<p>这样就完成了TMX文件的上传并读取功能。接下来就可以再把如何上传TMX文件到数据库的代码拿过来就行了，这是本书第六章讲解过的内容，同时也在博客的这个帖子中有详细介绍：<a href="https://codeslator.blog/post/bilingualtm/">开发简易在线翻译记忆库所需代码</a>。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[译者编程冷知识：位和字节]]></title>
+        <id>https://hanlintao.github.io/post/bit_byte/</id>
+        <link href="https://hanlintao.github.io/post/bit_byte/">
+        </link>
+        <updated>2021-01-12T08:59:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>许多译者在学习编程时搞不清楚“位”（Bit）和“字节”（Byte）的区别，所以我写篇帖子来讲一讲。</p>
+<!-- more -->
+<h2 id="位">位</h2>
+<p>大家是否遇到过这样的场景：</p>
+<p>老师：大家看看自己电脑是32位的还是64位的，然后下载对应的软件版本。<br>
+我：...... 怎么查看？<br>
+老师：不知道自己去百度一下，连这都不知道！<br>
+我：老师，32位和64位有啥区别？<br>
+老师：...... 问那么多干嘛，自己去百度一下！</p>
+<p>接下来我们一起来看看什么是“位”。</p>
+<p>在计算机术语中，“位”可以对应两个英文单词：Digit和Bit。</p>
+<p>牛津词典里Digit的释义如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610442977072.png" alt="" loading="lazy"></figure>
+<p>在这个解释里，第一个解释很好理解，就是数字、数位、位。比如Digital（数字的、数字化的、数码的）的词根就是Digit。</p>
+<p>不过不少人可能不知道第二个意思，digit的本意是手指。所以一个手指头就是一个“digit”。当你举起一个手指头时，我们可以数“1”，而当你把这个手指头又收回去的时候，我们可以数“0”。所以这个手指的伸缩可以表示0和1两种状态，因此我们可以称这个手指头为“Binary Digit”，简称为“Bit”。</p>
+<p>在翻译的时候，“Binary Digit”翻译成：二进制位；“Bit”翻译成“比特位”，这个比特完全是从英文音译过来的，“比特”这两个汉字本身没有什么意义。</p>
+<p>现在你应该可以理解为什么“Digit”和“Bit”都可以对应“位”这个词了吧？</p>
+<h2 id="字节">字节</h2>
+<p>其实现在很多人都知道字节的英文是什么，因为“字节跳动”的英文是“ByteDance”。</p>
+<p>“位”和“字节”的关系可以这样来记住：一个字节（byte）等于8个比特位（bit）。当你伸出8个手指头时，一口全部咬掉（bite）。这个“bite”用得有点冷，但事实上，字节这个词的英文“byte”就是从“bite”来的，只不过觉得可能会跟“bit”混淆，所以人为修改成了“byte”。</p>
+<p>以下是牛津词典对“Byte”的解释：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
+<p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开发简易在线翻译记忆库所需代码]]></title>
+        <id>https://hanlintao.github.io/post/bilingualtm/</id>
+        <link href="https://hanlintao.github.io/post/bilingualtm/">
+        </link>
+        <updated>2021-01-09T02:42:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>计算机辅助翻译技术的核心技术之一就是翻译记忆技术，涉及到翻译记忆库的对齐生成、翻译记忆库的管理、翻译记忆库的检索、翻译记忆库的相似度匹配等等，因此对于译者而言，善用翻译记忆库将能极大提升翻译的效率。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>计算机辅助翻译技术的核心技术之一就是翻译记忆技术，涉及到翻译记忆库的对齐生成、翻译记忆库的管理、翻译记忆库的检索、翻译记忆库的相似度匹配等等，因此对于译者而言，善用翻译记忆库将能极大提升翻译的效率。</p>
+<!-- more -->
+<p>在这篇文章中我们一起来看一下如何开发简易的在线翻译记忆库。</p>
+<h2 id="xml">XML</h2>
+<p>XML是eXtensible Markup Language的缩写，译为“可扩展标记语言”。只有理解了XML才能把翻译行业的众多基于XML的数据交换标准搞清楚，比如存储翻译记忆的TMX、存储术语库的TBX、存储断句规则的SRX等等。</p>
+<p>虽然现在主流的数据格式是json，一种更加简单轻便的数据存储格式，但在翻译行业常用的各类计算机辅助翻译工具中，XML的应用还是非常广的，所以对于翻译技术感兴趣的同学和老师还是有必要深入学习XML的。</p>
+<p>首先，请大家观看两个我录制的基础视频：什么是XML和什么是DTD。</p>
+<p>简单来说，XML中包含的是要传输的数据，DTD定义了要传输的数据以怎样的结构存在于XML中。</p>
+<p><strong><a href="https://www.bilibili.com/video/BV1uE41177nh">什么是XML？</a></strong></p>
+<iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=159123577&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><strong><a href="https://www.bilibili.com/video/BV1uE41177nh?p=2">什么是DTD？</a></strong></p>
+<iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=161812210&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>以上内容是我们了解翻译记忆库的基础，大家有时间的话最好能够全都看完。</p>
+<h2 id="tmx">TMX</h2>
+<p>IBM的工程师曾在博客中写过这样一篇文章<a href="https://www.ibm.com/developerworks/cn/xml/x-localis3/index.html">本地化中的 XML：通过 TM 和 TMX 重用翻译<br>
+——在 XML 标准的帮助下减少翻译的时间和劳动量</a></p>
+<p>其中提到：</p>
+<blockquote>
+<p>翻译存储（Translation memory，TM）是一种支持文档片段（句子、段落或短语）翻译的语言工具，方法是在数据库中搜索类似的片段并建议数据库中发现的匹配。</p>
+</blockquote>
+<blockquote>
+<p>TM 是现代计算机辅助翻译（CAT）工具的基本组成部分。它在翻译行业中非常普及，以至于人们常常用“翻译存储工具”代替“计算机辅助翻译工具”。但是，这些术语不应该互换，因为 CAT 技术还包括机器翻译（一种基于语言学规则并使用双语词典的计算机技术）。</p>
+</blockquote>
+<blockquote>
+<p>TM 系统记住翻译人员输入的翻译。当翻译人员处理类似的文本时，系统提供以前保存的版本。这样在处理重复性文本如技术手册时可以节约大量的时间，还有助于保证术语的一致性。</p>
+</blockquote>
+<p>在“计算机辅助翻译”领域，双语的句子大多是以“.tmx”格式的文件存储的，这种叫作“翻译记忆”（Translation Memory），作用就是先把翻译过的双语内容存在翻译记忆中，当译者翻译一个句子时，先看一下翻译记忆中有没有这个句子或者有没有与这个相似的句子，如果有就把句子原文和译文显示出来提示给译者，译者就可以省去很多时间和精力去瞎编。</p>
+<p>就像Word文档都是以“.doc”或“.docx”、Excel文档都是以“.xls”或“.xlsx”的文件格式存储一样，翻译记忆也有自己的存储格式，国际通用的格式就是刚才提到的“.tmx”。“tmx”是“Translation Memory eXchange”的缩写，国际上有组织制定了这种文件存储的<a href="https://www.gala-global.org/tmx-14b">标准</a>。</p>
+<p>接下来我们看一个示例：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+
+&lt;tmx version=&quot;1.4&quot;&gt;
+
+    &lt;header creationtool=&quot;Tmxmall&quot; segtype=&quot;sentence&quot; adminlang=&quot;zh-CN&quot; srclang=&quot;zh-CN&quot; datatype=&quot;xml&quot; creationdate=&quot;20171022T155351Z&quot; creationid=&quot;TM STUDIO&quot;/&gt;
+
+    &lt;body&gt;
+
+        &lt;tu creationdate=&quot;20171022T155351Z&quot; creationid=&quot;TM STUDIO&quot;&gt;
+
+            &lt;tuv xml:lang=&quot;zh-CN&quot;&gt;
+
+                &lt;seg&gt;大会的主题是：********&lt;/seg&gt;
+
+            &lt;/tuv&gt;
+
+            &lt;tuv xml:lang=&quot;en-US&quot;&gt;
+
+                &lt;seg&gt;The theme of the Congress is: *********&lt;/seg&gt;
+
+            &lt;/tuv&gt;
+
+        &lt;/tu&gt;
+
+        &lt;tu creationdate=&quot;20171022T155351Z&quot; creationid=&quot;TM STUDIO&quot;&gt;
+
+            &lt;tuv xml:lang=&quot;zh-CN&quot;&gt;
+
+                &lt;seg&gt;全党同志一定要永远与人民同呼吸********&lt;/seg&gt;
+
+            &lt;/tuv&gt;
+
+            &lt;tuv xml:lang=&quot;en-US&quot;&gt;
+
+                &lt;seg&gt;In our Party, each and every one of us must always breathe the same breath as the people*********&lt;/seg&gt;
+
+            &lt;/tuv&gt;
+
+        &lt;/tu&gt;
+
+ &lt;/body&gt;
+
+&lt;/tmx&gt;
+</code></pre>
+<p>我们习惯上使用对齐软件来制作这样的翻译记忆文件，参见下面这个视频：</p>
+<iframe src="//player.bilibili.com/player.html?aid=89672422&bvid=BV1i7411j7AJ&cid=153208379&page=24" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>制作完成后的翻译记忆文件虽然是以“.tmx”格式存储，但是在不同的计算机辅助翻译工具中，它往往还会有其他的存储格式，比如在SDL Trados Studio中，它的格式就是“.sdltm”。</p>
+<p>“.tmx”格式的文件适合在本地电脑打开，适合导入到计算机辅助翻译工具中供查询，但是不适合在线查询。我们不能把这个文件放到网盘、协作平台去查询。</p>
+<p>市面上有不少工具支持“.tmx”的导入导出和查询，比如一者科技的<a href="https://www.tmxmall.com/qsearch">语料快搜</a>，SDL公司的TM Server（此为收费的服务器版）等。</p>
+<p>对于译者或小的翻译团队而言，如果也想自己开发简易的在线翻译库呢？</p>
+<h2 id="开发简易在线翻译记忆库所需代码">开发简易在线翻译记忆库所需代码</h2>
+<p>我们以PHP为例，介绍如何在本地服务器上开发一个简易的在线翻译记忆库。</p>
+<p><strong>本地编程环境搭建</strong></p>
+<p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
+<p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
+<p>http://codeslator.edusoho.cn/course/2</p>
+<p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
+<p>以下是所需的全部代码：</p>
+<p><strong>代码一：读取TMX文件中的双语数据</strong></p>
+<p>方法一：</p>
+<pre><code>&lt;?php
+header(&quot;content-type:text/html; charset=utf-8&quot;); 
+
+$xml = simplexml_load_file('source.tmx');
+
+$json = json_encode($xml);
+
+$jsondata = json_decode($json,true);
+
+foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)
+{
+    echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;
+    echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;
+    echo &quot;&lt;br&gt;&quot;;
+}
+
+?&gt;
+</code></pre>
+<p>方法二：</p>
+<pre><code>&lt;?php
+header(&quot;content-type:text/html; charset=utf-8&quot;); 
+
+$xml = simplexml_load_file('source.tmx');
+
+foreach ($xml-&gt;body-&gt;tu as $tu)
+{
+    echo $tu-&gt;tuv[0]-&gt;seg.&quot;&lt;br&gt;&quot;;
+    echo $tu-&gt;tuv[1]-&gt;seg.&quot;&lt;br&gt;&quot;;
+    echo &quot;&lt;br&gt;&quot;;
+}
+?&gt;
+</code></pre>
+<p><strong>代码二：创建数据库</strong></p>
+<pre><code>CREATE DATABASE fmprc 
+DEFAULT CHARACTER SET utf8 
+DEFAULT COLLATE utf8_general_ci;
+</code></pre>
+<p><strong>代码三：创建数据表</strong></p>
+<pre><code>CREATE TABLE `tm` 
+( 
+    `ID` INT(5) NOT NULL AUTO_INCREMENT , 
+    `zh_CN` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
+    `en_US` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
+    PRIMARY KEY (`ID`) 
+) 
+ENGINE = InnoDB 
+CHARSET=utf8 
+COLLATE utf8_general_ci;
+</code></pre>
+<p><strong>代码四：连接服务器</strong></p>
+<pre><code>&lt;?php
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+?&gt;
+</code></pre>
+<p><strong>代码五：选择数据库</strong></p>
+<pre><code>&lt;?php
+mysqli_select_db($conn,&quot;fmprc&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+?&gt;
+</code></pre>
+<p><strong>代码六：导入翻译记忆至数据库</strong></p>
+<p>import.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;?php
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+mysqli_select_db($conn,&quot;fmprc&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+
+$xml = simplexml_load_file(&quot;source.tmx&quot;);
+
+foreach($xml-&gt;body-&gt;tu as $tu)
+{
+    $zh_CN = $tu-&gt;tuv[0]-&gt;seg;
+    $zh_CN = str_replace(&quot;'&quot;,&quot;\'&quot;,$zh_CN);
+
+    $en_US = $tu-&gt;tuv[1]-&gt;seg;
+    $en_US = str_replace(&quot;'&quot;,&quot;\'&quot;,$en_US);
+
+    $insert_sql = &quot;INSERT INTO tm(zh_CN,en_US) VALUES('$zh_CN','$en_US')&quot;;
+    $import = mysqli_query($conn,$insert_sql);
+
+    if(!$import)
+    {
+        echo &quot;&lt;font color=red&gt;&lt;b&gt;翻译记忆插入失败：&quot;.$zh_CN.$en_US.&quot;&lt;/b&gt;&lt;/font&gt;&quot;;
+    }
+    else{
+        echo &quot;翻译记忆插入成功！&quot;.&quot;&lt;br&gt;&quot;;
+    }
+}
+
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码七：查询翻译记忆库</strong></p>
+<p>search.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;input type = &quot;text&quot; name = &quot;zh_CN&quot; placeholder = &quot;中文检索词&quot; /&gt;
+            &lt;/td&gt;
+
+            &lt;td&gt;
+                &lt;input type = &quot;text&quot; name = &quot;en_US&quot; placeholder = &quot;英文检索词&quot; /&gt;
+
+            &lt;/td&gt;
+
+            &lt;td&gt;
+                &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码八：显示翻译记忆库查询结果</strong></p>
+<p>result.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;table width = &quot;100%&quot; border = &quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;序号&lt;/td&gt;
+        &lt;td&gt;中文&lt;/td&gt;
+        &lt;td&gt;英文&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;?php
+
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+mysqli_select_db($conn,&quot;fmprc&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+
+$zh_CN = $_POST[&quot;zh_CN&quot;];
+$en_US = $_POST[&quot;en_US&quot;];
+
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$zh_CN%' AND en_US LIKE '%$en_US%'&quot;;
+
+$gettm = mysqli_query($conn,$sql);
+
+if(!$gettm)
+{
+    echo &quot;无法获取翻译记忆，请检查问题！&quot;;
+}
+else{
+    while($row = mysqli_fetch_array($gettm,MYSQLI_ASSOC))
+    {
+        $row[&quot;zh_CN&quot;] = preg_replace(&quot;/$zh_CN/u&quot;,&quot;&lt;font color=blue&gt;&lt;b&gt;$zh_CN&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;zh_CN&quot;]);
+
+        $row[&quot;en_US&quot;] = preg_replace(&quot;/$en_US/u&quot;,&quot;&lt;font color=red&gt;&lt;b&gt;$en_US&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;en_US&quot;]);
+
+        echo &quot;
+            &lt;tr&gt;
+                &lt;td&gt;{$row['ID']}&lt;/td&gt;
+                &lt;td&gt;{$row['zh_CN']}&lt;/td&gt;
+                &lt;td&gt;{$row['en_US']}&lt;/td&gt;
+            &lt;/tr&gt;&quot;;
+    }
+}
+?&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>将以上代码输入到编辑器后，我们便能得到一个简易的在线翻译记忆库。但这个翻译记忆库只能在本地访问，如果想放到线上的话，还需要购买域名和服务器，相关视频在下方：</p>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=2">如何购买一个自己的专属域名</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155351236&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=3">如何购买主机并将域名绑定到主机上</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155480677&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=4">如何通过FTP和文本编辑器更新网页代码</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155651952&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=5">如何将本地代码和数据库更新到服务器上</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155652119&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
+<p><img src="https://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
+<img src="https://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开发简易在线双语术语库所需代码]]></title>
+        <id>https://hanlintao.github.io/post/bilingualtermbase/</id>
+        <link href="https://hanlintao.github.io/post/bilingualtermbase/">
+        </link>
+        <updated>2021-01-08T12:47:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
+<!-- more -->
+<h2 id="本地编程环境搭建">本地编程环境搭建</h2>
+<p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
+<p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
+<p>http://codeslator.edusoho.cn/course/2</p>
+<p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
+<h2 id="线上编程环境访问">线上编程环境访问</h2>
+<p>在译者编程入门指南讲座中我一般会带着大家学习一些比较简单的代码，大家最好能够提前打开以下网站：</p>
+<p>https://c.runoob.com/compile/1</p>
+<p>和</p>
+<p>https://c.runoob.com/compile/9</p>
+<p>通过上面两个网站我们可以练习一些简单的PHP和Python基础知识。</p>
+<h2 id="所需代码">所需代码</h2>
+<p><strong>代码一：基础网页代码</strong></p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITERM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p><strong>代码二：查询框</strong></p>
+<p>index.php</p>
+<pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/form&gt;
+
+</code></pre>
+<p><strong>代码三：获取检索词</strong></p>
+<p>result.php</p>
+<pre><code>&lt;?php
+    $term = $_POST[&quot;term&quot;];
+?&gt;
+</code></pre>
+<p><strong>代码四：创建数据库</strong></p>
+<pre><code>CREATE DATABASE fmprc 
+DEFAULT CHARACTER SET utf8 
+DEFAULT COLLATE utf8_general_ci;
+
+</code></pre>
+<p><strong>代码五：创建数据表</strong></p>
+<pre><code>CREATE TABLE `tm` 
+( 
+    `ID` INT(5) NOT NULL AUTO_INCREMENT , 
+    `zh_CN` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
+    `en_US` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
+    PRIMARY KEY (`ID`) 
+) 
+ENGINE = InnoDB 
+CHARSET=utf8 
+COLLATE utf8_general_ci;
+
+</code></pre>
+<p><strong>代码六：连接服务器</strong></p>
+<pre><code>&lt;?php
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+?&gt;
+</code></pre>
+<p><strong>代码七：选择数据库</strong></p>
+<pre><code>&lt;?php
+mysqli_select_db($conn,&quot;fmprc&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+?&gt;
+</code></pre>
+<p><strong>代码八：获取检索结果</strong></p>
+<pre><code>&lt;?php
+
+$term = $_POST[&quot;term&quot;];
+
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+
+$getterm = mysqli_query($conn,$sql);
+
+if(!$getterm)
+{
+    echo &quot;无法获取术语，请检查问题！&quot;;
+}
+else{
+
+    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
+    {
+        echo $row[&quot;zh_CN&quot;];
+        echo $row[&quot;en_US&quot;];
+    }
+}
+?&gt;
+</code></pre>
+<p>在《译者编程入门指南》一书的第四章，我详细介绍了如何开发简易的在线双语术语库：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+</feed>

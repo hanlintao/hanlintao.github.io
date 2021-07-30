@@ -1,0 +1,316 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>译者编程冷知识：二进制与UTF-8 | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1627659593287">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="译者编程冷知识：二进制与UTF-8 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="对于文科背景的译者而言，理解十进制、二进制、UTF-8是一件从骨子里觉得自己不可能理解的计算机知识点。
+但其实这个知识点很有趣，我希望能够用尽可能简单的方式来解释清楚。
+
+什么叫做“进”
+我们经常讲的二进制、十进制、十六进制、六十进制......" />
+    <meta name="keywords" content="coldslator" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1627659593287" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              译者编程冷知识：二进制与UTF-8
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-13
+              </span>
+              <span>
+                10 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/bANF-xQPl/" class="post-tag">
+                  # coldslator
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/binary.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>对于文科背景的译者而言，理解十进制、二进制、UTF-8是一件从骨子里觉得自己不可能理解的计算机知识点。</p>
+<p>但其实这个知识点很有趣，我希望能够用尽可能简单的方式来解释清楚。</p>
+<!-- more -->
+<h2 id="什么叫做进">什么叫做“进”</h2>
+<p>我们经常讲的二进制、十进制、十六进制、六十进制......都有个“进”字儿。最好理解“进”的是我们平时使用的十进制：</p>
+<p>0、1、2、3、4、5、6、7、8、9、停！</p>
+<p>怎么着？怎么不继续数了？不应该是接着数10吗？</p>
+<p>不。得分析一下。</p>
+<p>我们按照十进制去数数的时候，一共就只有10个数儿，分别是0到9。（注意哈，0-9是十个数儿哈）</p>
+<p>既然十进制是十个数儿，那9之后肯定要从这10个数儿里选，而且还不能选一个数儿，得选俩数儿，因为一个数儿都用完了。</p>
+<p>如果选俩数儿，就得从最小的俩数开始选，这两个数就是：0和1。</p>
+<p>但又不能是01，只能是10。</p>
+<p>所以9后面就是10。</p>
+<p>这就是“进”。</p>
+<h2 id="二进制">二进制</h2>
+<p>前面讲了十进制，十进制一共涉及到10个数字，那么二进制就是涉及到两个数字：0和1。</p>
+<p>在二进制里面数数的时候还是从0开始数，第二个数儿是1：</p>
+<p>0、1、停</p>
+<p>那么1之后应该是什么呢？</p>
+<p>按照前面讲的“进”的方式，1后面的数字肯定是两位（因为0和1都是一位），而且必须由0和1组成。</p>
+<p>01肯定不行，因为01就是1，00也不行，00就是0。</p>
+<p>所以只能是：10</p>
+<p>0、1、10</p>
+<p>10之后呢？肯定要把后面的0替换成1，所以是11。</p>
+<p>0、1、10、11</p>
+<p>那11之后呢？现在由0和1组成的两位都已经用完了，只能是跟一个三位数字，而这个三位数字又必须是由0和1组成。</p>
+<p>000是3位，但000就是0。</p>
+<p>001也是3位，但001就是1。</p>
+<p>010也是3位，但010就是10.</p>
+<p>可见，这个三位数字肯定得是1开头，不能是0开头，得是：</p>
+<p>1**</p>
+<p>那后面两位数是什么呢？</p>
+<p>肯定是0和1组成的两位数，那我们就从00开始：</p>
+<p>100</p>
+<p>因此：</p>
+<p>0、1、10、11、100、.......</p>
+<p>按照这样的计算方法，我们就能自己把二进制的数儿一个个排出来了。</p>
+<h2 id="幂指数">幂（指数）</h2>
+<p>虽然这个帖子的标题是讲二进制是什么，而我们已经解释清楚二进制是什么把数字表示出来的了，但为什么还要讲“幂”呢？</p>
+<p>因为，要想进一步理解二进制的使用，还得讲一下幂是什么。</p>
+<p>高中数学里幂和指数经常混为一谈。</p>
+<p>我们可以这样理解二者的区别：</p>
+<p>2的3次方（写作：2<sup>3</sup>）</p>
+<p>我们求2的3次方的过程就叫做：幂（Power）运算。</p>
+<p>英文是这样解释的：</p>
+<p>An expression that represents repeated multiplication of the same factor is called a power.</p>
+<p>其中2是底（base），3是指数（exponent）</p>
+<p>英语读作：2 to the power of three</p>
+<p>汉语读作：2的3次方或者2的3次幂</p>
+<p>好的，把上面这两个容易混淆的概念解释清楚后，我们来看十进制与这个概念有啥关系：</p>
+<p><strong>999</strong></p>
+<p>这是一个十进制的数字999，一共有三位：百位、十位和个位，对应的数字分别是：100、10和1</p>
+<p>所以：999 = 9 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 100 + 9 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 10 + 9</p>
+<p>我们用的是十进制，所以我们可以通过10为底的幂运算来分别获得100、10和1，即：</p>
+<p>10<sup>2</sup> = 100 (10的2次方)</p>
+<p>10<sup>1</sup> = 10 （10的1次方）</p>
+<p>10<sup>0</sup> = 1（10的0次方）</p>
+<p>那么我们接下来再看二进制：</p>
+<p><strong>10101</strong></p>
+<p>我们可以用同样的方法来表示，但区别是这回的底是2，而不是10：</p>
+<p>1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>4</sup> + 0 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>3</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>2</sup> + 0 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>1</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>0</sup> =</p>
+<p>16                    +  0                      + 4                      + 0               +1        =</p>
+<p>21</p>
+<p>所以二进制10101对应的十进制就是21。</p>
+<p>通过这个例子我们可以轻松完成二进制到十进制的转换，不过这个还只是让大家更容易理解如何把幂运算与进制结合到一起。</p>
+<h2 id="位">位</h2>
+<p>我们接下来再看一个问题：</p>
+<p>如果给你4个盒子，每个盒子里只能装1或者0，那么这4个盒子一共能有多少种排列的可能？</p>
+<p>你可以手动计算：</p>
+<p>0000</p>
+<p>0001</p>
+<p>0010</p>
+<p>0011</p>
+<p>.......</p>
+<p>但是我们也可以这样运算：</p>
+<p>四个盒子如果都是1就是：1111</p>
+<p>用以2为底的幂运算计算：</p>
+<p>1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>3</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>2</sup> + 1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>1</sup> +  1 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2<sup>0</sup> =</p>
+<p>8       + 4       + 2       + 1       =</p>
+<p>15</p>
+<p>也就是说这四个盒子能存储的最大的十进制数字是15。</p>
+<p>我们知道最小的十进制数字是0（对应的二进制是0000），而0到15一共是16个数字，所以四个盒子一共能有16种排布方式，而16又恰好是2<sup>4</sup>（2的4次方），15就是：2<sup>4</sup> -1 (即16-1）</p>
+<p>这些排布方式对应的十进制范围就是：0 到 2<sup>4</sup> -1</p>
+<p>那么换一个问题：</p>
+<p>如果有32个盒子，那么这32个盒子能有多少种排列呢？</p>
+<p>根据上面的计算，对应的十进制范围就是：0 到 2<sup>32</sup> -1</p>
+<p>即：0 到 4294967295</p>
+<p>那我们现在再出一个新的问题：给你4个盒子，第一个盒子可以填正号（+）或者负号（-），后面的三个盒子则每个盒子可以填写0或者1，那么请问：这4个盒子一共有多少种排序，其中对应的正数有多少个，负数有多少个？</p>
+<p>这个问题应该很简单吧？</p>
+<p>假如第一个盒子是正号，那么剩下三个盒子的最大数就是：2<sup>3</sup> -1，如果第一个盒子是负号，那么剩下的三个盒子的最大数也是：2<sup>3</sup> -1</p>
+<p>同理，如果是32个盒子呢？</p>
+<p>如果是32个盒子，那么第一个盒子是正号，剩下的31个盒子的最大数就是：2<sup>31</sup> -1；如果第一个盒子是负号，那么剩下的31个盒子的最大数依然是：2<sup>31</sup> - 1</p>
+<p>因此这32个盒子能够显示的最小的负数就是： -(2<sup>31</sup> -1)，能够显示的最大的正数就是：2<sup>31</sup> -1</p>
+<p>好了，现在，我们再给大家换一种描述的方法，把“盒子”改成：“位”（bit）</p>
+<p>（看到这里，大家可以去看一下我之前发布的另一篇文章：<a href="https://codeslator.blog/post/bit_byte/">译者编程冷知识：位和字节</a>）</p>
+<p>如果计算机上的一个存储空间有32位（32 bits），那么请问，这个存储空间能够存储的最大的整数是什么？</p>
+<p>如果这个存储空间的第一位必须是正号或者负号，那么这个存储空间能够存储的最大的整数又是什么？</p>
+<p>希望大家已经可以自己计算出来了。</p>
+<h2 id="utf-8和utf-16">UTF-8和UTF-16</h2>
+<p>有了上面的知识，我们知道其实“位”（bit）就是个盒子，因为盒子就是用来存储东西的空间嘛。计算机里也是有存储空间的，计算机里的存储空间也是盒子，这些盒子只能存储0和1，而不能存储英文字母和汉字。</p>
+<p>为了能够存储英文字母和汉字，就只能让所有的英文字母和汉字都有对应的0和1，即二进制。</p>
+<p>那我们就这样来安排，用三位吧（3 bits)</p>
+<p>000  -&gt; a</p>
+<p>001  -&gt; b</p>
+<p>010  -&gt; c</p>
+<p>......</p>
+<p>111 -&gt; g</p>
+<p>完了，3位只能表示到g，可我还有那么多个英文字母呢，而且我还有那么多个标点符号呢？</p>
+<p>由于早期的计算机是美国人做的，所以他们只想用来表示英文字母和标点符号，然后他们发现7位就可以了：</p>
+<p>（二进制）1111111 =（十进制）127</p>
+<p>7个盒子能够表示的最大数是127，最小的数是0，所以7位可以用来表示128个符号。</p>
+<p>但是计算机里一个字节（byte）等于8位（bit），得凑个整呀？</p>
+<p>于是就规定了第一位是0，其他的位可以是0，也可以是1。</p>
+<p>这就有了最早的文字编码方式：ASCII（美国信息交换标准代码）</p>
+<p>可这种编码方式只能表示英文字母和标点符号，汉字和其他语言都表示不了，所以ASCII只能美国人自己玩儿，其他国家的人还得搞出新的编码方式，像汉字这种7位肯定不够，得多加一点儿。</p>
+<p>于是汉字的编码就搞了2个字节（2 bytes），因为1个字节是8位，所以2个字节就是16位。</p>
+<p>好家伙，你自己算算16个盒子能有多少个排列？ 给你个参考：2的16次方(2<sup>16</sup>) = 265536</p>
+<p>完全够了！</p>
+<p>于是，汉字就采取了双字节的方式来编码。</p>
+<p>这人啊一旦有了钱，就会为所欲为。16个盒子怎么能够？我要32个盒子、64个盒子！</p>
+<p>于是就有人想，能不能用尽可能多的位数来表示编码文字呢？这样人类有多少儿符号都能给它编码。</p>
+<p>然而，并不是位数越多越好，因为土豪有的时候过于浪费，如果你用32位，也就是4个8位，加入表示第一个英文字母a，就得是这样：</p>
+<p>00000000 00000000 00000000 00000000</p>
+<p>这么多个0，你受得了吗？</p>
+<p>你要是受得了，计算机还受不了呢。</p>
+<p>于是，人们就想怎么才能节约一些空间，少用一些0。</p>
+<p>所以有些符号（比如英文），就用8位来表示吧，有些符号就用16位来表示吧。</p>
+<p>这里面还有很多知识，我这里就不多介绍了。</p>
+<p>总之，UTF-8的8是8位的意思，UTF-16的16是16位的意思。</p>
+<p>现在你写的网页、代码，大部分的符号都涵盖到了UTF-8这种编码方式里，所以你把文件的文字编码方式选为UTF-8就大概率不会出现乱码了。</p>
+<p>之所以出现乱码，就是因为你想显示的文字并没有对应的二进制编码。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E5%8F%AB%E5%81%9A%E8%BF%9B">什么叫做“进”</a></li>
+<li><a href="#%E4%BA%8C%E8%BF%9B%E5%88%B6">二进制</a></li>
+<li><a href="#%E5%B9%82%E6%8C%87%E6%95%B0">幂（指数）</a></li>
+<li><a href="#%E4%BD%8D">位</a></li>
+<li><a href="#utf-8%E5%92%8Cutf-16">UTF-8和UTF-16</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/multiqueries/">
+              <h3 class="post-title">
+                开发支持多检索词的搜索引擎所需代码
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

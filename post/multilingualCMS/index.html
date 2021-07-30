@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>多语言内容管理系统设计与开发【更新中】 | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1627659593287">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="多语言内容管理系统设计与开发【更新中】 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="声明：以下文字内容均为韩林涛原创内容，仅在本博客发布，任何人不得转载和抄袭。
+第一章 你的第一个内容管理系统
+1.1 数据、信息和内容
+数据、信息和内容是三个人们容易混淆的概念，所以最好从定义出发去理解其内涵。
+数据：
+客观事物的符号表示。..." />
+    <meta name="keywords" content="courses" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1627659593287" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              多语言内容管理系统设计与开发【更新中】
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-03-02
+              </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/7jX6R-wCFH/" class="post-tag">
+                  # courses
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/multilingualCMS.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>声明：以下文字内容均为韩林涛原创内容，仅在本博客发布，任何人不得转载和抄袭。</p>
+<h2 id="第一章-你的第一个内容管理系统">第一章 你的第一个内容管理系统</h2>
+<p><strong>1.1 数据、信息和内容</strong></p>
+<p>数据、信息和内容是三个人们容易混淆的概念，所以最好从定义出发去理解其内涵。</p>
+<p><strong>数据：</strong></p>
+<p>客观事物的符号表示。在计算机科学中，指所有能输入到计算机中并被计算机程序处理的符号的总称。</p>
+<p>来源：《计算机科学技术名词 》 (第三版)</p>
+<p>描述事件或事物的属性、过程及其关系的符号序列。比如自然语言符号、科学符号、数字以及图形图像等。数据具有形式和内容两个方面。</p>
+<p>来源：《管理科学技术名词》</p>
+<p>数字、字母与符号的集合。系客观事物与主观思维的具体表达，不限于数值。现常指可由计算机处理的信息单元。</p>
+<p>来源：《图书馆·情报与文献学名词》</p>
+<p><strong>信息：</strong></p>
+<p>处理后的数据。可用于人们对管理和决策的支持。</p>
+<p>来源：《计算机科学技术名词 》 (第三版)</p>
+<p>广义指客观事物存在、运动和变化的方式、特征、规律及其表现形式。狭义指用来消除随机不确定性的东西。</p>
+<p>来源：《图书馆·情报与文献学名词》</p>
+<p>数据的内容和含义。同样的信息可以用不同形式的数据表达。</p>
+<p>来源：《管理科学技术名词》</p>
+<p><strong>内容：</strong></p>
+<p>1999年，欧盟的“Info2000计划”才真正对内容产业进行了界定：那些制造、开发、包装、销售信息产品和服务的企业。内容产业的范围包括在各种媒介上的印刷品（报纸、书籍、杂志等）、音像与电子出版物（联机数据库、音像制品服务，以传真及光盘为基础的服务以及电子游戏等）、音像传播（电视、录像、广播和影院），以及消费型软件业等。</p>
+<p>和传统的内容产业相比，现代意义上的内容产业一个突出的特征就是“ 数字化”。正是由于“ 数字化”的影响，信息内容对载体的依赖性不断降低，并使得传统内容产业的生产方式和运行体系发生了变化，催生了新兴的以互联网为特征的服务方式和内容。因此可以认为：现代意义上的信息内容产业是一种基于数字化、多媒体和网络等技术，利用信息资源和其他相关资源创（制）作、开发、分发、销售与消费信息产品和服务的产业。</p>
+<p>来源：<a href="https://wiki.mbalib.com/wiki/%E4%BF%A1%E6%81%AF%E5%86%85%E5%AE%B9%E4%BA%A7%E4%B8%9A">前往</a></p>
+<p>参考：<br>
+http://www.sic.gov.cn/News/455/3608.htm<br>
+http://excolo.com/information-v-content/<br>
+https://www.sohu.com/a/109828891_464088</p>
+<p><strong>1.2 内容管理系统</strong></p>
+<p>内容管理系统（英语：content management system，缩写为 CMS）是指在一个合作模式下，用于管理工作流程的一套制度。该系统可应用于手工操作中，也可以应用到电脑或网络里。作为一种中央储存器（central repository），内容管理系统可将相关内容集中储存并具有群组管理、版本控制等功能。版本控制是内容管理系统的一个主要优势。</p>
+<p>内容管理系统在物品或文案或数据的存储、掌管、修订（盘存）、语用充实、文档发布等方面有着广泛的应用。现在流行的开源CMS系统有WordPress、Joomla!、Drupal、Xoops、CmsTop等。</p>
+<p>参考：<a href="http://blog.sina.com.cn/s/blog_5f4150730102xgav.html">内容管理系统分类</a></p>
+<p>来源：</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">维基百科</a></p>
+<p><strong>1.3 实践：WordPress安装</strong></p>
+<p>网站：https://cn.wordpress.org/</p>
+<p>环境：XAMPP或者MAMP</p>
+<p>实践目标：请尝试在本地电脑上搭建一个基于WordPress的网站，并探索如何基于WordPress完成一个双语网站。</p>
+<p>第一步：环境搭建</p>
+<p>请参照CodeSlator视频课程中的环境搭建教程，Mac电脑优先选用MAMP Pro，Windows电脑优先选用国产的<a href="https://www.xp.cn/">PHPStudy</a>。</p>
+<p>易错点：<br>
+· 搞错htdocs文件夹的位置<br>
+· 电脑上安装了多个环境，使用时不知道用的是哪个环境</p>
+<p>第二步：下载WordPress</p>
+<p>下载地址参见官网，下载后该文件为一个压缩包，需要将其解压缩，并将全部内容解压缩到htdocs文件夹内自主创建的一个文件夹中。</p>
+<p>易错点：<br>
+· 下载WordPress压缩包后，解压缩时将内容解压到错误的目标文件夹</p>
+<p>第三步：安装WordPress</p>
+<p>安装前需要先确认以下两点：</p>
+<p>1）环境的默认访问地址前缀：先确认是否是localhost，如果不是localhost则根据环境工具内置的按钮点击后的结果确认，比如有些同学电脑上的环境地址是localhost:8080</p>
+<p>2）确认环境内默认的数据库地址：先确认默认的数据库地址是不是localhost/phpmyadmin，如果不是的话则根据环境工具内置的按钮点击后的结果确认</p>
+<p>以上两点确认后，则打开浏览器，前往：localhost/自定义文件夹地址</p>
+<p>易错点：<br>
+· 有同学不明白自己定义文件夹地址如何创建，实际上就是在htdocs文件夹下创建一个空白的文件夹，这个文件夹的名字就是localhost/后面跟着的名字。<br>
+· 有同学会使用中文来命名文件夹或者英文加数字，但建议在这里创建文件夹时仅使用纯小写英文，不要使用中文、数字、标点符号。<br>
+· 安装WordPress过程需要创建数据库、设置用户名和密码，许多同学搞不清楚数据库用户名密码和WordPress用户名和密码的区别，实际上在我们安装在本地电脑的环境中数据库的用户名和密码往往是：root/root或者root/空密码。比如XAMPP默认的数据库用户名和密码是root和空密码，而MAMP Pro和PHPStudy往往是root和root，这一点一定要搞清楚，不同的教程中给出的用户名和密码都不一定一样。</p>
+<p>这个用户名和密码是用户存储数据的地方，而WordPress安装过程中，需要提供这个用户名和密码，否则WordPress的后台数据不知道如何存到数据库中；还需要提供数据库的名字，这个是需要安装人员自己去phpMyadmin中去创建的，否则WordPress不知道应该将数据存到哪个数据库中。</p>
+<p>除了数据库用户名和密码外，用户还要自己设置WordPress的用户名和密码，这个是当用户成功安装完成WordPress后，在浏览器中访问个人博客时要自己输入的登录用户名和密码。</p>
+<p>第四步：登录WordPress</p>
+<p>成功安装完成WordPress后，用户可以登录其中，开始尝试发布文章、安装主题、调整页面布局、安装插件。</p>
+<p><strong>1.4 实践：WordPress多语言和WordPress数据库</strong></p>
+<p>我们在本课程中要重点学习如何将WordPress调整成多语言版。我们使用的是名为Polylang的插件，参考：<a href="https://www.easywpbook.com/i18n/polylang.html">使用Polylang插件建设一个多语言站点</a>。</p>
+<p>按照上述教程来操作，你将获得自己的第一个多语言内容管理系统。接下来我们还可以尝试将这个网站放到公开网络中供他人去访问，这就需要自己去购买服务器和域名，具体流程参见以下教程：<a href="https://www.bilibili.com/video/BV1M7411c7BT">一步步吭哧吭哧制作个人双语网站</a>，重点观看P2、P3、P4。</p>
+<p>当我们拥有了一个可以公开访问的博客后，我们希望将多语言的数据库发布到网络上供他人检索和查询，比如我们希望将双语术语库发布到网站上，或者将双语句对发布到网站上供他人检索。那我们就可以使用WordPress的TablePress插件，通过该插件，我们可以直接将本地Excel表格中的双语术语表发布到WordPress博客中供他人检索，如下图：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1615257827346.png" alt="" loading="lazy"></figure>
+<p>整个过程的逻辑是：</p>
+<p>· 安装TablePress插件<br>
+· 在WordPress的TablePress区域创建一个空白表格，并将本地电脑上的Excel表格上传到该空白表格中<br>
+<img src="https://hanlintao.github.io/post-images/1615257921016.png" alt="" loading="lazy"></p>
+<p>· 成功创建的表格会自动生成一个“简码”，并将这个简码插入到博客文章中：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1615260009478.png" alt="" loading="lazy"></figure>
+<p>· 文章发布后即可看到表格，并能通过表格自带的搜索框进行数据检索。</p>
+<h2 id="第二章-多语言内容管理系统与翻译实践">第二章 多语言内容管理系统与翻译实践</h2>
+<p>2.1 SQL语言入门</p>
+<p>本节内容将基于PHPMyadmin开展，学习如何使用SQL语言进行简易双语词典的查询。</p>
+<h2 id="第三章-简易平行语料库的设计与开发">第三章 简易平行语料库的设计与开发</h2>
+<h2 id="第四章-平行语料库管理系统设计与开发">第四章 平行语料库管理系统设计与开发</h2>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">第一章 你的第一个内容管理系统</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BF%BB%E8%AF%91%E5%AE%9E%E8%B7%B5">第二章 多语言内容管理系统与翻译实践</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%AE%80%E6%98%93%E5%B9%B3%E8%A1%8C%E8%AF%AD%E6%96%99%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91">第三章 简易平行语料库的设计与开发</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%B9%B3%E8%A1%8C%E8%AF%AD%E6%96%99%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91">第四章 平行语料库管理系统设计与开发</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/technicalwriting/">
+              <h3 class="post-title">
+                《技术写作》课程教学大纲
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>开发简易在线双语术语库所需代码 | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1627659593287">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="开发简易在线双语术语库所需代码 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的..." />
+    <meta name="keywords" content="samplecode" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1627659593287" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              开发简易在线双语术语库所需代码
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-08
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/awl4K3GIwv/" class="post-tag">
+                  # samplecode
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/bilingualtermbase.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
+<!-- more -->
+<h2 id="本地编程环境搭建">本地编程环境搭建</h2>
+<p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
+<p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
+<p>http://codeslator.edusoho.cn/course/2</p>
+<p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
+<h2 id="线上编程环境访问">线上编程环境访问</h2>
+<p>在译者编程入门指南讲座中我一般会带着大家学习一些比较简单的代码，大家最好能够提前打开以下网站：</p>
+<p>https://c.runoob.com/compile/1</p>
+<p>和</p>
+<p>https://c.runoob.com/compile/9</p>
+<p>通过上面两个网站我们可以练习一些简单的PHP和Python基础知识。</p>
+<h2 id="所需代码">所需代码</h2>
+<p><strong>代码一：基础网页代码</strong></p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITERM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p><strong>代码二：查询框</strong></p>
+<p>index.php</p>
+<pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/form&gt;
+
+</code></pre>
+<p><strong>代码三：获取检索词</strong></p>
+<p>result.php</p>
+<pre><code>&lt;?php
+    $term = $_POST[&quot;term&quot;];
+?&gt;
+</code></pre>
+<p><strong>代码四：创建数据库</strong></p>
+<pre><code>CREATE DATABASE fmprc 
+DEFAULT CHARACTER SET utf8 
+DEFAULT COLLATE utf8_general_ci;
+
+</code></pre>
+<p><strong>代码五：创建数据表</strong></p>
+<pre><code>CREATE TABLE `tm` 
+( 
+    `ID` INT(5) NOT NULL AUTO_INCREMENT , 
+    `zh_CN` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
+    `en_US` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
+    PRIMARY KEY (`ID`) 
+) 
+ENGINE = InnoDB 
+CHARSET=utf8 
+COLLATE utf8_general_ci;
+
+</code></pre>
+<p><strong>代码六：连接服务器</strong></p>
+<pre><code>&lt;?php
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+?&gt;
+</code></pre>
+<p><strong>代码七：选择数据库</strong></p>
+<pre><code>&lt;?php
+mysqli_select_db($conn,&quot;fmprc&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+?&gt;
+</code></pre>
+<p><strong>代码八：获取检索结果</strong></p>
+<pre><code>&lt;?php
+
+$term = $_POST[&quot;term&quot;];
+
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+
+$getterm = mysqli_query($conn,$sql);
+
+if(!$getterm)
+{
+    echo &quot;无法获取术语，请检查问题！&quot;;
+}
+else{
+
+    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
+    {
+        echo $row[&quot;zh_CN&quot;];
+        echo $row[&quot;en_US&quot;];
+    }
+}
+?&gt;
+</code></pre>
+<p>在《译者编程入门指南》一书的第四章，我详细介绍了如何开发简易的在线双语术语库：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%9C%AC%E5%9C%B0%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">本地编程环境搭建</a></li>
+<li><a href="#%E7%BA%BF%E4%B8%8A%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E8%AE%BF%E9%97%AE">线上编程环境访问</a></li>
+<li><a href="#%E6%89%80%E9%9C%80%E4%BB%A3%E7%A0%81">所需代码</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/first_blog/">
+              <h3 class="post-title">
+                译者的第一个博客
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

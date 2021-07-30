@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>开发支持多检索词的搜索引擎所需代码 | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1627659593287">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="开发支持多检索词的搜索引擎所需代码 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="有读者问到：“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”
+要想解决这个问题，需要对搜索功能如何实..." />
+    <meta name="keywords" content="samplecode" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1627659593287" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              开发支持多检索词的搜索引擎所需代码
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-13
+              </span>
+              <span>
+                10 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/awl4K3GIwv/" class="post-tag">
+                  # samplecode
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/multiqueries.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>有读者问到：“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”</p>
+<p>要想解决这个问题，需要对搜索功能如何实现的有进一步的了解，我们通过本帖来详细分析一下。</p>
+<!-- more -->
+<p>在本书的第四章我们介绍了如何开发简易在线双语术语库，同时在博客的这个帖子中也有介绍：<a href="https://codeslator.blog/post/bilingualtermbase/">开发简易在线双语术语库所需代码</a>。</p>
+<p>这位读者的上述问题就源自于这部分的学习。</p>
+<h2 id="搜索功能的实现">搜索功能的实现</h2>
+<p>我们简单回顾一下搜索功能的实现过程：</p>
+<p><strong>代码一：查询框</strong></p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITERM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码二：获取检索结果</strong></p>
+<p>result.php</p>
+<pre><code>&lt;?php
+
+$term = $_POST[&quot;term&quot;];
+
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+
+$getterm = mysqli_query($conn,$sql);
+
+if(!$getterm)
+{
+    echo &quot;无法获取术语，请检查问题！&quot;;
+}
+else{
+
+    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
+    {
+        echo $row[&quot;zh_CN&quot;];
+        echo $row[&quot;en_US&quot;];
+    }
+}
+?&gt;
+</code></pre>
+<p>上面这两段代码组合到一起就能实现简易术语检索功能或简易翻译记忆功能的实现，而实现的关键在于：</p>
+<p>1）代码一的这两行：</p>
+<pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+</code></pre>
+<pre><code>&lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
+</code></pre>
+<p>2）代码二的这两行：</p>
+<pre><code>$term = $_POST[&quot;term&quot;];
+$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+</code></pre>
+<p>也就是说，通过代码一的表单我们可以把检索词放到“term”这个变量中（<code>name = &quot;term&quot;</code> 就表示要给输入的检索词起一个名字“term”）</p>
+<p>通过代码二的<code>$_POST[&quot;term&quot;]</code>我们就可以通过POST的方法来在两个文件之间传输检索词（代码一的<code>method = &quot;POST&quot;</code>就表示以POST方法发送数据，本书P90页有对POST方法的简要介绍）。</p>
+<p>更为关键的是我们在代码二中构建的SQL语句：<code>$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;</code></p>
+<p>如果没有SQL语句去检索数据库，我们也无法将用户输入的关键词与数据库相连。</p>
+<h2 id="检索词的处理">检索词的处理</h2>
+<p>在SQL语句中，我们将用户输入的关键词放到了<code>$term</code>变量中，然后使用<code>zh_CN LIKE '%$term%'</code>和<code>en_US LIKE '%$term%'</code>作为判断条件，看看用户输入的检索词是否出现在了中文数据中或英文数据中（<code>OR</code>表明的就是“或”）。</p>
+<p>现在再看这位读者的问题：</p>
+<p>“我发现在search.php中，只能搜索连在一起的词，不能搜索两个分开的词，我想实现的话应该去学习哪方面的知识呢？比如我想搜“公道”，“人心”，我希望它出来的结果是公道自在人心这句话。”</p>
+<p>她说的search.php指的就是上面这两段代码对应的功能，我们上面的代码确实只能输入一个检索词，并判断这一个检索词是否出现在中文或英文数据中。</p>
+<p>她想同时搜索两个关键词，甚至是多个关键词，上面的代码显然是做不到的。除非在index.php中我们多添加一个<code>&lt;input&gt;</code>元素，让用户输入两个检索词，如下：</p>
+<p><strong>代码三：支持两个检索词的搜索框</strong></p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITERM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term_one&quot; placeholder = &quot;检索词一&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;input type = &quot;text&quot; name = &quot;term_two&quot; placeholder = &quot;检索词二&quot; /&gt;
+    &lt;/td&gt;
+
+    &lt;td&gt;
+        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>效果如下图：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610508603777.png" alt="" loading="lazy"></figure>
+<p>一旦接受了两个检索词，那么result.php也得修改，如下：</p>
+<pre><code>&lt;?php
+
+$term_one = $_POST[&quot;term_one&quot;];
+$term_two = $_POST[&quot;term_two&quot;];
+
+//$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
+
+$sql = &quot;SELECT * FROM tm WHERE (zh_CN LIKE '%$term_one%' AND zh_CN LIKE '%$term_two%') OR (en_US LIKE '%$term_one%' AND en_US LIKE '%$term_two%')&quot;;
+
+$getterm = mysqli_query($conn,$sql);
+
+if(!$getterm)
+{
+    echo &quot;无法获取术语，请检查问题！&quot;;
+}
+else{
+
+    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
+    {
+        echo $row[&quot;zh_CN&quot;];
+        echo $row[&quot;en_US&quot;];
+    }
+}
+?&gt;
+</code></pre>
+<p>这里面的关键就是SQL语句的写法，大家看下面这个截图：</p>
+<figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610509423827.png" alt="" loading="lazy"></figure>
+<p>在这个截图中，我想搜索包含“卫生”和“中心”的句子，于是我构造的条件是：</p>
+<pre><code>zh_CN LIKE &quot;%卫生%&quot; AND zh_CN LIKE &quot;%中心%&quot;
+</code></pre>
+<p>也就是说我先让zh_CN对应的中文字段去查看是否有数据中包含“卫生”，然后再去看zh_CN对应的中文字段是否有包含“卫生”的数据，且两个条件必须要同时满足。</p>
+<p>给大家再看一个实际的检索结果展示：</p>
+<figure data-type="image" tabindex="3"><img src="https://hanlintao.github.io/post-images/1610509977939.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://hanlintao.github.io/post-images/1610509958790.png" alt="" loading="lazy"></figure>
+<p>这个应该就与这位读者想实现的功能保持一致了。</p>
+<p>为了帮助大家更好实践，我把代码也放到了这里：</p>
+<p>index.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;input type = &quot;text&quot; name = &quot;term_one&quot; placeholder = &quot;检索词一&quot; /&gt;
+            &lt;/td&gt;
+
+            &lt;td&gt;
+                &lt;input type = &quot;text&quot; name = &quot;term_two&quot; placeholder = &quot;检索词二&quot; /&gt;
+
+            &lt;/td&gt;
+
+            &lt;td&gt;
+                &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>result.php</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;title&gt;STITM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;table width = &quot;100%&quot; border = &quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;序号&lt;/td&gt;
+        &lt;td&gt;中文&lt;/td&gt;
+        &lt;td&gt;英文&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;?php
+
+$dbhost = &quot;localhost&quot;; //数据库所在主机地址
+$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
+$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
+
+if(!$conn)
+{
+   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
+}
+
+mysqli_select_db($conn,&quot;mytms&quot;);
+mysqli_query($conn,&quot;set names 'utf8'&quot;);
+
+$term_one = $_POST[&quot;term_one&quot;];
+$term_two = $_POST[&quot;term_two&quot;];
+
+echo &quot;检索词一：&quot;.$term_one.&quot;&lt;br&gt;&quot;;
+
+echo &quot;检索词二：&quot;.$term_two.&quot;&lt;br&gt;&quot;;
+$sql = &quot;SELECT * FROM tm WHERE (zh_CN LIKE '%$term_one%' AND zh_CN LIKE '%$term_two%') OR (en_US LIKE '%$term_one%' AND en_US LIKE '%$term_two%')&quot;;
+
+//$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$zh_CN%' AND en_US LIKE '%$en_US%'&quot;;
+
+$gettm = mysqli_query($conn,$sql);
+
+if(!$gettm)
+{
+    echo &quot;无法获取翻译记忆，请检查问题！&quot;;
+}
+else{
+    while($row = mysqli_fetch_array($gettm,MYSQLI_ASSOC))
+    {
+        $row[&quot;zh_CN&quot;] = preg_replace(&quot;/$term_one/u&quot;,&quot;&lt;font color=blue&gt;&lt;b&gt;$term_one&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;zh_CN&quot;]);
+
+        $row[&quot;zh_CN&quot;] = preg_replace(&quot;/$term_two/u&quot;,&quot;&lt;font color=blue&gt;&lt;b&gt;$term_two&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;zh_CN&quot;]);
+
+        $row[&quot;en_US&quot;] = preg_replace(&quot;/$term_one/u&quot;,&quot;&lt;font color=red&gt;&lt;b&gt;$term_one&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;en_US&quot;]);
+
+        $row[&quot;en_US&quot;] = preg_replace(&quot;/$term_two/u&quot;,&quot;&lt;font color=red&gt;&lt;b&gt;$term_two&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;en_US&quot;]);
+
+        echo &quot;
+            &lt;tr&gt;
+                &lt;td&gt;{$row['ID']}&lt;/td&gt;
+                &lt;td&gt;{$row['zh_CN']}&lt;/td&gt;
+                &lt;td&gt;{$row['en_US']}&lt;/td&gt;
+            &lt;/tr&gt;&quot;;
+    }
+}
+?&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>（注：数据库需要自己准备，相关数据库创建的方法参见：<a href="https://codeslator.blog/post/bilingualtm/">开发简易在线翻译记忆库所需代码</a>）</p>
+<h2 id="检索词的进一步处理">检索词的进一步处理</h2>
+<p>上面的方法其实只是部分解决了这位读者的问题，因为当这位读者想搜索三个检索词时，或者搜索一个中文词、一个英文词时就会遇到问题，因为要想实现多个检索词的检索，就需要添加多个检索框，SQL语句也要跟着修改。</p>
+<p>但我们也可以考虑使用一个检索框，用户输入的检索词用空格隔开，然后再根据空格把用户的一次输入切分成多个检索词，再将检索词放到SQL里去逐个检索。</p>
+<p>我们在之后的教程中再介绍这个知识点。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0">搜索功能的实现</a></li>
+<li><a href="#%E6%A3%80%E7%B4%A2%E8%AF%8D%E7%9A%84%E5%A4%84%E7%90%86">检索词的处理</a></li>
+<li><a href="#%E6%A3%80%E7%B4%A2%E8%AF%8D%E7%9A%84%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%A4%84%E7%90%86">检索词的进一步处理</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/tmxupload/">
+              <h3 class="post-title">
+                开发TMX文件上传功能所需代码
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

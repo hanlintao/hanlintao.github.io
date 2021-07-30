@@ -1,0 +1,316 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>开发TMX文件上传功能所需代码 | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1627659593287">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="开发TMX文件上传功能所需代码 | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。
+
+TMX文件上传
+首先，我们将5.2.2节中的代码粘贴过来：
+代码一：head.php
+&lt;!DOCTYPE ht..." />
+    <meta name="keywords" content="samplecode" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1627659593287" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              开发TMX文件上传功能所需代码
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-13
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/awl4K3GIwv/" class="post-tag">
+                  # samplecode
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hanlintao.github.io/post-images/tmxupload.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>在本书的5.2.2节中我们介绍了如何上传Excel文件，有读者就想知道TMX文件如何上传，在这个帖子中我们一起来看一下。</p>
+<!-- more -->
+<h2 id="tmx文件上传">TMX文件上传</h2>
+<p>首先，我们将5.2.2节中的代码粘贴过来：</p>
+<p><strong>代码一：head.php</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    
+    &lt;title&gt;File Upload&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</code></pre>
+<p><strong>代码二：foot.php</strong></p>
+<pre><code>&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>代码三：upload.php</strong></p>
+<pre><code>&lt;?php include &quot;shared/head.php&quot;; ?&gt;   
+&lt;form action=&quot;upload_file.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;  
+    &lt;table&gt;    
+        &lt;tr&gt;    
+            &lt;td&gt;    
+                &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;    
+            &lt;/td&gt;    
+            &lt;td&gt;    
+                &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;上传&quot;&gt;  
+            &lt;/td&gt;    
+        &lt;/tr&gt;    
+    &lt;/table&gt;  
+&lt;/form&gt;  
+&lt;?php include &quot;shared/foot.php&quot;; ?&gt;
+</code></pre>
+<p><strong>代码四：upload_file.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {  
+  echo &quot;上传文件为：&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;;  
+  echo &quot;文件类型：&quot;.$_FILES[&quot;file&quot;][&quot;type&quot;].&quot;&lt;br&gt;&quot;;  
+  echo &quot;文件大小：&quot;.($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024).&quot; KB&lt;br&gt;&quot;;  
+  echo &quot;文件临时存储在：&quot;.$_FILES[&quot;file&quot;][&quot;tmp_name&quot;];  
+  }  
+?&gt;  
+</code></pre>
+<p><strong>代码五：upload_file.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {   
+  if (file_exists(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]))  
+      {  
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;已经存在。&quot;;  
+      }  
+    else  
+      {  
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      echo &quot;文件已上传至以下文件夹：&quot;.&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;];  
+      }  
+  }  
+?&gt;
+</code></pre>
+<p>以上代码均来自于本书第五章，其中代码五是代码四的升级版，修改的主要内容就是将用户上传的文件放到一个指定的文件夹中。</p>
+<p>对于初学者而言，如果就想使用上面的代码来实现TMX文件的上传是没有任何问题的，每当上传一个文件后，这个文件就会进入到upload文件夹中。</p>
+<p>我给大家看一下我电脑上的文件夹结构：</p>
+<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610505378914.png" alt="" loading="lazy"></figure>
+<p>如果你将上面的代码按照这个文件夹结构来撰写的话，就会得到一个可以正常上传TMX文件的功能。</p>
+<h2 id="tmx文件读取">TMX文件读取</h2>
+<p>既然能够上传TMX文件了，那么我们就也可以读取TMX文件了，读取的方法就是利用本书第六章所使用的代码：</p>
+<p><strong>代码七：从“.tmx”格式翻译记忆库中读取并展示数据</strong></p>
+<pre><code>&lt;?php   
+    $xml = simplexml_load_file(&quot;source.tmx&quot;);  
+    $json = json_encode($xml);  
+    $jsondata = json_decode($json,true);  
+    foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)  
+        {  
+            echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+            echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+            echo &quot;&lt;br&gt;&quot;;  
+        }     
+?&gt;  
+</code></pre>
+<p>对于初学者而言，会在这里卡住，因为不知道怎么将文件提交页面的文件名与代码七连通在一起。</p>
+<p>要解决这个问题就要把握两个关键点：</p>
+<p>1）代码七中的第一行：</p>
+<pre><code>$xml = simplexml_load_file(&quot;source.tmx&quot;); 
+</code></pre>
+<p>在这行代码中我们使用了一个函数simplexml_load_file()，这个函数要想执行成功需要一个参数，也就是括号里的&quot;source.tmx&quot;，这是我们要处理的文件的文件名。</p>
+<p>2）代码四中的第七行：</p>
+<pre><code>echo &quot;上传文件为：&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;; 
+</code></pre>
+<p>在这行代码中我们获得了上传文件的文件名。</p>
+<p>因此，只要将上传文件的文件名放到simplexml_load_file()函数里就可以了。</p>
+<p>upload_result.php文件修改如下：</p>
+<p><strong>代码八：upload_result.php</strong></p>
+<pre><code>&lt;?php  
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)  
+  {  
+  echo &quot;文件上传错误代码：&quot;.$_FILES[&quot;file&quot;][&quot;error&quot;].&quot;&lt;br&gt;&quot;;  
+  }  
+else  
+  {   
+  if (file_exists(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]))  
+      {  
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;已经存在。&quot;;  
+      }  
+    else  
+      {  
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      echo &quot;文件已上传至以下文件夹：&quot;.&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;].&quot;&lt;br&gt;&quot;;  
+      
+      $xml = simplexml_load_file(&quot;upload/&quot;.$_FILES[&quot;file&quot;][&quot;name&quot;]);  
+      $json = json_encode($xml);  
+      $jsondata = json_decode($json,true);  
+      foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)  
+          {  
+              echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+              echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;  
+              echo &quot;&lt;br&gt;&quot;;  
+          }     
+    
+        }  
+  }  
+?&gt;
+</code></pre>
+<p>这样就完成了TMX文件的上传并读取功能。接下来就可以再把如何上传TMX文件到数据库的代码拿过来就行了，这是本书第六章讲解过的内容，同时也在博客的这个帖子中有详细介绍：<a href="https://codeslator.blog/post/bilingualtm/">开发简易在线翻译记忆库所需代码</a>。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#tmx%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0">TMX文件上传</a></li>
+<li><a href="#tmx%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96">TMX文件读取</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/bit_byte/">
+              <h3 class="post-title">
+                译者编程冷知识：位和字节
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
