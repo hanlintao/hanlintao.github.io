@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-07-30T15:45:29.816Z</updated>
+    <updated>2021-08-09T05:55:44.169Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://hanlintao.github.io/images/avatar.png</logo>
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[如何使用PHP调用斯坦福词性标注工具（Stanfard Tagger）]]></title>
+        <id>https://hanlintao.github.io/post/ru-he-shi-yong-php-diao-yong-si-tan-fu-ci-xing-biao-zhu-gong-ju-stanfard-tagger/</id>
+        <link href="https://hanlintao.github.io/post/ru-he-shi-yong-php-diao-yong-si-tan-fu-ci-xing-biao-zhu-gong-ju-stanfard-tagger/">
+        </link>
+        <updated>2021-08-09T05:54:19.000Z</updated>
+        <content type="html"><![CDATA[<p>如果我们现在手里有一段中文</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[译者的效率工具集合]]></title>
         <id>https://hanlintao.github.io/post/666/</id>
@@ -1319,136 +1328,6 @@ else{
 <p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
 <p><img src="https://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
 <img src="https://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[开发简易在线双语术语库所需代码]]></title>
-        <id>https://hanlintao.github.io/post/bilingualtermbase/</id>
-        <link href="https://hanlintao.github.io/post/bilingualtermbase/">
-        </link>
-        <updated>2021-01-08T12:47:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>我最近也在一些学校面对从来没有编程基础的翻译专业学生分享译者如何学习编程，往往讲座时间里只能有最多一小时的时间来演示编程入门，我觉得这个在线双语术语库开发的案例非常适合拿来做译者入门教学素材，所以将准备材料和所需代码都放在这里，供参加讲座的听众参考。</p>
-<!-- more -->
-<h2 id="本地编程环境搭建">本地编程环境搭建</h2>
-<p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
-<p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
-<p>http://codeslator.edusoho.cn/course/2</p>
-<p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
-<h2 id="线上编程环境访问">线上编程环境访问</h2>
-<p>在译者编程入门指南讲座中我一般会带着大家学习一些比较简单的代码，大家最好能够提前打开以下网站：</p>
-<p>https://c.runoob.com/compile/1</p>
-<p>和</p>
-<p>https://c.runoob.com/compile/9</p>
-<p>通过上面两个网站我们可以练习一些简单的PHP和Python基础知识。</p>
-<h2 id="所需代码">所需代码</h2>
-<p><strong>代码一：基础网页代码</strong></p>
-<p>index.php</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-
-&lt;title&gt;STITERM&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-
-</code></pre>
-<p><strong>代码二：查询框</strong></p>
-<p>index.php</p>
-<pre><code>&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
-
-&lt;table&gt;
-&lt;tr&gt;
-    &lt;td&gt;
-        &lt;input type = &quot;text&quot; name = &quot;term&quot; placeholder = &quot;检索词&quot; /&gt;
-    &lt;/td&gt;
-
-    &lt;td&gt;
-        &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
-    &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;/form&gt;
-
-</code></pre>
-<p><strong>代码三：获取检索词</strong></p>
-<p>result.php</p>
-<pre><code>&lt;?php
-    $term = $_POST[&quot;term&quot;];
-?&gt;
-</code></pre>
-<p><strong>代码四：创建数据库</strong></p>
-<pre><code>CREATE DATABASE fmprc 
-DEFAULT CHARACTER SET utf8 
-DEFAULT COLLATE utf8_general_ci;
-
-</code></pre>
-<p><strong>代码五：创建数据表</strong></p>
-<pre><code>CREATE TABLE `tm` 
-( 
-    `ID` INT(5) NOT NULL AUTO_INCREMENT , 
-    `zh_CN` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
-    `en_US` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
-    PRIMARY KEY (`ID`) 
-) 
-ENGINE = InnoDB 
-CHARSET=utf8 
-COLLATE utf8_general_ci;
-
-</code></pre>
-<p><strong>代码六：连接服务器</strong></p>
-<pre><code>&lt;?php
-$dbhost = &quot;localhost&quot;; //数据库所在主机地址
-$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
-$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
-
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
-
-if(!$conn)
-{
-   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
-}
-
-?&gt;
-</code></pre>
-<p><strong>代码七：选择数据库</strong></p>
-<pre><code>&lt;?php
-mysqli_select_db($conn,&quot;fmprc&quot;);
-mysqli_query($conn,&quot;set names 'utf8'&quot;);
-?&gt;
-</code></pre>
-<p><strong>代码八：获取检索结果</strong></p>
-<pre><code>&lt;?php
-
-$term = $_POST[&quot;term&quot;];
-
-$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$term%' OR en_US LIKE '%$term%'&quot;;
-
-$getterm = mysqli_query($conn,$sql);
-
-if(!$getterm)
-{
-    echo &quot;无法获取术语，请检查问题！&quot;;
-}
-else{
-
-    while($row = mysqli_fetch_array($getterm,MYSQLI_ASSOC))
-    {
-        echo $row[&quot;zh_CN&quot;];
-        echo $row[&quot;en_US&quot;];
-    }
-}
-?&gt;
-</code></pre>
-<p>在《译者编程入门指南》一书的第四章，我详细介绍了如何开发简易的在线双语术语库：</p>
-<figure data-type="image" tabindex="1"><img src="https://hanlintao.github.io/post-images/1610112113907.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
