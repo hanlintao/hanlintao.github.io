@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-08-09T06:34:05.414Z</updated>
+    <updated>2021-08-10T15:48:29.626Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -10,6 +10,55 @@
     <logo>https://hanlintao.github.io/images/avatar.png</logo>
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[译者编程冷知识：你的电脑软件装在了哪儿？]]></title>
+        <id>https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-ni-de-python-zhuang-zai-liao-na-er/</id>
+        <link href="https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-ni-de-python-zhuang-zai-liao-na-er/">
+        </link>
+        <updated>2021-08-10T15:02:09.000Z</updated>
+        <content type="html"><![CDATA[<p>最近朋友问了我一个问题，我觉得很有意思：怎么查看自己的Python装在了电脑的哪个位置？</p>
+<p>一般来说在Windows操作系统中可以首先打开命令行工具，然后输入where python命令便可以可以查到。网上也能看到许多教程。</p>
+<p>这位朋友查到之后我发给我结果，我看到地址是：C:\Users\用户名\AppData\Local\Programs</p>
+<h2 id="一-windows电脑里的本地文件夹">一、Windows电脑里的“本地文件夹”</h2>
+<p>我其实也很好奇为什么是这个地址，于是去查了一番，发现了以下信息：</p>
+<p><em>几乎每个在Win10 PC上安装的程序都会在AppData文件夹中创建自己的文件夹，并将其所有相关信息存储在其中。 AppData或应用程序数据是Windows 10中的一个隐藏文件夹，可帮助保护用户数据和设置免遭删除和操作。 要访问它，必须在文件夹选项中选择“显示隐藏的文件和文件夹”。</em></p>
+<p>来源：https://www.aclear.top/post/ed2a9102.html</p>
+<p>仔细阅读完我终于知道：在这个AppData文件夹里，一般有三个文件夹，分别是：Local、LocalLow和Roaming，上面这个链接也介绍了这三个文件夹的作用：</p>
+<p>Local是“本地文件夹”，主要包含与安装程序相关的文件夹，包含在其中的数据（％localappdata％）不能与用户配置文件一起移动，因为它特定于当前的电脑。</p>
+<p>LocalLow也是本地文件夹，里面包含了无法移动的数据，有较低的访问级别。所以我们很少简单软件安装在这个文件夹里。</p>
+<p>Roaming是“漫游文件夹”，是一种可以与服务器同步的文件夹。它的数据可以随着用户的个人资料从一台电脑移动到另一台电脑。</p>
+<p>有些同学经常想去清理自己的电脑数据，但又不知道该去删除哪里的文件，这里还有个帖子告诉你哪个文件夹的哪些东西可以删掉：https://zhuanlan.zhihu.com/p/62030272</p>
+<h2 id="二-windows电脑里的其他存储软件数据的文件夹">二、Windows电脑里的其他存储软件数据的文件夹</h2>
+<p>关于Windows系统中软件安装位置的区别，可以看这个帖子，非常受用：https://www.jianshu.com/p/677846a93056</p>
+<p>简单说就是：</p>
+<p>1）AppData文件夹：是“Application Data Folder”，是用来存储应用程序数据的文件夹，程序运行时产生的数据可以存放到这里来。</p>
+<p>2）Documents文件夹：即我们电脑上的“我的文档”，虽然我们用的操作系统里看到的是四个中文字，但点开之后会发现，其完整的地址是：C:\Users\用户名\Documents</p>
+<p>这个文件夹里存储了许多我们平时用的许多程序的项目文件，所以这个文件夹的数据可不能轻易删掉，删掉之后可能你做的工作、玩儿的游戏都会出现数据丢失的情况。</p>
+<p>3）Registry注册表：注册表可以看作是一张Excel表，可以通过注册表编辑器来修改，许多软件的配置数据都存储在这些数据表里，这也是为什么有人在破解某些软件时会去修改注册表，就是为了迷惑软件的正版验证机制，所以现在许多软件越来越聪明了，就算你修改注册表也没有用。</p>
+<p>4）Program Files文件夹：Windows电脑最常见的软件安装位置，点开之后会看到很多软件的名字。有些同学的电脑上既有Program Files文件夹，也有Program Files(x86)文件夹，两者的区别是：如果你安装的软件是64位的，那么这个软件一般会安装在Program Files文件夹里；如果你安装的软件是32位的，那么软件就可能安装在Program Files(x86)文件夹里。我们平时用到的许多软件都是32位的，因此电脑里出现“x86”的文件夹就再正常不过了。</p>
+<h2 id="三-python究竟安装在哪个文件夹">三、Python究竟安装在哪个文件夹？</h2>
+<p>其实我这位朋友的Python安装地址之所以让我觉得陌生，是因为我还见过其他的安装地址。说起Python安装，有些同学并不是直接去官网上下载Python来安装的，而是使用了Anaconda这样的工具，此时的Python又安装在哪里了呢？</p>
+<p>我找了一个示例的位置，如下：</p>
+<p>C:\Users\用户名\AppData\Local\conda\conda\envs\python35</p>
+<p>可以看到这个python是位于Anaconda这个工具的目录里面的，但也是在AppData文件夹下。</p>
+<p>不过还会发现有些情况下软件是安装在这样的链接下面：</p>
+<p>C:\ProgramData</p>
+<p>简单的原因是：ProgramData是所有用户共享的软件，而AppData前面有用户名，表明这是属于某个用户的软件。有时候我们用管理员权限安装的所有用户可用的软件，就位于ProgramData里面。</p>
+<p>前面我分享的帖子里也有这样的描述：<br>
+ProgramData文件夹跟AppData文件夹基本类似，都是用来存放一些setting文件、缓存文件的，不同的是ProgramData是所有用户共享的，没有私有的文件夹。在XP时代，存放在C:\Documents and Settings\All Users\Application Data，从Vista开始，将这些应用数据都转移到C:\ProgramData下。</p>
+<p>对于初学Python的用户，我个人建议还是使用Anaconda这样的工具来安装Python，因为这个工具装好后Python就装好了，而且你还可以在这个工具的框架内安装不同版本的Python。Python的安装和卸载都很方便。不必再去关注自己的Python安装在了哪个文件夹里。我的美国同事Nick还建议在Windows上使用Chocolatey来安装Python，非常方便。</p>
+<p>Anaconda：https://www.anaconda.com/<br>
+Chocolatey：https://chocolatey.org/</p>
+<p>这都是大家的经验之谈啊，你下次学Python的时候，不一定非要按照某些教程里讲的那样从Python官网直接去下载安装包，装完都不一定知道自己把软件装哪里去了。打仗了要去领枪，开战了却不知道自己的枪放哪儿了，那还怎么战斗？</p>
+<h2 id="四-mac电脑里的python装在了哪儿">四、Mac电脑里的Python装在了哪儿？</h2>
+<p>其实Mac电脑买来之后本身就自带了Python的，但是这个Python的版本是2.X，可以简单理解为是Python二代。但现在大家普遍使用的是Python 3.X，可以理解为是Python三代。这两代Python默认安装的位置是不一样的，这个帖子里有比较详细的说明：</p>
+<p>https://jiyiren.github.io/2017/10/31/python_environmet/</p>
+<p>简单来说就是，Mac电脑自带的Python二代一般安装的地址是：/usr/bin/python文件夹，而你自己安装的Python三代一般安装的地址是：/usr/local/bin/python3。之所以你安装的会跑到local文件夹里，是因为你的权限不高，通过普通安装方式安装的Python就会到这个权限低一点的文件夹里。</p>
+<p>我们这里看到的bin是二进制Binaries的缩写，这个文件夹里一般存储的就是应用程序的可执行命令，所以我们安装软件时软件的可执行代码就会跑到这个bin文件夹里。</p>
+<h2 id="小结">小结</h2>
+<p>今天分享的冷知识可能真得很冷，但希望可以帮助大家了解电脑上安装的软件究竟去了哪里。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何使用PHP调用斯坦福词性标注工具（Stanford POS Tagger）]]></title>
         <id>https://hanlintao.github.io/post/stanfordtagger/</id>
@@ -1062,341 +1111,6 @@ else
 <p>以下是牛津词典对“Byte”的解释：</p>
 <figure data-type="image" tabindex="2"><img src="https://hanlintao.github.io/post-images/1610465886795.png" alt="" loading="lazy"></figure>
 <p>大家不妨仔细看看第一条英文解释，其中就包括了“binary digit”和“bit”这两种表达。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[开发简易在线翻译记忆库所需代码]]></title>
-        <id>https://hanlintao.github.io/post/bilingualtm/</id>
-        <link href="https://hanlintao.github.io/post/bilingualtm/">
-        </link>
-        <updated>2021-01-09T02:42:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>计算机辅助翻译技术的核心技术之一就是翻译记忆技术，涉及到翻译记忆库的对齐生成、翻译记忆库的管理、翻译记忆库的检索、翻译记忆库的相似度匹配等等，因此对于译者而言，善用翻译记忆库将能极大提升翻译的效率。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>计算机辅助翻译技术的核心技术之一就是翻译记忆技术，涉及到翻译记忆库的对齐生成、翻译记忆库的管理、翻译记忆库的检索、翻译记忆库的相似度匹配等等，因此对于译者而言，善用翻译记忆库将能极大提升翻译的效率。</p>
-<!-- more -->
-<p>在这篇文章中我们一起来看一下如何开发简易的在线翻译记忆库。</p>
-<h2 id="xml">XML</h2>
-<p>XML是eXtensible Markup Language的缩写，译为“可扩展标记语言”。只有理解了XML才能把翻译行业的众多基于XML的数据交换标准搞清楚，比如存储翻译记忆的TMX、存储术语库的TBX、存储断句规则的SRX等等。</p>
-<p>虽然现在主流的数据格式是json，一种更加简单轻便的数据存储格式，但在翻译行业常用的各类计算机辅助翻译工具中，XML的应用还是非常广的，所以对于翻译技术感兴趣的同学和老师还是有必要深入学习XML的。</p>
-<p>首先，请大家观看两个我录制的基础视频：什么是XML和什么是DTD。</p>
-<p>简单来说，XML中包含的是要传输的数据，DTD定义了要传输的数据以怎样的结构存在于XML中。</p>
-<p><strong><a href="https://www.bilibili.com/video/BV1uE41177nh">什么是XML？</a></strong></p>
-<iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=159123577&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><strong><a href="https://www.bilibili.com/video/BV1uE41177nh?p=2">什么是DTD？</a></strong></p>
-<iframe src="//player.bilibili.com/player.html?aid=93198185&bvid=BV1uE41177nh&cid=161812210&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>以上内容是我们了解翻译记忆库的基础，大家有时间的话最好能够全都看完。</p>
-<h2 id="tmx">TMX</h2>
-<p>IBM的工程师曾在博客中写过这样一篇文章<a href="https://www.ibm.com/developerworks/cn/xml/x-localis3/index.html">本地化中的 XML：通过 TM 和 TMX 重用翻译<br>
-——在 XML 标准的帮助下减少翻译的时间和劳动量</a></p>
-<p>其中提到：</p>
-<blockquote>
-<p>翻译存储（Translation memory，TM）是一种支持文档片段（句子、段落或短语）翻译的语言工具，方法是在数据库中搜索类似的片段并建议数据库中发现的匹配。</p>
-</blockquote>
-<blockquote>
-<p>TM 是现代计算机辅助翻译（CAT）工具的基本组成部分。它在翻译行业中非常普及，以至于人们常常用“翻译存储工具”代替“计算机辅助翻译工具”。但是，这些术语不应该互换，因为 CAT 技术还包括机器翻译（一种基于语言学规则并使用双语词典的计算机技术）。</p>
-</blockquote>
-<blockquote>
-<p>TM 系统记住翻译人员输入的翻译。当翻译人员处理类似的文本时，系统提供以前保存的版本。这样在处理重复性文本如技术手册时可以节约大量的时间，还有助于保证术语的一致性。</p>
-</blockquote>
-<p>在“计算机辅助翻译”领域，双语的句子大多是以“.tmx”格式的文件存储的，这种叫作“翻译记忆”（Translation Memory），作用就是先把翻译过的双语内容存在翻译记忆中，当译者翻译一个句子时，先看一下翻译记忆中有没有这个句子或者有没有与这个相似的句子，如果有就把句子原文和译文显示出来提示给译者，译者就可以省去很多时间和精力去瞎编。</p>
-<p>就像Word文档都是以“.doc”或“.docx”、Excel文档都是以“.xls”或“.xlsx”的文件格式存储一样，翻译记忆也有自己的存储格式，国际通用的格式就是刚才提到的“.tmx”。“tmx”是“Translation Memory eXchange”的缩写，国际上有组织制定了这种文件存储的<a href="https://www.gala-global.org/tmx-14b">标准</a>。</p>
-<p>接下来我们看一个示例：</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
-
-&lt;tmx version=&quot;1.4&quot;&gt;
-
-    &lt;header creationtool=&quot;Tmxmall&quot; segtype=&quot;sentence&quot; adminlang=&quot;zh-CN&quot; srclang=&quot;zh-CN&quot; datatype=&quot;xml&quot; creationdate=&quot;20171022T155351Z&quot; creationid=&quot;TM STUDIO&quot;/&gt;
-
-    &lt;body&gt;
-
-        &lt;tu creationdate=&quot;20171022T155351Z&quot; creationid=&quot;TM STUDIO&quot;&gt;
-
-            &lt;tuv xml:lang=&quot;zh-CN&quot;&gt;
-
-                &lt;seg&gt;大会的主题是：********&lt;/seg&gt;
-
-            &lt;/tuv&gt;
-
-            &lt;tuv xml:lang=&quot;en-US&quot;&gt;
-
-                &lt;seg&gt;The theme of the Congress is: *********&lt;/seg&gt;
-
-            &lt;/tuv&gt;
-
-        &lt;/tu&gt;
-
-        &lt;tu creationdate=&quot;20171022T155351Z&quot; creationid=&quot;TM STUDIO&quot;&gt;
-
-            &lt;tuv xml:lang=&quot;zh-CN&quot;&gt;
-
-                &lt;seg&gt;全党同志一定要永远与人民同呼吸********&lt;/seg&gt;
-
-            &lt;/tuv&gt;
-
-            &lt;tuv xml:lang=&quot;en-US&quot;&gt;
-
-                &lt;seg&gt;In our Party, each and every one of us must always breathe the same breath as the people*********&lt;/seg&gt;
-
-            &lt;/tuv&gt;
-
-        &lt;/tu&gt;
-
- &lt;/body&gt;
-
-&lt;/tmx&gt;
-</code></pre>
-<p>我们习惯上使用对齐软件来制作这样的翻译记忆文件，参见下面这个视频：</p>
-<iframe src="//player.bilibili.com/player.html?aid=89672422&bvid=BV1i7411j7AJ&cid=153208379&page=24" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>制作完成后的翻译记忆文件虽然是以“.tmx”格式存储，但是在不同的计算机辅助翻译工具中，它往往还会有其他的存储格式，比如在SDL Trados Studio中，它的格式就是“.sdltm”。</p>
-<p>“.tmx”格式的文件适合在本地电脑打开，适合导入到计算机辅助翻译工具中供查询，但是不适合在线查询。我们不能把这个文件放到网盘、协作平台去查询。</p>
-<p>市面上有不少工具支持“.tmx”的导入导出和查询，比如一者科技的<a href="https://www.tmxmall.com/qsearch">语料快搜</a>，SDL公司的TM Server（此为收费的服务器版）等。</p>
-<p>对于译者或小的翻译团队而言，如果也想自己开发简易的在线翻译库呢？</p>
-<h2 id="开发简易在线翻译记忆库所需代码">开发简易在线翻译记忆库所需代码</h2>
-<p>我们以PHP为例，介绍如何在本地服务器上开发一个简易的在线翻译记忆库。</p>
-<p><strong>本地编程环境搭建</strong></p>
-<p>如果你使用的是Windows操作系统，可以安装XAMPP或者PHPStudy，相关教学视频参见以下网址的课时3和课时4：</p>
-<p>如果你使用的是Mac操作系统，可以安装MAMP Pro，相关教学视频参见以下网址的课时7：</p>
-<p>http://codeslator.edusoho.cn/course/2</p>
-<p>大家也许会注意到以上课程是收费课程，不过你们可以先注册上面这个网站，以上视频都是可以免费观看的。</p>
-<p>以下是所需的全部代码：</p>
-<p><strong>代码一：读取TMX文件中的双语数据</strong></p>
-<p>方法一：</p>
-<pre><code>&lt;?php
-header(&quot;content-type:text/html; charset=utf-8&quot;); 
-
-$xml = simplexml_load_file('source.tmx');
-
-$json = json_encode($xml);
-
-$jsondata = json_decode($json,true);
-
-foreach ($jsondata[&quot;body&quot;][&quot;tu&quot;] as $tu)
-{
-    echo $tu[&quot;tuv&quot;][0][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;
-    echo $tu[&quot;tuv&quot;][1][&quot;seg&quot;].&quot;&lt;br&gt;&quot;;
-    echo &quot;&lt;br&gt;&quot;;
-}
-
-?&gt;
-</code></pre>
-<p>方法二：</p>
-<pre><code>&lt;?php
-header(&quot;content-type:text/html; charset=utf-8&quot;); 
-
-$xml = simplexml_load_file('source.tmx');
-
-foreach ($xml-&gt;body-&gt;tu as $tu)
-{
-    echo $tu-&gt;tuv[0]-&gt;seg.&quot;&lt;br&gt;&quot;;
-    echo $tu-&gt;tuv[1]-&gt;seg.&quot;&lt;br&gt;&quot;;
-    echo &quot;&lt;br&gt;&quot;;
-}
-?&gt;
-</code></pre>
-<p><strong>代码二：创建数据库</strong></p>
-<pre><code>CREATE DATABASE fmprc 
-DEFAULT CHARACTER SET utf8 
-DEFAULT COLLATE utf8_general_ci;
-</code></pre>
-<p><strong>代码三：创建数据表</strong></p>
-<pre><code>CREATE TABLE `tm` 
-( 
-    `ID` INT(5) NOT NULL AUTO_INCREMENT , 
-    `zh_CN` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
-    `en_US` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , 
-    PRIMARY KEY (`ID`) 
-) 
-ENGINE = InnoDB 
-CHARSET=utf8 
-COLLATE utf8_general_ci;
-</code></pre>
-<p><strong>代码四：连接服务器</strong></p>
-<pre><code>&lt;?php
-$dbhost = &quot;localhost&quot;; //数据库所在主机地址
-$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
-$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
-
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
-
-if(!$conn)
-{
-   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
-}
-
-?&gt;
-</code></pre>
-<p><strong>代码五：选择数据库</strong></p>
-<pre><code>&lt;?php
-mysqli_select_db($conn,&quot;fmprc&quot;);
-mysqli_query($conn,&quot;set names 'utf8'&quot;);
-?&gt;
-</code></pre>
-<p><strong>代码六：导入翻译记忆至数据库</strong></p>
-<p>import.php</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-
-&lt;title&gt;STITM&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;?php
-$dbhost = &quot;localhost&quot;; //数据库所在主机地址
-$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
-$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
-
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
-
-if(!$conn)
-{
-   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
-}
-
-mysqli_select_db($conn,&quot;fmprc&quot;);
-mysqli_query($conn,&quot;set names 'utf8'&quot;);
-
-$xml = simplexml_load_file(&quot;source.tmx&quot;);
-
-foreach($xml-&gt;body-&gt;tu as $tu)
-{
-    $zh_CN = $tu-&gt;tuv[0]-&gt;seg;
-    $zh_CN = str_replace(&quot;'&quot;,&quot;\'&quot;,$zh_CN);
-
-    $en_US = $tu-&gt;tuv[1]-&gt;seg;
-    $en_US = str_replace(&quot;'&quot;,&quot;\'&quot;,$en_US);
-
-    $insert_sql = &quot;INSERT INTO tm(zh_CN,en_US) VALUES('$zh_CN','$en_US')&quot;;
-    $import = mysqli_query($conn,$insert_sql);
-
-    if(!$import)
-    {
-        echo &quot;&lt;font color=red&gt;&lt;b&gt;翻译记忆插入失败：&quot;.$zh_CN.$en_US.&quot;&lt;/b&gt;&lt;/font&gt;&quot;;
-    }
-    else{
-        echo &quot;翻译记忆插入成功！&quot;.&quot;&lt;br&gt;&quot;;
-    }
-}
-
-?&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p><strong>代码七：查询翻译记忆库</strong></p>
-<p>search.php</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-
-&lt;title&gt;STITM&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;form action = &quot;result.php&quot; method = &quot;POST&quot;&gt;
-    &lt;table&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                &lt;input type = &quot;text&quot; name = &quot;zh_CN&quot; placeholder = &quot;中文检索词&quot; /&gt;
-            &lt;/td&gt;
-
-            &lt;td&gt;
-                &lt;input type = &quot;text&quot; name = &quot;en_US&quot; placeholder = &quot;英文检索词&quot; /&gt;
-
-            &lt;/td&gt;
-
-            &lt;td&gt;
-                &lt;button type = &quot;submit&quot;&gt;搜索&lt;/button&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/form&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p><strong>代码八：显示翻译记忆库查询结果</strong></p>
-<p>result.php</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-
-&lt;title&gt;STITM&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;table width = &quot;100%&quot; border = &quot;1&quot;&gt;
-    &lt;tr&gt;
-        &lt;td&gt;序号&lt;/td&gt;
-        &lt;td&gt;中文&lt;/td&gt;
-        &lt;td&gt;英文&lt;/td&gt;
-    &lt;/tr&gt;
-
-&lt;?php
-
-$dbhost = &quot;localhost&quot;; //数据库所在主机地址
-$dbuser = &quot;root&quot;; //登录服务器所用的服务器用户名
-$dbpass = &quot;root&quot;; //登录服务器所用的用户名密码
-
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass);
-
-if(!$conn)
-{
-   echo &quot;服务器连接失败：&quot;.mysqli_connect_error();
-}
-
-mysqli_select_db($conn,&quot;fmprc&quot;);
-mysqli_query($conn,&quot;set names 'utf8'&quot;);
-
-$zh_CN = $_POST[&quot;zh_CN&quot;];
-$en_US = $_POST[&quot;en_US&quot;];
-
-$sql = &quot;SELECT * FROM tm WHERE zh_CN LIKE '%$zh_CN%' AND en_US LIKE '%$en_US%'&quot;;
-
-$gettm = mysqli_query($conn,$sql);
-
-if(!$gettm)
-{
-    echo &quot;无法获取翻译记忆，请检查问题！&quot;;
-}
-else{
-    while($row = mysqli_fetch_array($gettm,MYSQLI_ASSOC))
-    {
-        $row[&quot;zh_CN&quot;] = preg_replace(&quot;/$zh_CN/u&quot;,&quot;&lt;font color=blue&gt;&lt;b&gt;$zh_CN&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;zh_CN&quot;]);
-
-        $row[&quot;en_US&quot;] = preg_replace(&quot;/$en_US/u&quot;,&quot;&lt;font color=red&gt;&lt;b&gt;$en_US&lt;/b&gt;&lt;/font&gt;&quot;,$row[&quot;en_US&quot;]);
-
-        echo &quot;
-            &lt;tr&gt;
-                &lt;td&gt;{$row['ID']}&lt;/td&gt;
-                &lt;td&gt;{$row['zh_CN']}&lt;/td&gt;
-                &lt;td&gt;{$row['en_US']}&lt;/td&gt;
-            &lt;/tr&gt;&quot;;
-    }
-}
-?&gt;
-&lt;/table&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>将以上代码输入到编辑器后，我们便能得到一个简易的在线翻译记忆库。但这个翻译记忆库只能在本地访问，如果想放到线上的话，还需要购买域名和服务器，相关视频在下方：</p>
-<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=2">如何购买一个自己的专属域名</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155351236&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=3">如何购买主机并将域名绑定到主机上</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155480677&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=4">如何通过FTP和文本编辑器更新网页代码</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155651952&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><a href="https://www.bilibili.com/video/BV1M7411c7BT?p=5">如何将本地代码和数据库更新到服务器上</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=90852890&bvid=BV1M7411c7BT&cid=155652119&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>在《译者编程入门指南》一书的第六章，我详细介绍了如何开发简易的在线翻译记忆库：</p>
-<p><img src="https://hanlintao.github.io/post-images/1610168920380.png" alt="" loading="lazy"><br>
-<img src="https://hanlintao.github.io/post-images/1610168929777.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>
