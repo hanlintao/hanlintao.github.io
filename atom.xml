@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-08-10T15:54:12.598Z</updated>
+    <updated>2021-08-11T06:49:48.442Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
     <entry>
         <title type="html"><![CDATA[译者编程冷知识：你的电脑软件装在了哪儿？]]></title>
-        <id>https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-ni-de-python-zhuang-zai-liao-na-er/</id>
-        <link href="https://hanlintao.github.io/post/yi-zhe-bian-cheng-leng-zhi-shi-ni-de-python-zhuang-zai-liao-na-er/">
+        <id>https://hanlintao.github.io/post/folders/</id>
+        <link href="https://hanlintao.github.io/post/folders/">
         </link>
         <updated>2021-08-10T15:02:09.000Z</updated>
         <content type="html"><![CDATA[<p>最近朋友问了我一个问题，我觉得很有意思：怎么查看自己的Python装在了电脑的哪个位置？</p>

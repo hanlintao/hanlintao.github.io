@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>译者编程冷知识：你的电脑软件装在了哪儿？ | CodeSlator Blog</title>
+<link rel="shortcut icon" href="https://hanlintao.github.io/favicon.ico?v=1628664581870">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hanlintao.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="译者编程冷知识：你的电脑软件装在了哪儿？ | CodeSlator Blog - Atom Feed" href="https://hanlintao.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="最近朋友问了我一个问题，我觉得很有意思：怎么查看自己的Python装在了电脑的哪个位置？
+一般来说在Windows操作系统中可以首先打开命令行工具，然后输入where python命令便可以可以查到。网上也能看到许多教程。
+这位朋友查到之后..." />
+    <meta name="keywords" content="coldslator" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hanlintao.github.io">
+  <img class="avatar" src="https://hanlintao.github.io/images/avatar.png?v=1628664581870" alt="">
+  </a>
+  <h1 class="site-title">
+    CodeSlator Blog
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://hanlintao.github.io/post/codeslator_lecture-MacBook Pro" class="menu">
+          讲座
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              译者编程冷知识：你的电脑软件装在了哪儿？
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-08-10
+              </span>
+              <span>
+                7 min read
+              </span>
+              
+                <a href="https://hanlintao.github.io/tag/bANF-xQPl/" class="post-tag">
+                  # coldslator
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>最近朋友问了我一个问题，我觉得很有意思：怎么查看自己的Python装在了电脑的哪个位置？</p>
+<p>一般来说在Windows操作系统中可以首先打开命令行工具，然后输入where python命令便可以可以查到。网上也能看到许多教程。</p>
+<p>这位朋友查到之后我发给我结果，我看到地址是：C:\Users\用户名\AppData\Local\Programs</p>
+<h2 id="一-windows电脑里的本地文件夹">一、Windows电脑里的“本地文件夹”</h2>
+<p>我其实也很好奇为什么是这个地址，于是去查了一番，发现了以下信息：</p>
+<p><em>几乎每个在Win10 PC上安装的程序都会在AppData文件夹中创建自己的文件夹，并将其所有相关信息存储在其中。 AppData或应用程序数据是Windows 10中的一个隐藏文件夹，可帮助保护用户数据和设置免遭删除和操作。 要访问它，必须在文件夹选项中选择“显示隐藏的文件和文件夹”。</em></p>
+<p>来源：https://www.aclear.top/post/ed2a9102.html</p>
+<p>仔细阅读完我终于知道：在这个AppData文件夹里，一般有三个文件夹，分别是：Local、LocalLow和Roaming，上面这个链接也介绍了这三个文件夹的作用：</p>
+<p>Local是“本地文件夹”，主要包含与安装程序相关的文件夹，包含在其中的数据（％localappdata％）不能与用户配置文件一起移动，因为它特定于当前的电脑。</p>
+<p>LocalLow也是本地文件夹，里面包含了无法移动的数据，有较低的访问级别。所以我们很少简单软件安装在这个文件夹里。</p>
+<p>Roaming是“漫游文件夹”，是一种可以与服务器同步的文件夹。它的数据可以随着用户的个人资料从一台电脑移动到另一台电脑。</p>
+<p>有些同学经常想去清理自己的电脑数据，但又不知道该去删除哪里的文件，这里还有个帖子告诉你哪个文件夹的哪些东西可以删掉：https://zhuanlan.zhihu.com/p/62030272</p>
+<h2 id="二-windows电脑里的其他存储软件数据的文件夹">二、Windows电脑里的其他存储软件数据的文件夹</h2>
+<p>关于Windows系统中软件安装位置的区别，可以看这个帖子，非常受用：https://www.jianshu.com/p/677846a93056</p>
+<p>简单说就是：</p>
+<p>1）AppData文件夹：是“Application Data Folder”，是用来存储应用程序数据的文件夹，程序运行时产生的数据可以存放到这里来。</p>
+<p>2）Documents文件夹：即我们电脑上的“我的文档”，虽然我们用的操作系统里看到的是四个中文字，但点开之后会发现，其完整的地址是：C:\Users\用户名\Documents</p>
+<p>这个文件夹里存储了许多我们平时用的许多程序的项目文件，所以这个文件夹的数据可不能轻易删掉，删掉之后可能你做的工作、玩儿的游戏都会出现数据丢失的情况。</p>
+<p>3）Registry注册表：注册表可以看作是一张Excel表，可以通过注册表编辑器来修改，许多软件的配置数据都存储在这些数据表里，这也是为什么有人在破解某些软件时会去修改注册表，就是为了迷惑软件的正版验证机制，所以现在许多软件越来越聪明了，就算你修改注册表也没有用。</p>
+<p>4）Program Files文件夹：Windows电脑最常见的软件安装位置，点开之后会看到很多软件的名字。有些同学的电脑上既有Program Files文件夹，也有Program Files(x86)文件夹，两者的区别是：如果你安装的软件是64位的，那么这个软件一般会安装在Program Files文件夹里；如果你安装的软件是32位的，那么软件就可能安装在Program Files(x86)文件夹里。我们平时用到的许多软件都是32位的，因此电脑里出现“x86”的文件夹就再正常不过了。</p>
+<h2 id="三-python究竟安装在哪个文件夹">三、Python究竟安装在哪个文件夹？</h2>
+<p>其实我这位朋友的Python安装地址之所以让我觉得陌生，是因为我还见过其他的安装地址。说起Python安装，有些同学并不是直接去官网上下载Python来安装的，而是使用了Anaconda这样的工具，此时的Python又安装在哪里了呢？</p>
+<p>我找了一个示例的位置，如下：</p>
+<p>C:\Users\用户名\AppData\Local\conda\conda\envs\python35</p>
+<p>可以看到这个python是位于Anaconda这个工具的目录里面的，但也是在AppData文件夹下。</p>
+<p>不过还会发现有些情况下软件是安装在这样的链接下面：</p>
+<p>C:\ProgramData</p>
+<p>简单的原因是：ProgramData是所有用户共享的软件，而AppData前面有用户名，表明这是属于某个用户的软件。有时候我们用管理员权限安装的所有用户可用的软件，就位于ProgramData里面。</p>
+<p>前面我分享的帖子里也有这样的描述：<br>
+ProgramData文件夹跟AppData文件夹基本类似，都是用来存放一些setting文件、缓存文件的，不同的是ProgramData是所有用户共享的，没有私有的文件夹。在XP时代，存放在C:\Documents and Settings\All Users\Application Data，从Vista开始，将这些应用数据都转移到C:\ProgramData下。</p>
+<p>对于初学Python的用户，我个人建议还是使用Anaconda这样的工具来安装Python，因为这个工具装好后Python就装好了，而且你还可以在这个工具的框架内安装不同版本的Python。Python的安装和卸载都很方便。不必再去关注自己的Python安装在了哪个文件夹里。我的美国同事Nick还建议在Windows上使用Chocolatey来安装Python，非常方便。</p>
+<p>Anaconda：https://www.anaconda.com/<br>
+Chocolatey：https://chocolatey.org/</p>
+<p>这都是大家的经验之谈啊，你下次学Python的时候，不一定非要按照某些教程里讲的那样从Python官网直接去下载安装包，装完都不一定知道自己把软件装哪里去了。打仗了要去领枪，开战了却不知道自己的枪放哪儿了，那还怎么战斗？</p>
+<h2 id="四-mac电脑里的python装在了哪儿">四、Mac电脑里的Python装在了哪儿？</h2>
+<p>其实Mac电脑买来之后本身就自带了Python的，但是这个Python的版本是2.X，可以简单理解为是Python二代。但现在大家普遍使用的是Python 3.X，可以理解为是Python三代。这两代Python默认安装的位置是不一样的，这个帖子里有比较详细的说明：</p>
+<p>https://jiyiren.github.io/2017/10/31/python_environmet/</p>
+<p>简单来说就是，Mac电脑自带的Python二代一般安装的地址是：/usr/bin/python文件夹，而你自己安装的Python三代一般安装的地址是：/usr/local/bin/python3。之所以你安装的会跑到local文件夹里，是因为你的权限不高，通过普通安装方式安装的Python就会到这个权限低一点的文件夹里。</p>
+<p>我们这里看到的bin是二进制Binaries的缩写，这个文件夹里一般存储的就是应用程序的可执行命令，所以我们安装软件时软件的可执行代码就会跑到这个bin文件夹里。</p>
+<h2 id="小结">小结</h2>
+<p>今天分享的冷知识可能真得很冷，但希望可以帮助大家了解电脑上安装的软件究竟去了哪里。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80-windows%E7%94%B5%E8%84%91%E9%87%8C%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%A4%B9">一、Windows电脑里的“本地文件夹”</a></li>
+<li><a href="#%E4%BA%8C-windows%E7%94%B5%E8%84%91%E9%87%8C%E7%9A%84%E5%85%B6%E4%BB%96%E5%AD%98%E5%82%A8%E8%BD%AF%E4%BB%B6%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9">二、Windows电脑里的其他存储软件数据的文件夹</a></li>
+<li><a href="#%E4%B8%89-python%E7%A9%B6%E7%AB%9F%E5%AE%89%E8%A3%85%E5%9C%A8%E5%93%AA%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9">三、Python究竟安装在哪个文件夹？</a></li>
+<li><a href="#%E5%9B%9B-mac%E7%94%B5%E8%84%91%E9%87%8C%E7%9A%84python%E8%A3%85%E5%9C%A8%E4%BA%86%E5%93%AA%E5%84%BF">四、Mac电脑里的Python装在了哪儿？</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hanlintao.github.io/post/stanfordtagger/">
+              <h3 class="post-title">
+                如何使用PHP调用斯坦福词性标注工具（Stanford POS Tagger）
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://hanlintao.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
