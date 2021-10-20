@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hanlintao.github.io</id>
     <title>CodeSlator Blog</title>
-    <updated>2021-08-11T06:49:48.442Z</updated>
+    <updated>2021-10-20T15:22:04.490Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hanlintao.github.io"/>
     <link rel="self" href="https://hanlintao.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>《译者编程入门指南》官方博客</subtitle>
     <logo>https://hanlintao.github.io/images/avatar.png</logo>
     <icon>https://hanlintao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, CodeSlator Blog</rights>
